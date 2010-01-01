@@ -30,7 +30,10 @@
 	<link rel="stylesheet" href="./resources/css/login/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./resources/css/login/style.css">
 	<link rel="stylesheet" href="./resources/css/login/model.css">
-	<link rel="stylesheet" href="./resources/css//select2.min.css">
+	<link rel="stylesheet" href="./resources/css/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="css/roboto-font.css">
+	<link rel="stylesheet" type="text/css" href="./resources/css/login/material-design-iconic-font.min.css">
 	<script src="./resources/js/adminJs/customer.js"></script>
   	<script src="./resources/js/commonJs/countrystatecity.js"></script>
   	<script src="./resources/js/commonJs/select2.min.js"></script>
@@ -533,6 +536,10 @@
 		        <form class="form-register" action="#" method="post">
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
+		        		<h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-account"></i></span>
+			            	<span class="step-text">About</span>
+			            </h2>
 			            <section>
 			                <div class="inner">
 			                	<h3>Organization Information:</h3>
@@ -556,7 +563,6 @@
 									<div class="form-holder form-holder-1">
 										<label class="form-row-inner">
 											<input type="file" class="form-control" id="logoImage" name="logoImage" required>
-											<span class="label">Logo Image</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -719,8 +725,6 @@
             <div class="text-center form-sm mt-2">
               <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
             </div>
->>>>>>> branch 'master' of https://github.com/raahi1725/adminPanel.git
-
             </div>
           </div>
         </div>
@@ -740,13 +744,9 @@
 	<script src="./resources/js/login/magnific-popup-options.js"></script>
 	<script src="./resources/js/login/jquery.countTo.js"></script>
 	<script src="./resources/js/login/main.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
-	<link rel="stylesheet" type="text/css" href="css/roboto-font.css">
-	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-	<!-- datepicker -->
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-	<!-- Main Style Css -->
-    <link rel="stylesheet" href="css/style.css"/>
+	<!-- <script src="./resources/js/login/jquery-3.3.1.min.js"></script> -->
+	<script src="./resources/js/login/jquery.steps.js"></script>
+	<script src="./resources/js/login/jquery-ui.min.js"></script>
 	</body>
 </html>
 
