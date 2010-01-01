@@ -69,13 +69,13 @@
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
-		                          <form:input path="contactNo" id="phone" name="phone" type="tel" class="form-control"/>
+		                          <input id="phone" name="phone" type="tel" class="form-control"/>
 		                          <label>Contact No</label>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
-		                          <form:input path="altContactNo" id="phone1" name="phone1" type="tel" class="form-control"/>
+		                          <input id="phone1" name="phone1" type="tel" class="form-control"/>
 		                          <label>Alternate Contact</label>
 		                        </div>
 	                        </div>

@@ -1022,7 +1022,7 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-   margin-bottom: 15px;
+   margin-bottom: 5px;
 }
 
 .no-gutters {
@@ -2320,10 +2320,6 @@ select.form-control-lg:not([size]):not([multiple]),
 .input-group-lg>.input-group-prepend>select.btn:not([size]):not([multiple]),
 .input-group-lg>.input-group-append>select.btn:not([size]):not([multiple]) {
   height: calc(4.125rem + 2px);
-}
-
-.form-group {
-  margin-bottom: 1rem;
 }
 
 .form-text {
@@ -12892,6 +12888,7 @@ input::placeholder {
 
 label {
   color: #AAAAAA;
+  font-style: italic;
 }
 
 .radio label,
@@ -12995,12 +12992,6 @@ select.form-control {
 .has-danger .form-control-feedback {
   color: #f44336;
   opacity: 1;
-}
-
-.form-group {
-  padding-bottom: 10px;
-  position: relative;
-  margin: 8px 0 0;
 }
 
 .form-group .bmd-label-static {
@@ -14952,7 +14943,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .main-panel>.content {
-  margin-top: 70px;
+  margin-top: 45px;
   padding: 15px 15px;
   min-height: calc(100vh - 123px);
 }
@@ -16398,7 +16389,7 @@ a .material-icons {
 
 .form-check,
 label {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.42857;
   color: #AAAAAA;
   font-weight: 400;
@@ -17039,10 +17030,6 @@ label {
 .card .card-body {
   padding: 0.9375rem 20px;
   position: relative;
-}
-
-.card .card-body .form-group {
-  margin: 8px 0 0;
 }
 
 .card .card-header {

@@ -71,7 +71,7 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public Long getMaxRegNo() {
+	public String getMaxRegNo() {
 		return customerRepository.getMaxRegNo(sessionUserBean.getTourPlannerBranchId());
 	}
 

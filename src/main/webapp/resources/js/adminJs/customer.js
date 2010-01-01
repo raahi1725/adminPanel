@@ -54,7 +54,7 @@ $(document).ready(function() {
       //      callback(countryCode);
       //    });
       // },
-      // hiddenInput: "full_number",
+       hiddenInput: "contactNo",
       // initialCountry: "auto",
       // localizedCountries: { 'de': 'Deutschland' },
       // nationalMode: false,
@@ -79,7 +79,7 @@ $(document).ready(function() {
         //     callback(countryCode);
         //   });
         // },
-        // hiddenInput: "full_number",
+         hiddenInput: "altContactNo",
         // initialCountry: "auto",
         // localizedCountries: { 'de': 'Deutschland' },
         // nationalMode: false,

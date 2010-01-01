@@ -13,6 +13,6 @@ public interface CustomerService {
 
 	CustomerBean getCustomerDetails(Integer customerId);
 
-	Long getMaxRegNo();
+	String getMaxRegNo();
 
 }

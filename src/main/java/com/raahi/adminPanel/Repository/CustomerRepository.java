@@ -28,7 +28,7 @@ public interface CustomerRepository extends JpaRepository<CustomerModel, Integer
 			 + "from CustomerModel a where a.customerId=:customerId ")
 	CustomerBean getCustomerDetails(@Param("customerId") Integer customerId);
 
-	@Query("select MAX(COALESCE(a.regNo,0)) from CustomerModel a where a.tourPlannerBranchModel.tourPlannerBranchId=:tourPlannerBranchId ")
-	Long getMaxRegNo(Integer tourPlannerBranchId);
+	@Query("select Cast(MAX(COALESCE(a.regNo,0)) as string) from CustomerModel a where a.tourPlannerBranchModel.tourPlannerBranchId=:tourPlannerBranchId ")
+	String getMaxRegNo(Integer tourPlannerBranchId);
 
 }
