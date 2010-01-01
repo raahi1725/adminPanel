@@ -50,7 +50,7 @@
 					<div class="row">
 						<div class="col-md-2">
 							<a href="#" class="simple-text logo-normal">
-         						<img src="./resources/img/logo.png" class="logo"></img>
+         						<img src="./resources/img/WhiteLogo.png" class="logo"></img>
          					</a>
 						</div>
 						<div class="col-md-10 text-right menu-1">
@@ -519,13 +519,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
           <div class="tab-pane fade" id="panel8" role="tabpanel">
             <div class="modal-body">
             	<div class="row">
-	                <div class="col-md-4">
+	                <div class="col-md-6">
 	               		<input name="orgName" type="text" class="form-control" placeholder="Organization Name">
 	               	</div>
-	               	<div class="col-md-4">
+	               	<div class="col-md-6">
 	               		<input name="website" type="text" class="form-control" placeholder="Website Address">
 	               	</div>
-	               	<div class="col-md-4">
+	               	<div class="col-md-6">
 	               		<input name="orgName" type="file" class="form-control" placeholder="Logo file">
 	               	</div>
 	            </div>
