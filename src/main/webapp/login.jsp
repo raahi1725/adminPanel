@@ -129,8 +129,10 @@
 								<i class="icon-browser"></i>
 							</span>
 							<div class="desc">
-								<h3>Easy To Use</h3>
-								<p>Add, edit & view your data on simple clicks. Upload your excels and directly connect to database </p>
+								<h3>A Faster way to add data</h3>
+								<p>Save your time and do more with your data.
+									Fill in the data through our UI or simply upload your excels and get the job done
+								</p>
 							</div>
 						</div>
 					</div>
@@ -140,8 +142,10 @@
 								<i class="icon-download"></i>
 							</span>
 							<div class="desc">
-								<h3>Secured</h3>
-								<p>Data is secured with proper auhthentication. </p>
+								<h3>A easier way to access data</h3>
+								<p>Replace your excels and documents with Raahi and 
+									view all your customer staff and tours data at one place. 
+								</p>
 							</div>
 						</div>
 					</div>
@@ -151,8 +155,9 @@
 								<i class="icon-layers"></i>
 							</span>
 							<div class="desc">
-								<h3>Customized</h3>
-								<p>User Needs are our priority</p>
+								<h3>A smarter way to do your marketing</h3>
+								<p>Why spend on marketing when your own team can design and 
+								   publish fully customizable templates through Raahi</p>
 							</div>
 						</div>
 					</div>
@@ -164,8 +169,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-						<h2>Collaborate with your design team in a new way</h2>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						<h2>Do more with the customization possible on your device</h2>
+						<p>Your inputs will help us make your management easy. 
+						   Let us know what you will like to have in the software.Click to send your feedback
+						   or contact us!</p>
 					</div>
 				</div>
 				<div class="row">
@@ -184,26 +191,26 @@
 					</div>
 					<div class="col-md-7 animate-box">
 						<div class="desc">
-							<h2>Real template creation</h2>
+							<h2>Stay Organized instantly</h2>
 							<div class="features">
 								<span class="icon"><i class="icon-lightbulb"></i></span>
 								<div class="f-desc">
-									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+									<p>Papers make you disorganized and really put a bad impression on your customers</p>
 								</div>
 							</div>
 							<div class="features">
 								<span class="icon"><i class="icon-circle-compass"></i></span>
 								<div class="f-desc">
-									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+									<p>Carry less papers and more information</p>
 								</div>
 							</div>
 							<div class="features">
 								<span class="icon"><i class="icon-beaker"></i></span>
 								<div class="f-desc">
-									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+									<p> Manage everything under one app and decide what you want to show</p>
 								</div>
 							</div>
-							<p><a href="#" class="btn btn-primary btn-outline with-arrow">Start collaborating <i class="icon-arrow-right3"></i></a></p>
+							<p><a href="#" class="btn btn-primary btn-outline with-arrow">See Demo<i class="icon-arrow-right3"></i></a></p>
 						</div>
 					</div>
 				</div>
@@ -213,32 +220,33 @@
 					</div>
 					<div class="col-md-7 col-md-pull-5 animate-box">
 						<div class="desc">
-							<h2>Finish template creation</h2>
+							<h2>Never Take Risk With Your Data</h2>
 							<div class="features">
 								<span class="icon"><i class="icon-lightbulb"></i></span>
 								<div class="f-desc">
-									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+									<p>Avoid Last minute hustle because your customers dont want to loose
+									   their time, money and personal information</p>
 								</div>
 							</div>
 							<div class="features">
 								<span class="icon"><i class="icon-circle-compass"></i></span>
 								<div class="f-desc">
-									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+									<p>Avoid loss of any confidential information and assure them safe and memorable journey</p>
 								</div>
 							</div>
 							<div class="features">
 								<span class="icon"><i class="icon-beaker"></i></span>
 								<div class="f-desc">
-									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+									<p>Aware Customers are happy Customers</p>
 								</div>
 							</div>
-							<p><a href="#" class="btn btn-primary btn-outline with-arrow">Start collaborating <i class="icon-arrow-right3"></i></a></p>
+							<p><a href="#" class="btn btn-primary btn-outline with-arrow">See Demo <i class="icon-arrow-right3"></i></a></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+<!-- Till here -->
 		<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(resources/img/login/cover_img_1.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
@@ -394,7 +402,7 @@
 			<div class="container">
 				<div class="row row-pb-md">
 					<div class="col-md-3 colorlib-widget">
-						<h4>About unapp</h4>
+						<h4>About Raahi</h4>
 						<p>Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
 						<p>
 							<ul class="colorlib-social-icons">
@@ -410,7 +418,7 @@
 						<p>
 							<ul class="colorlib-footer-links">
 								<li><a href="#"><i class="icon-check"></i> Home</a></li>
-								<li><a href="#"><i class="icon-check"></i> Gallery</a></li>
+								<li><a href="#"><i class="icon-check"></i> Services </a></li>
 								<li><a href="#"><i class="icon-check"></i> About</a></li>
 								<li><a href="#"><i class="icon-check"></i> Blog</a></li>
 								<li><a href="#"><i class="icon-check"></i> Contact</a></li>
@@ -450,9 +458,9 @@
 					<div class="col-md-3 colorlib-widget">
 						<h4>Contact Info</h4>
 						<ul class="colorlib-footer-links">
-							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li><a href="tel://1234567920"><i class="icon-phone"></i> + 1235 2355 98</a></li>
-							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
+							<li>abc , <br> Pune</li>
+							<li><a href="tel://1234567920"><i class="icon-phone"></i> 8550812500</a></li>
+							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@myraahi.com</a></li>
 							<li><a href="#"><i class="icon-location4"></i> yourwebsite.com</a></li>
 						</ul>
 					</div>
@@ -463,10 +471,9 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-								 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><br> 
-								Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a>, <a href="http://pexels.com/" target="_blank">Pexels</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><br> 
 							</p>
 						</div>
 					</div>
@@ -517,112 +524,202 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
           </div>
           
           <div class="tab-pane fade" id="panel8" role="tabpanel">
-            <div class="modal-body">
-            	<div class="row">
-	                <div class="col-md-6">
-	               		<input name="orgName" type="text" class="form-control" placeholder="Organization Name">
-	               	</div>
-	               	<div class="col-md-6">
-	               		<input name="website" type="text" class="form-control" placeholder="Website Address">
-	               	</div>
-	               	<div class="col-md-6">
-	               		<input name="orgName" type="file" class="form-control" placeholder="Logo file">
-	               	</div>
-	            </div>
-	            <div class="row">
-	                <div class="col-md-4">
-	               		<input name="headBranchName" type="text" class="form-control" placeholder="Organization Name">
-	               	</div>
-	               	<div class="col-md-4">
-	               		<input name="contact No" type="text" class="form-control" placeholder="Code - Contact No (comma seperated for multiple)">
-	               	</div>
-	               	<div class="col-md-4">
-	               		<input name="email" type="file" class="form-control" placeholder="Emails (Seperated By Commas)">
-	               	</div>
-	            </div>
-	            <div class="row">
-	               	<div class="col-md-3">
-                        <select name="country" id="countryId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
-                        	<option value="" class="form-control-select-default">Select Country</option>
-                        </select>
-	                   </div>
-                  	<div class="col-md-3">
-                       <select name="state" id="stateId" class="form-control-select js-example-basic-multiple states">
-                       	<option value="" class="form-control-select-default">Select State</option>
-                       </select>
-                   </div>
-                   <div class="col-md-3">
-                       <select name="city" id="cityId" class="form-control-select js-example-basic-multiple cities">
-                       	<option value="" class="form-control-select-default">Select City</option>
-                       </select>
-                   </div>
-               </div>
-               <div class="row">
-               	 <div class="col-md-6">
-                      <label class="bmd-label-floating">Address</label>
-                      <textarea name="address"  class="form-control"></textarea>
-                 </div>
-                 <div class="col-md-3">
-	                   <label class="bmd-label-floating">PinCode</label>
-	                   <input name="pinCode"  type="text" class="form-control">
-                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4">
-              		<input name="firstName" type="text" class="form-control" placeholder="First Name">
-               	</div>
-               	<div class="col-md-4">
-               		<input name="lastName" type="text" class="form-control" placeholder="Last Name">
-               	</div>
-               	<div class="col-md-4">
-                    <select name="gender" class="form-control-select"
-                      		 onchange="this.className=this.options[this.selectedIndex].className">
-                    		<option value="0" class="form-control-select-default">Gender</option>
-         					<option value="MALE" class="form-control-select-option">MALE</option>
-         					<option value="FEMALE" class="form-control-select-option">FEMALE</option>
-         					<option value="OTHER" class="form-control-select-option">OTHER</option>
-               		</select>
-               	</div>
-               	<div class="row">
-	                <div class="col-md-4">
-	               		<input name="email" type="text" class="form-control" placeholder="User Email">
-	               	</div>
-	               	<div class="col-md-4">
-	               		<input name="MobileNo" type="text" class="form-control" placeholder="User Contact ">
-	               	</div>
-	               	<div class="col-md-4">
-	               		<input name="password" type="password" class="form-control" placeholder="Password">
-	               	</div>
-	            </div>
-	            <div class="row">
-	                <div class="col-md-4">
-	               		<input name="email" type="text" class="form-control" placeholder="Forgot Question">
-	               	</div>
-	               	<div class="col-md-4">
-	               		<input name="MobileNo" type="text" class="form-control" placeholder="Forgot Answer ">
-	               	</div>
-	               	<div class="col-md-4">
-	               		<input name="password" type="password" class="form-control" placeholder="Password">
-	               	</div>
-	            </div>
-	          </div>
-              <!-- <div class="md-form form-sm mb-5">
-                <i class="fas fa-envelope prefix"></i>
-                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
-              </div>
-              <div class="md-form form-sm mb-5">
-                <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
-              </div>
-
-              <div class="md-form form-sm mb-4">
-                <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
-              </div> -->
-
-              <div class="text-center form-sm mt-2">
-                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
-              </div>
+            <div class="modal-body page-content">
+            	<div class="wizard-form">
+				<div class="wizard-header">
+					<h3 class="heading">Sign Up To Raahi</h3>
+					<p>Fill all form field to go next step</p>
+				</div>
+		        <form class="form-register" action="#" method="post">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <section>
+			                <div class="inner">
+			                	<h3>Organization Information:</h3>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="orgName" name="orgName" required>
+											<span class="label">Organization Name</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="orgWebsite" name="orgWebsite" required>
+											<span class="label">Website</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-1">
+										<label class="form-row-inner">
+											<input type="file" class="form-control" id="logoImage" name="logoImage" required>
+											<span class="label">Logo Image</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+									<!-- <div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="code" name="code" required>
+											<span class="label">Zip Code</span>
+					  						<span class="border"></span>
+										</label>
+									</div> -->
+								</div>
+							</div>
+			            </section>
+						<!-- SECTION 2 -->
+			            <h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-lock"></i></span>
+			            	<span class="step-text">Head Branch</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<h3>Head Branch</h3>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="branchName" name="branchName" required>
+											<span class="label">Branch Name</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="branchEmail" name="branchEmail" required>
+											<span class="label">Email</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="branchContact" name="branchContact" required>
+											<span class="label">Contact No</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="branchAltContact" name="branchAltContact" required>
+											<span class="label">Alt Contact</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder  form-holder-2">
+										<select name="country" id="countryId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
+                       						<option value="" class="form-control-select-default">Select Country</option>
+                       					</select>		
+									</div>
+									<div class="form-holder  form-holder-2">
+										<select name="state" id="stateId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
+                       						<option value="" class="form-control-select-default">Select State</option>
+                       					</select>		
+									</div>
+									<div class="form-holder  form-holder-2">
+										<select name="city" id="cityId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
+                       						<option value="" class="form-control-select-default">Select City</option>
+                       					</select>		
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="branchAddress" name="branchAddress" required>
+											<span class="label">Address</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="branchPinCode" name="branchPinCode" required>
+											<span class="label">Pin Code</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+			            </section>
+			            <!-- SECTION 3 -->
+			            <h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
+			            	<span class="step-text">Admin User Information</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<h3>More About Primary User</h3>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="firstName" name="firstName" required>
+											<span class="label">First Name</span>
+											<span class="border"></span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="lastName" name="lastName" required>
+											<span class="label">Last Name</span>
+											<span class="border"></span>
+										</label>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<select name="gender" id="gender">
+											<option value="Gender" disabled selected>Gender</option>
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+											<option value="Other">Other</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="email" class="form-control" id="userEmail" name="userEmail" required>
+											<span class="label">Email</span>
+											<span class="border"></span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="userContact" name="userContact" required>
+											<span class="label">Contact No</span>
+											<span class="border"></span>
+										</label>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="email" class="form-control" id="userPassword" name="userPassword" required>
+											<span class="label">Password</span>
+											<span class="border"></span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="userConfirmPassword" name="userConfirmPassword" required>
+											<span class="label">Confirm Password</span>
+											<span class="border"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+			            </section>
+		        	</div>
+		        </form>
+			</div>
+            <div class="text-center form-sm mt-2">
+              <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+            </div>
+>>>>>>> branch 'master' of https://github.com/raahi1725/adminPanel.git
 
             </div>
           </div>
@@ -643,7 +740,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="./resources/js/login/magnific-popup-options.js"></script>
 	<script src="./resources/js/login/jquery.countTo.js"></script>
 	<script src="./resources/js/login/main.js"></script>
-
+	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="css/roboto-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- datepicker -->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
 	</body>
 </html>
 
