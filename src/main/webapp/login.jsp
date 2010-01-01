@@ -518,11 +518,11 @@
               <form method="POST" action="/login" class="form-signin">
 	              <div class="md-form form-sm mb-5">
 	                <span class="icon"><i class="fas fa-envelope prefix"></i></span>
-	                <input name="username" type="text" class="form-control" placeholder="Mobile No">
+	                <input name="username" type="text" class="form-control-login" placeholder="Mobile No">
 	              </div>
 	              <div class="md-form form-sm mb-4">
 	                <span class="icon"><i class="fas fa-lock prefix"></i></span>
-	                <input name="password" type="password" class="form-control" placeholder="Password">
+	                <input name="password" type="password" class="form-control-login" placeholder="Password">
  	              </div>
 	              <div class="text-center mt-2">
 	                <button class="btn btn-info" type="submit">Log in <i class="fas fa-sign-in ml-1"></i></button>

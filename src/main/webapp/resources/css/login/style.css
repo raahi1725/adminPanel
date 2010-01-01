@@ -360,7 +360,6 @@ h1, h2, h3, h4, h5, h6, figure {
   border-right: none; }
 
 .colorlib-featured {
-  padding-bottom: 3em;
   width: 100%; }
   .colorlib-featured .featured-wrap {
     margin-top: -7em; }
@@ -1112,7 +1111,7 @@ article {
     font-weight: 700; }
   #colorlib-footer .copy {
     background: #262626;
-    padding: 7em 0; }
+    padding: 3em 0; }
     #colorlib-footer .copy p {
       margin-bottom: 0;
       color: #fff;
