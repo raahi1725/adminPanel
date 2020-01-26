@@ -108,18 +108,18 @@
               <li class="nav-item">
                 <a class="nav-link" href="#pablo">
                   <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
+                  <span class="d-lg-none d-md-block">
                     Stats
-                  </p>
+                  </span>
                 </a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
                   <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
+                  <span class="d-lg-none d-md-block">
                     Some Actions
-                  </p>
+                  </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#">Mike John responded to your email</a>
@@ -132,9 +132,9 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
-                  <p class="d-lg-none d-md-block">
+                  <span class="d-lg-none d-md-block">
                     Account
-                  </p>
+                  </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="#">Profile</a>
@@ -192,18 +192,14 @@
                 			</tr>
                 			<tr>
                 				<td><label>From : </label></td>
-                				<td style="white-space: nowrap;"><input type="text" class="boxInput">
-                          		&nbsp;&nbsp;<span class='plusButton'> <i class="material-icons">add</i> </span></td>
+                				<td style="white-space: nowrap;" id="fromTd"><input type="text" class="boxInput">
+                          		&nbsp;&nbsp;<a class='plusButton' onclick="addFromRow()"> <i class="material-icons">add</i> </a></td>
                           		<td style="width:10%;">&nbsp;</td>
                           		<td><label>To : </label></td>
                           		<td style="white-space: nowrap;"><input type="text" class="boxInput">
                           		&nbsp;&nbsp;<span class='plusButton'> <i class="material-icons">add</i></span></td>
                           	</tr>
                           	<tr><td style="line-height: 0.8;">&nbsp;</td></tr>
-                          	<tr>
-                          		<td><label>Things To Carry</label></td>
-                				<td colspan="100%" style="white-space: nowrap;"><input type="text" class="boxInput" placeholder="Comma Seperated Values"></td>
-                          	</tr>
                 		</table>
                         <figure class="tabBlock">
 							<ul class="tabBlock-tabs">
@@ -247,7 +243,7 @@
 							  			</td>
 							  			<td> 
 							  				<label class="bmd-label-floating">Per</label>
-							  				<select class="form-control" style="width:100px;">
+							  				<select class="form-control">
 		                          				<option>Person</option>
 		                          				<option>Group</option>
 		                          				<option>Couple</option>
@@ -257,7 +253,7 @@
 							  	</table>
 							  </div>
 							  <div class="tabBlock-pane">
-							  	<table class="tabTable" border="1" style="width: 100%;">
+							  	<table class="tabTable"  style="width: 100%;">
 							  		<tr>
 							  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 							  			<td>
@@ -280,7 +276,10 @@
 							  			<td>
 							  				<label class="bmd-label-floating">Price</label>
 							  				<input type="number" class="form-control"> 
-							  				<select class="form-control" style="width:100px;">
+							  			</td>
+							  			<td>
+							  				<label class="bmd-label-floating">Per</label>
+							  				<select class="form-control" >
 		                          				<option>/Person</option>
 		                          				<option>/Group</option>
 		                          				<option>/Couple</option>
@@ -290,7 +289,7 @@
 							  	</table>
 							  	</div>
 							    <div class="tabBlock-pane">
-								    <table class="tabTable" border="1" style="width: 100%;">
+								    <table class="tabTable"  style="width: 100%;">
 								  		<tr>
 								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
@@ -308,7 +307,10 @@
 								  			<td>
 									  			<label class="bmd-label-floating">Price</label>
 								  				<input type="number" class="form-control"> 
-								  				<select class="form-control" style="width:100px;">
+								  			</td>
+								  			<td>
+								  				<label class="bmd-label-floating">Per</label>
+								  				<select class="form-control">
 								  					<option>/Room</option>
 			                          				<option>/Person</option>
 			                          				<option>/Group</option>
@@ -319,7 +321,7 @@
 								  	</table>
 							 	</div>
 							 	 <div class="tabBlock-pane">
-								    <table class="tabTable" border="1" style="width: 100%;">
+								    <table class="tabTable"  style="width: 100%;">
 								  		<tr>
 								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
@@ -341,7 +343,10 @@
 								  			<td>
 									  			<label class="bmd-label-floating">Price</label>
 								  				<input type="number" class="form-control"> 
-								  				<select class="form-control" style="width:100px;">
+								  			</td>
+								  			<td>
+								  				<label class="bmd-label-floating">Per</label>
+								  				<select class="form-control">
 								  					<option>/Room</option>
 			                          				<option>/Person</option>
 			                          				<option>/Group</option>
@@ -352,7 +357,7 @@
 								  	</table>
 							 	</div>
 							 	<div class="tabBlock-pane">
-								    <table class="tabTable" border="1" style="width: 100%;">
+								    <table class="tabTable"  style="width: 100%;">
 								  		<tr>
 								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
@@ -369,16 +374,19 @@
 								  			</td>
 								  			<td>
 								  				<label class="bmd-label-floating">Day</label>
-								  				<input type="1" class="form-control">
+								  				<input type="number" class="form-control">
 								  			</td>
 								  			<td>
 								  				<label class="bmd-label-floating">Images</label>
-								  				<input type="file" class="form-control">
+								  				<input type="file" class="form-control" multiple>
 								  			</td>
 								  			<td>
 									  			<label class="bmd-label-floating">Price</label>
 								  				<input type="number" class="form-control"> 
-								  				<select class="form-control" style="width:100px;">
+								  			</td>
+								  			<td>
+								  				<label class="bmd-label-floating">Per</label>
+								  				<select class="form-control">
 								  					<option>/Room</option>
 			                          				<option>/Person</option>
 			                          				<option>/Group</option>
@@ -389,7 +397,7 @@
 								  	</table>
 							 	</div>
 							 	<div class="tabBlock-pane">
-								  	<table class="tabTable" border="1" style="width: 100%;">
+								  	<table class="tabTable"  style="width: 100%;">
 								  		<tr>
 								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
@@ -416,7 +424,10 @@
 								  			<td>
 								  				<label class="bmd-label-floating">Price</label>
 								  				<input type="number" class="form-control"> 
-								  				<select class="form-control" style="width:100px;">
+								  			</td>
+								  			<td>
+								  				<label class="bmd-label-floating">Per</label>
+								  				<select class="form-control">
 			                          				<option>/Person</option>
 			                          				<option>/Group</option>
 			                          				<option>/Couple</option>
@@ -426,7 +437,7 @@
 								  	</table>
 							  </div>
 							  <div class="tabBlock-pane">
-								  	<table class="tabTable" border="1" style="width: 100%;">
+								  	<table class="tabTable"  style="width: 100%;">
 								  		<tr>
 								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
@@ -450,17 +461,29 @@
 								</td>
 							</tr>
 							<tr><td>&nbsp;</td></tr>
-							<tr><td colspan="100;" ><input type="button" value="Submit"></td></tr>
-							<tr><td>&nbsp;</td></tr>
 							<tr>
-								<td><input type="button" value="Add Route"></td>
-								<td><input type="button" value="Add Offers"></td>
-								<td><input type="button" value="Design Brochure"></td>
+                				<td colspan="2">
+                					<label>Things To Carry</label>
+                					<input type="text" class="form-control">
+                				</td>
+                				<td colspan="2">&nbsp;</td>
+                				<td colspan="2">
+					  				<label class="bmd-label-floating">Images</label>
+					  				<input type="file" class="form-control" multiple>
+                				</td>
+                          	</tr>
+							<tr><td style="line-height: 0.8;">&nbsp;</td></tr>
+							<tr>
+								<td colspan="100%"><input type="button" value="Submit"></td>
 							</tr>
+							<tr><td style="line-height: 0.8;">&nbsp;</td></tr>
 							<tr>
-								<td><input type="button" value="Design Pages"></td>
-								<td><input type="button" value="Send Emails To Customers"></td>
-								<td><input type="button" value="Send Messages To Customers"></td>
+								<td><a href="#">Add Route</a></td>
+								<td><a href="#">Add Offers</a></td>
+								<td><a href="#">Design Brochures</a></td>
+								<td><a href="#">Design Pages</a></td>
+								<td><a href="#">Send Messages</a></td>
+								<td><a href="#">Send Email</a></td>
 							</tr>
 						</table>
                      </form>
@@ -614,6 +637,17 @@
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="./resources/demo/demo.js"></script>
   <script>
+  var fromRowAdded=0;
+  function addFromRow() {
+	  fromRowAdded++;
+	  $("#fromTd").append('<span class="fromRowShown'+fromRowAdded+'"><br/><input type="text" class="boxInput" > ')
+      $("#fromTd").append('&nbsp;&nbsp;<a class="plusButton fromRowShown'+fromRowAdded+' " onclick="cancelFromRow('+fromRowAdded+')"> <i class="material-icons">cancel</i> </a></span>');
+  }
+  function cancelFromRow(rowToHide) {
+	  fromRowAdded--;	
+	  $(".fromRowShown"+rowToHide).hide();
+  }
+  
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');
@@ -835,7 +869,6 @@
   		$(function() {
   		  TabBlock.init();
   		});
-  		
   		
   </script>
 </body>

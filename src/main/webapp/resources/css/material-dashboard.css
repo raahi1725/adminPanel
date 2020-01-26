@@ -2169,9 +2169,6 @@ pre code {
   opacity: 1;
 }
 
-select.form-control:not([size]):not([multiple]) {
-  height: calc(2.4375rem + 2px);
-}
 
 select.form-control:focus::-ms-value {
   color: #495057;
@@ -18945,9 +18942,16 @@ label {
 	font-weight: bold;
 }
 
+td {
+	vertical-align: top;
+}
 .tabTable  td {
 	padding:10px;
 	white-space: nowrap;
 }
 
+a {
+	text-decoration: underline;
+	cursor: pointer;
+}
 /*# sourceMappingURL=dashboard-free.css.map */
