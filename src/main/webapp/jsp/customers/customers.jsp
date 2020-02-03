@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link href="./resources/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="/js/customer.js"></script>
+  <script src="./resources/js/adminJs/customer.js"></script>
 </head>
 <body class="">
   <div class="wrapper ">
@@ -30,32 +30,23 @@
                 	<form>
                 		<table>
                 			<tr class="form-group">
-                				<td><label class="bmd-label-floating">Reg No</label></td>
-                				<td><input type="text" class="form-control"></td>
-                				<td><label class="bmd-label-floating">Reg Date</label></td>
-                				<td><input type="text" class="form-control"></td>
-                				<td>&nbsp;</td>
-                				<td>&nbsp;</td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Reg No</label></td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Reg Date</label></td>
                 			</tr>
                 			<tr>
-                				<td><label class="bmd-label-floating">Name</label></td>
-                				<td><input type="text" class="form-control" placeholder="First Name"></td>
-                				<td><input type="text" class="form-control" placeholder="Middle Name"></td>
-                				<td><input type="text" class="form-control" placeholder="Last Name"></td>
-                				<td>&nbsp;</td>
-                				<td>&nbsp;</td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">First Name</label></td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Middle Name</label></td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Last Name</label></td>
                 			</tr>
                 			<tr>
-                				<td><label>Gender : </label></td>
                 				<td><select class="form-control">
 	                					<option value="MALE">MALE</option>
 	                					<option value="FEMALE">FEMALE</option>
 	                					<option value="OTHER">OTHER</option>
                 					</select>
+                					<label>Gender : </label>
                 				</td>
-                				<td><label>Birth Date : </label></td>
-                				<td><input type="date" class="form-control"></td>
-                				<td><label>Blood Group : </label></td>
+                				<td><input type="date" class="form-control"><label>Birth Date : </label></td>
                 				<td><select class="form-control">
 	                					<option value="A+ve">A+ve</option>
 	                					<option value="A-ve">A-ve</option>
@@ -64,28 +55,22 @@
 	                					<option value="AB-ve">AB-ve</option>
 	                					<option value="O+ve">O+ve</option>
 	                					<option value="O-ve">O-ve</option>
-                					</select>
+                					</select><label>Blood Group : </label>
                 				</td>
                 			</tr>
                 			<tr class="form-group">
-                				<td><label class="bmd-label-floating">Address</label></td>
-                				<td colspan="5"><textarea class="form-control"></textarea></td>
+                				<td colspan="5"><textarea class="form-control"></textarea>
+                				<label class="bmd-label-floating">Address</label></td>
                 			</tr>
                 			<tr class="form-group">
-                				<td><label class="bmd-label-floating">State</label></td>
-                				<td><input type="text" class="form-control"></td>
-                				<td><label class="bmd-label-floating">Country</label></td>
-                				<td><input type="text" class="form-control"></td>
-                				<td><label class="bmd-label-floating">PinCode</label></td>
-                				<td><input type="number" class="form-control"></td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">State</label></td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Country</label></td>
+                				<td><input type="number" class="form-control"><label class="bmd-label-floating">PinCode</label></td>
                 			</tr>
                 			<tr class="form-group">
-                				<td><label class="bmd-label-floating">Caste-Category</label></td>
-                				<td><input type="text" class="form-control"></td>
-                				<td><label class="bmd-label-floating">Occupation</label></td>
-                				<td><input type="text" class="form-control"></td>
-                				<td><label class="bmd-label-floating">Nationality</label></td>
-                				<td><input type="text" class="form-control"></td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Caste-Category</label></td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Occupation</label></td>
+                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Nationality</label></td>
                 			</tr>
                 			<tr>
 								<td colspan="100%"><input type="button" value="Submit"></td>

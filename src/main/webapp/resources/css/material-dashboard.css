@@ -199,7 +199,7 @@ svg:not(:root) {
 
 table {
   border-collapse: separate;
-  border-spacing:10px 50px;
+  border-spacing:20px 20px;
 }
 
 td {
@@ -1003,10 +1003,6 @@ pre code {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .row {
@@ -18925,9 +18921,6 @@ ol, ul {
 	width:100%;
 }
 
-td {
-	vertical-align: top;
-}
 .tabTable  td {
 	padding:10px;
 	white-space: nowrap;

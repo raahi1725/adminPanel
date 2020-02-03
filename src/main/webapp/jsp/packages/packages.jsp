@@ -31,11 +31,9 @@
                 			<tr>
                 				<td><label>Package Name : </label></td>
                 				<td><input type="text" class="boxInput"></td>
-                				<td style="width:10%;">&nbsp;</td>
                 				<td><input type="number" class="boxInput" style="width:70px;">&nbsp;&nbsp;<label>Days</label></td>
                 				<td><input type="number" class="boxInput" style="width:70px;">&nbsp;&nbsp;<label>Nights</label></td>
                 			</tr>
-                			<tr><td style="line-height: 0.8;">&nbsp;</td></tr>
                 			<tr>
                 				<td><label>Package Amount : </label></td>
                 				<td>
@@ -47,27 +45,22 @@
                           				<option>Couple</option>
                           			</select>
                 				</td>
-                				<td style="width:10%;">&nbsp;</td>
                 				<td colspan="2"><input type="text" placeholder="Criteria" class="form-control"></td>
                 			</tr>
-                			<tr><td style="line-height: 0.8;">&nbsp;</td></tr>
                 			<tr>
                 				<td><label>From Date : </label></td>
                           		<td><input type="date" class="boxInput"></td>
-                          		<td style="width:10%;">&nbsp;</td>
-                          		<td><label>To  Date : </label></td>
+                          		<td  style="text-align: right;"><label>To  Date : </label></td>
                           		<td><input type="date" class="boxInput"></td>
                 			</tr>
                 			<tr>
                 				<td><label>From : </label></td>
                 				<td style="white-space: nowrap;" id="fromTd"><input type="text" class="boxInput">
                           		&nbsp;&nbsp;<a class='plusButton' onclick="addFromRow()"> <i class="material-icons">add</i> </a></td>
-                          		<td style="width:10%;">&nbsp;</td>
-                          		<td><label>To : </label></td>
-                          		<td style="white-space: nowrap;"><input type="text" class="boxInput">
-                          		&nbsp;&nbsp;<span class='plusButton'> <i class="material-icons">add</i></span></td>
+                          		<td style="text-align: right;"><label>To : </label></td>
+                          		<td style="white-space: nowrap;" id="toTd"><input type="text" class="boxInput">
+                          		&nbsp;&nbsp;<a class='plusButton' onclick="addToRow()"> <i class="material-icons">add</i></a></td>
                           	</tr>
-                          	<tr><td style="line-height: 0.8;">&nbsp;</td></tr>
                 		</table>
                         <figure class="tabBlock">
 							<ul class="tabBlock-tabs">
@@ -77,14 +70,10 @@
 							  <li class="tabBlock-tab">Food</li>
 							  <li class="tabBlock-tab">Sights/Activities</li>
 							  <li class="tabBlock-tab">Drop</li>
-							  <li class="tabBlock-tab">Other Benefits</li>
-							  <li class="tabBlock-tab">Route</li>
-							  <li class="tabBlock-tab">Offers</li>
 							</ul>
 							<div class="tabBlock-content">
 							  <div class="tabBlock-pane">
-							  	<span class='plusButton'><i class="material-icons">add</i></span>
-							  	<table class="tabTable">
+							  	<table class="tabTable" id="pickupBaseTable">
 							  		<tr>
 							  			<td>
 							  				<label class="bmd-label-floating">Mode</label>
@@ -103,11 +92,15 @@
 							  				<label class="bmd-label-floating">Time</label>
 							  				<input type="time" class="form-control">
 							  			</td>
-							  		</tr>
-							  		<tr>
 							  			<td>
 							  				<label class="bmd-label-floating">Place</label>
 							  				<input type="text" class="form-control">
+							  			</td>
+							  		</tr>
+							  		<tr>
+							  			<td colspan="2">
+							  				<label class="bmd-label-floating">Details</label>
+							  				<textarea class="form-control"></textarea>
 							  			</td>
 							  			<td>
 							  				<label class="bmd-label-floating">Price</label>
@@ -122,18 +115,13 @@
                           					</select>
 							  			</td>
 							  		</tr>
-							  		<tr>
-							  			<td colspan="3">
-							  				<label class="bmd-label-floating">Details</label>
-							  				<input type="text" class="form-control">
-							  			</td>
-							  		</tr>
 							  	</table>
+							  	<div id="pickupTable" class="pickupTables"></div>
+							  	<a class='plusButton' onclick="addPickupTables()"><i class="material-icons">add</i></a>
 							  </div>
 							  <div class="tabBlock-pane">
-							  	<table class="tabTable"  style="width: 100%;">
+							  	<table class="tabTable" id="travelBaseTable" style="width: 100%;">
 							  		<tr>
-							  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 							  			<td>
 							  				<label class="bmd-label-floating">Mode</label>
 							  				<select class="form-control">
@@ -148,8 +136,22 @@
 							  				<input type="date" class="form-control">
 							  			</td>
 							  			<td>
-							  				<label class="bmd-label-floating">Time</label>
+							  				<label class="bmd-label-floating">Dep Time</label>
 							  				<input type="time" class="form-control">
+							  			</td>
+							  			<td>
+							  				<label class="bmd-label-floating">Arrival Time</label>
+							  				<input type="time" class="form-control">
+							  			</td>
+							  		</tr>
+							  		<tr>
+							  			<td>
+							  				<label class="bmd-label-floating">Place</label>
+							  				<input type="text" class="form-control">
+							  			</td>
+							  			<td>
+							  				<label class="bmd-label-floating">Details</label>
+							  				<textarea class="form-control"></textarea>
 							  			</td>
 							  			<td>
 							  				<label class="bmd-label-floating">Price</label>
@@ -165,11 +167,12 @@
 							  			</td>
 							  		</tr>
 							  	</table>
+							  	<div id="travelTable"></div>
+							  	<a class='plusButton' onclick="addTravelTables()"> <i class="material-icons">add</i></a>
 							  	</div>
 							    <div class="tabBlock-pane">
 								    <table class="tabTable"  style="width: 100%;">
 								  		<tr>
-								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
 								  				<label class="bmd-label-floating">Name</label>
 								  				<input type="text" class="form-control">
@@ -182,6 +185,16 @@
 								  				<label class="bmd-label-floating">Star</label>
 								  				<input type="number" class="form-control" >
 								  			</td>
+								  			<td>
+								  				<label class="bmd-label-floating">Address</label>
+								  				<input type="text" class="form-control" >
+								  			</td>
+								  		</tr>
+								  		<tr>
+								  			<td colspan="2">
+								  				<label class="bmd-label-floating">Details</label>
+								  				<textarea class="form-control"></textarea>
+							  				</td>
 								  			<td>
 									  			<label class="bmd-label-floating">Price</label>
 								  				<input type="number" class="form-control"> 
@@ -197,6 +210,8 @@
 		                         			</td>
 								  		</tr>
 								  	</table>
+								  	<div id="hotelTable"></div>
+							  		<a class='plusButton' onclick="addHotelTables()"> <i class="material-icons">add</i></a>
 							 	</div>
 							 	 <div class="tabBlock-pane">
 								    <table class="tabTable"  style="width: 100%;">
@@ -338,28 +353,17 @@
 	                         		<textarea rows="1" cols="9" class="form-control"></textarea>
 								</td>
 							</tr>
-							<tr><td>&nbsp;</td></tr>
-							<tr>
-                				<td colspan="2">
-                					<label>Things To Carry</label>
-                					<input type="text" class="form-control">
-                				</td>
-                				<td colspan="2">&nbsp;</td>
-                				<td colspan="2">
-					  				<label class="bmd-label-floating">Images</label>
-					  				<input type="file" class="form-control" multiple>
-                				</td>
-                          	</tr>
 							<tr><td style="line-height: 0.8;">&nbsp;</td></tr>
 							<tr>
-								<td colspan="100%"><input type="button" value="Submit"></td>
+								<td><a href="#">Other Benefits</a></td>
+								<td><a href="#">Exclusions</a></td>
+								<td><a href="#">Policies</a></td>
+								<td><a href="#">Things To Carry</a></td>
+								<td><a href="#">Images</a></td>
 							</tr>
 							<tr><td style="line-height: 0.8;">&nbsp;</td></tr>
 							<tr>
-								<td><a href="#">Design Brochures</a></td>
-								<td><a href="#">Design Pages</a></td>
-								<td><a href="#">Send Messages</a></td>
-								<td><a href="#">Send Email</a></td>
+								<td colspan="100%"><input type="button" value="Submit"></td>
 							</tr>
 						</table>
                      </form>
@@ -414,241 +418,9 @@
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="./resources/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="./resources/demo/demo.js"></script>
+  <script src="./resources/js/adminJs/packages.js"></script>
   <script>
-  var fromRowAdded=0;
-  function addFromRow() {
-	  fromRowAdded++;
-	  $("#fromTd").append('<span class="fromRowShown'+fromRowAdded+'"><br/><input type="text" class="boxInput" > ')
-      $("#fromTd").append('&nbsp;&nbsp;<a class="plusButton fromRowShown'+fromRowAdded+' " onclick="cancelFromRow('+fromRowAdded+')"> <i class="material-icons">cancel</i> </a></span>');
-  }
-  function cancelFromRow(rowToHide) {
-	  fromRowAdded--;	
-	  $(".fromRowShown"+rowToHide).hide();
-  }
-  
-    $(document).ready(function() {
-      $().ready(function() {
-        $sidebar = $('.sidebar');
-
-        $sidebar_img_container = $sidebar.find('.sidebar-background');
-
-        $full_page = $('.full-page');
-
-        $sidebar_responsive = $('body > .navbar-collapse');
-
-        window_width = $(window).width();
-
-        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
-
-        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
-          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
-            $('.fixed-plugin .dropdown').addClass('open');
-          }
-
-        }
-
-        $('.fixed-plugin a').click(function(event) {
-          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
-          if ($(this).hasClass('switch-trigger')) {
-            if (event.stopPropagation) {
-              event.stopPropagation();
-            } else if (window.event) {
-              window.event.cancelBubble = true;
-            }
-          }
-        });
-
-        $('.fixed-plugin .active-color span').click(function() {
-          $full_page_background = $('.full-page-background');
-
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
-
-          var new_color = $(this).data('color');
-
-          if ($sidebar.length != 0) {
-            $sidebar.attr('data-color', new_color);
-          }
-
-          if ($full_page.length != 0) {
-            $full_page.attr('filter-color', new_color);
-          }
-
-          if ($sidebar_responsive.length != 0) {
-            $sidebar_responsive.attr('data-color', new_color);
-          }
-        });
-
-        $('.fixed-plugin .background-color .badge').click(function() {
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
-
-          var new_color = $(this).data('background-color');
-
-          if ($sidebar.length != 0) {
-            $sidebar.attr('data-background-color', new_color);
-          }
-        });
-
-        $('.fixed-plugin .img-holder').click(function() {
-          $full_page_background = $('.full-page-background');
-
-          $(this).parent('li').siblings().removeClass('active');
-          $(this).parent('li').addClass('active');
-
-
-          var new_image = $(this).find("img").attr('src');
-
-          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
-            $sidebar_img_container.fadeOut('fast', function() {
-              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
-              $sidebar_img_container.fadeIn('fast');
-            });
-          }
-
-          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
-            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
-
-            $full_page_background.fadeOut('fast', function() {
-              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
-              $full_page_background.fadeIn('fast');
-            });
-          }
-
-          if ($('.switch-sidebar-image input:checked').length == 0) {
-            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
-            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
-
-            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
-            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
-          }
-
-          if ($sidebar_responsive.length != 0) {
-            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
-          }
-        });
-
-        $('.switch-sidebar-image input').change(function() {
-          $full_page_background = $('.full-page-background');
-
-          $input = $(this);
-
-          if ($input.is(':checked')) {
-            if ($sidebar_img_container.length != 0) {
-              $sidebar_img_container.fadeIn('fast');
-              $sidebar.attr('data-image', '#');
-            }
-
-            if ($full_page_background.length != 0) {
-              $full_page_background.fadeIn('fast');
-              $full_page.attr('data-image', '#');
-            }
-
-            background_image = true;
-          } else {
-            if ($sidebar_img_container.length != 0) {
-              $sidebar.removeAttr('data-image');
-              $sidebar_img_container.fadeOut('fast');
-            }
-
-            if ($full_page_background.length != 0) {
-              $full_page.removeAttr('data-image', '#');
-              $full_page_background.fadeOut('fast');
-            }
-
-            background_image = false;
-          }
-        });
-
-        $('.switch-sidebar-mini input').change(function() {
-          $body = $('body');
-
-          $input = $(this);
-
-          if (md.misc.sidebar_mini_active == true) {
-            $('body').removeClass('sidebar-mini');
-            md.misc.sidebar_mini_active = false;
-
-            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
-
-          } else {
-
-            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
-
-            setTimeout(function() {
-              $('body').addClass('sidebar-mini');
-
-              md.misc.sidebar_mini_active = true;
-            }, 300);
-          }
-
-          // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function() {
-            window.dispatchEvent(new Event('resize'));
-          }, 180);
-
-          // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function() {
-            clearInterval(simulateWindowResize);
-          }, 1000);
-
-        });
-      });
-    });
-    
-    var TabBlock = {
-  		  s: {
-  		    animLen: 200
-  		  },
-  		  
-  		  init: function() {
-  		    TabBlock.bindUIActions();
-  		    TabBlock.hideInactive();
-  		  },
-  		  
-  		  bindUIActions: function() {
-  		    $('.tabBlock-tabs').on('click', '.tabBlock-tab', function(){
-  		      TabBlock.switchTab($(this));
-  		    });
-  		  },
-  		  
-  		  hideInactive: function() {
-  		    var $tabBlocks = $('.tabBlock');
-  		    
-  		    $tabBlocks.each(function(i) {
-  		      var 
-  		        $tabBlock = $($tabBlocks[i]),
-  		        $panes = $tabBlock.find('.tabBlock-pane'),
-  		        $activeTab = $tabBlock.find('.tabBlock-tab.is-active');
-  		      
-  		      $panes.hide();
-  		      $($panes[$activeTab.index()]).show();
-  		    });
-  		  },
-  		  
-  		  switchTab: function($tab) {
-  		    var $context = $tab.closest('.tabBlock');
-  		    
-  		    if (!$tab.hasClass('is-active')) {
-  		      $tab.siblings().removeClass('is-active');
-  		      $tab.addClass('is-active');
-  		   
-  		      TabBlock.showPane($tab.index(), $context);
-  		    }
-  		   },
-  		  
-  		  showPane: function(i, $context) {
-  		    var $panes = $context.find('.tabBlock-pane');
-  		    $panes.slideUp(TabBlock.s.animLen);
-  		    $($panes[i]).slideDown(TabBlock.s.animLen);
-  		  }
-  		};
-
-  		$(function() {
-  		  TabBlock.init();
-  		});
-  		
+ 
   </script>
 </body>
 
