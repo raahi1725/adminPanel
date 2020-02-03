@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Spring Boot with Apache Tiles</title>
+	 <link rel="icon" type="image/png" href="./resources/img/R.png">
+    <title>Raahi Admin Panel</title>
 	<link href="/bootstrap.min.css" rel="stylesheet">
     <script src="/jquery-2.2.1.min.js"></script>
     <script src="/bootstrap.min.js"></script>

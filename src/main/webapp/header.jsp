@@ -4,7 +4,7 @@
 	<div class="sidebar" data-color="purple" data-background-color="white" data-image="./resources/img/sidebar-1.jpg">
       <div class="logo">
      	 <a href="#" class="simple-text logo-normal">
-         	<!-- RAAHI -->
+         	<img src="./resources/img/logo.png" class="logo"></img>
          </a>
       </div>
       <div class="sidebar-wrapper">
@@ -66,7 +66,7 @@
         </ul>
       </div>
     </div>
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+      <nav class="navbar navbar-expand-lg navbar-transparent ">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -78,10 +78,6 @@
             <form class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
               </div>
             </form>
             <ul class="navbar-nav">
