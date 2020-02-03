@@ -8,56 +8,56 @@
          </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav">
+        <ul id="home" class="nav">
            <li class="nav-item">
             <a class="nav-link" href="dashboard">
               <i class="material-icons">home</i>
               <span>Home</span>
             </a>
           </li>
-          <li class="nav-item active">
+          <li id="packages" class="nav-item active">
             <a class="nav-link" href="packages">
               <i class="material-icons">flight_takeoff</i>
               <span>Packages</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./tables.jsp">
+          <li id="customers" class="nav-item">
+            <a class="nav-link" href="customers">
               <i class="material-icons">person_add</i>
               <span>Customers</span>
             </a>
           </li>
-          <li class="nav-item ">
+          <li id="tourReports" class="nav-item ">
             <a class="nav-link" href="./typography.jsp">
               <i class="material-icons">library_books</i>
               <span>Tour Reports</span>
             </a>
           </li>
-          <li class="nav-item ">
+          <li id="iESheet" class="nav-item ">
             <a class="nav-link" href="./icons.jsp">
               <i class="material-icons">assessment</i>
               <span>Income/Expense Sheet</span>
             </a>
           </li>
-          <li class="nav-item ">
+          <li id="staff" class="nav-item ">
             <a class="nav-link" href="./map.jsp">
               <i class="material-icons">person_pin</i>
               <span>Staff</span>
             </a>
           </li>
-          <li class="nav-item ">
+          <li id="notifications" class="nav-item ">
             <a class="nav-link" href="./notifications.jsp">
               <i class="material-icons">notifications</i>
               <span>Notifications</span>
             </a>
           </li>
-          <li class="nav-item ">
+          <li id="language" class="nav-item ">
             <a class="nav-link" href="./rtl.jsp">
               <i class="material-icons">language</i>
               <span>Language</span>
             </a>
           </li>
-          <li class="nav-item active-pro ">
+          <li id="pro" class="nav-item active-pro ">
             <a class="nav-link" href="./upgrade.jsp">
               <i class="material-icons">unarchive</i>
               <span>Upgrade to PRO</span>
