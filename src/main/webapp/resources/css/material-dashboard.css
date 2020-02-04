@@ -18968,7 +18968,7 @@ ol, ul {
 }
 
 .hide {
-	style:display:none;
+	display:none !important;
 }
 
 .submitDiv{

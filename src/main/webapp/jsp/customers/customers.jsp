@@ -160,9 +160,9 @@
 		                          <input name="referalCode" type="text" class="form-control" multiple>
 		                        </div>
 	                        </div>
-	                        <div class="col-md-3">
+	                        <div class="col-md-3" >
 		                        <div class="form-group">
-		                            <select name="hearedFrom" class="form-control-select" onchange="showHideOther()">
+		                            <select name="hearedFrom" id="hearedFromSelect" class="form-control-select" onchange="showHideOther()">
 		                          		<option value="" >Here Us From?</option>
 		                          		<option value="Google Search" >Google Search</option>
 	                					<option value="Instagram">Instagram</option>
@@ -172,10 +172,10 @@
                 				  </select>
 		                        </div>
 	                        </div>
-	                        <div class="col-md-3">
-		                        <div class="form-group">
-		                          <label class="bmd-label-floating hide">Other</label>
-		                          <input type="other" class="form-control">
+	                        <div class="col-md-3 hide" id="othersDiv">
+		                        <div class="form-group" >
+		                          <label class="bmd-label-floating">Other</label>
+		                          <input type="text" class="form-control">
 		                        </div>
 	                        </div>
                     	</div>
@@ -195,7 +195,7 @@
 	                    </div>
 	                    <div class="row">
 	                        <div class="col-md-8">
-		                        <div class="">
+		                        <div >
 		                          <label class="bmd-label-floating">Upload Other</label>
 		                          <input name="otherFile" type="file" class="form-control">
 		                        </div>
