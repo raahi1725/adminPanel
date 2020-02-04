@@ -103,8 +103,63 @@ function removeFoodTable(foodTable) {
 	 $("#foodDiv"+foodTable).hide();
 }
 
+var TabBlock = {
+	  s: {
+	    animLen: 200
+	  },
+	  
+	  init: function() {
+	    TabBlock.bindUIActions();
+	    TabBlock.hideInactive();
+	  },
+	  
+	  bindUIActions: function() {
+	    $('.tabBlock-tabs').on('click', '.tabBlock-tab', function(){
+      TabBlock.switchTab($(this));
+    });
+},
+	  
+hideInactive: function() {
+    var $tabBlocks = $('.tabBlock');
+
+	$tabBlocks.each(function(i) {
+	  var 
+	    $tabBlock = $($tabBlocks[i]),
+	    $panes = $tabBlock.find('.tabBlock-pane'),
+	$activeTab = $tabBlock.find('.tabBlock-tab.is-active');
+	      
+	      $panes.hide();
+	      $($panes[$activeTab.index()]).show();
+	    });
+ },
+	  
+ switchTab: function($tab) {
+    var $context = $tab.closest('.tabBlock');
+    if (!$tab.hasClass('is-active')) {
+      $tab.siblings().removeClass('is-active');
+      $tab.addClass('is-active');
+   
+      TabBlock.showPane($tab.index(), $context);
+    }
+   },
+  
+  showPane: function(i, $context) {
+    var $panes = $context.find('.tabBlock-pane');
+    $panes.slideUp(TabBlock.s.animLen);
+    $($panes[i]).slideDown(TabBlock.s.animLen);
+  }
+};
+
+$(function() {
+  TabBlock.init();
+});
+
+
+
+	
+// Not Sure if needed	
 $(document).ready(function() {
-  $().ready(function() {
+  	$().ready(function() {
     $sidebar = $('.sidebar');
 
 	$sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -120,10 +175,10 @@ $(document).ready(function() {
 	if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
 	  if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
 	    $('.fixed-plugin .dropdown').addClass('open');
-	  }
+	}
 
 }
-
+		
 $('.fixed-plugin a').click(function(event) {
   // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
   if ($(this).hasClass('switch-trigger')) {
@@ -267,55 +322,4 @@ $('.switch-sidebar-mini input').change(function() {
 
     });
   });
-});
-
-var TabBlock = {
-	  s: {
-	    animLen: 200
-	  },
-	  
-	  init: function() {
-	    TabBlock.bindUIActions();
-	    TabBlock.hideInactive();
-	  },
-	  
-	  bindUIActions: function() {
-	    $('.tabBlock-tabs').on('click', '.tabBlock-tab', function(){
-      TabBlock.switchTab($(this));
-    });
-},
-  
-hideInactive: function() {
-    var $tabBlocks = $('.tabBlock');
-
-	$tabBlocks.each(function(i) {
-	  var 
-	    $tabBlock = $($tabBlocks[i]),
-	    $panes = $tabBlock.find('.tabBlock-pane'),
-	$activeTab = $tabBlock.find('.tabBlock-tab.is-active');
-	      
-	      $panes.hide();
-	      $($panes[$activeTab.index()]).show();
-	    });
- },
-  
- switchTab: function($tab) {
-    var $context = $tab.closest('.tabBlock');
-    if (!$tab.hasClass('is-active')) {
-      $tab.siblings().removeClass('is-active');
-      $tab.addClass('is-active');
-   
-      TabBlock.showPane($tab.index(), $context);
-    }
-   },
-  
-  showPane: function(i, $context) {
-    var $panes = $context.find('.tabBlock-pane');
-    $panes.slideUp(TabBlock.s.animLen);
-    $($panes[i]).slideDown(TabBlock.s.animLen);
-  }
-};
-
-$(function() {
-  TabBlock.init();
 });

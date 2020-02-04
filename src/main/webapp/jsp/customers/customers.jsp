@@ -3,15 +3,6 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="./resources/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="./resources/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Packages</title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <link href="./resources/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="./resources/js/adminJs/customer.js"></script>
 </head>
 <body class="">
@@ -28,26 +19,61 @@
                 </div>
                 <div class="card-body">
                 	<form>
-                		<table>
-                			<tr class="form-group">
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Reg No</label></td>
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Reg Date</label></td>
-                			</tr>
-                			<tr>
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">First Name</label></td>
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Middle Name</label></td>
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Last Name</label></td>
-                			</tr>
-                			<tr>
-                				<td><select class="form-control">
+                		<div class="row">
+			                <div class="col-md-3">
+			                    <div class="form-group">
+				                    <label class="bmd-label-floating">Reg No</label>
+				                    <input name="regNo" type="text" class="form-control">
+		                   		</div>
+		                	</div>
+		                    <div class="col-md-3">
+		                    	<div class="form-group">
+			                        <label class="bmd-label-floating">Reg Date</label>
+			                        <input name="regDate" type="text" class="form-control">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row">
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">First Name</label>
+		                          <input name="firstName" type="text" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Middle Name</label>
+		                          <input name="middleName" type="text" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Last Name</label>
+		                          <input name="lastName" type="text" class="form-control">
+		                        </div>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		  <div class="col-md-3">
+		                        <div class="form-group">
+		                          <select name="gender" class="form-control-select">
+		                          		<option value="0" >Gender</option>
 	                					<option value="MALE">MALE</option>
 	                					<option value="FEMALE">FEMALE</option>
 	                					<option value="OTHER">OTHER</option>
-                					</select>
-                					<label>Gender : </label>
-                				</td>
-                				<td><input type="date" class="form-control"><label>Birth Date : </label></td>
-                				<td><select class="form-control">
+                				  </select>
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Birth Date</label>
+		                          <input name="birthDate" type="date" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <select name="bloodGroup" class="form-control-select">
+		                          		<option value="" >Blood Group</option>
 	                					<option value="A+ve">A+ve</option>
 	                					<option value="A-ve">A-ve</option>
 	                					<option value="B+ve">B+ve</option>
@@ -55,27 +81,133 @@
 	                					<option value="AB-ve">AB-ve</option>
 	                					<option value="O+ve">O+ve</option>
 	                					<option value="O-ve">O-ve</option>
-                					</select><label>Blood Group : </label>
-                				</td>
-                			</tr>
-                			<tr class="form-group">
-                				<td colspan="5"><textarea class="form-control"></textarea>
-                				<label class="bmd-label-floating">Address</label></td>
-                			</tr>
-                			<tr class="form-group">
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">State</label></td>
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Country</label></td>
-                				<td><input type="number" class="form-control"><label class="bmd-label-floating">PinCode</label></td>
-                			</tr>
-                			<tr class="form-group">
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Caste-Category</label></td>
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Occupation</label></td>
-                				<td><input type="text" class="form-control"><label class="bmd-label-floating">Nationality</label></td>
-                			</tr>
-                			<tr>
-								<td colspan="100%"><input type="button" value="Submit"></td>
-							</tr>
-                		</table>
+                				  </select>
+		                        </div>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		 <div class="col-md-8">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Address</label>
+		                          <textarea name="address"  class="form-control"></textarea>
+		                        </div>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">State</label>
+		                          <input name="state"  type="text" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Country</label>
+		                          <input name="country"  type="text" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">PinCode</label>
+		                          <input name="pinCode"  type="text" class="form-control">
+		                        </div>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Caste-Category</label>
+		                          <input name="casteCategory" type="text" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Occupation</label>
+		                          <input name="occupation" type="text" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Nationality</label>
+		                          <input name="nationality"  type="text" class="form-control">
+		                        </div>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Email</label>
+		                          <input name="email"  type="email" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Contact No</label>
+		                          <input name="contactNo"  type="text" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Alt. Contact No</label>
+		                          <input name="altContactNo" type="text" class="form-control">
+		                        </div>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Referal Code</label>
+		                          <input name="referalCode" type="text" class="form-control" multiple>
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                            <select name="hearedFrom" class="form-control-select" onchange="showHideOther()">
+		                          		<option value="" >Here Us From?</option>
+		                          		<option value="Google Search" >Google Search</option>
+	                					<option value="Instagram">Instagram</option>
+	                					<option value="Facebook">Facebook</option>
+	                					<option value="Advertisement">Advertisement</option>
+	                					<option value="Other">Other</option>
+                				  </select>
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating hide">Other</label>
+		                          <input type="other" class="form-control">
+		                        </div>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col-md-5">
+		                        <div class="">
+		                          <label class="bmd-label-floating">Upload Id Proof</label>
+		                          <input name="idProof" type="file" class="form-control" multiple>
+		                        </div>
+	                        </div>
+	                        <div class="col-md-5">
+		                        <div class="">
+		                          <label class="bmd-label-floating">Upload Photo</label>
+		                          <input name="photo" type="file" class="form-control" >
+		                        </div>
+	                        </div>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-md-8">
+		                        <div class="">
+		                          <label class="bmd-label-floating">Upload Other</label>
+		                          <input name="otherFile" type="file" class="form-control">
+		                        </div>
+	                        </div>
+                    	</div>
+                    	 <div class="row">
+	                        <div class="col-md-8">
+		                        <div class="submitDiv">
+		                          <input type="button" value="Submit">
+		                         </div>
+	                        </div>
+                    	</div>
                      </form>
                 </div>
               </div>
