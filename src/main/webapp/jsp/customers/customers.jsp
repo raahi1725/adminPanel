@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <script src="./resources/js/adminJs/customer.js"></script>
-  <script src="//geodata.solutions/includes/countrystatecity.js"></script>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script src="./resources/js/commonJs/countrystatecity.js"></script>
+  <script src="./resources/js/commonJs/select2.min.js"></script>
+  <link rel="stylesheet" href="./resources/css//select2.min.css">
 </head>
-
 <body class="">
   <div class="wrapper ">
     <div class="main-panel">
@@ -113,18 +112,18 @@
 		                           </select>
 		                        </div>
 	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		 <div class="col-md-6">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Address</label>
+		                          <textarea name="address"  class="form-control"></textarea>
+		                        </div>
+	                        </div>
 	                        <div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">PinCode</label>
 		                          <input name="pinCode"  type="text" class="form-control">
-		                        </div>
-	                        </div>
-                    	</div>
-                    	<div class="row">
-                    		 <div class="col-md-7">
-		                        <div class="form-group">
-		                          <label class="bmd-label-floating">Address</label>
-		                          <textarea name="address"  class="form-control"></textarea>
 		                        </div>
 	                        </div>
                     	</div>
