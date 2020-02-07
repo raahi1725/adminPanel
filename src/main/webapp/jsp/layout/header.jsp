@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <body>
 	<div class="sidebar" data-color="purple" data-background-color="white" data-image="./resources/img/sidebar-1.jpg">
@@ -125,4 +125,3 @@
       </nav>
 </body>
 </html>
- -->

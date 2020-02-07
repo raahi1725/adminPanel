@@ -40,8 +40,8 @@
   <script src="./resources/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
 </head>
 <body>
-	<div>
-		<div class="container">
+	  <div class="wrapper">
+  		<div class="main-panel">
 			<tiles:insertAttribute name="header" />
 			<tiles:insertAttribute name="body" />
 			<tiles:insertAttribute name="footer" />

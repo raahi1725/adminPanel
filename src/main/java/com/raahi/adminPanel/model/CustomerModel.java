@@ -16,8 +16,8 @@ public class CustomerModel implements java.io.Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private Integer customerId;
-	private Integer tourPlannerId;
-	private Integer tourPlannerBranchId;
+//	private Integer tourPlannerId;
+//	private Integer tourPlannerBranchId;
 	private String firstName;
 	private String middleName;
 	private String lastName;
@@ -56,7 +56,7 @@ public class CustomerModel implements java.io.Serializable {
 		this.customerId = customerId;
 	}
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+/*	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "tourPlannerId")
 	public Integer getTourPlannerId() {
 		return tourPlannerId;
@@ -72,7 +72,7 @@ public class CustomerModel implements java.io.Serializable {
 	}
 	public void setTourPlannerBranchId(Integer tourPlannerBranchId) {
 		this.tourPlannerBranchId = tourPlannerBranchId;
-	}
+	}*/
 	
 	@Column(name = "firstName")
 	public String getFirstName() {

@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="./resources/css//select2.min.css">
 </head>
 <body class="">
-  <div class="wrapper ">
-    <div class="main-panel">
       <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -231,8 +229,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </body>
 
 </html>
