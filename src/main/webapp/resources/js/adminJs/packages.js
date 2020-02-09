@@ -13,8 +13,8 @@
  function addFromRow() {
   fromRowAdded++;
   var fromTd ="";
-  fromTd += '<span id="fromRowShown'+fromRowAdded+'"><br/><input type="text" class="boxInput" /> '
-  fromTd +='&nbsp;&nbsp;<a class="plusButton fromLinkShown'+fromRowAdded+' " onclick="cancelFromRow('+fromRowAdded+')"> <i class="material-icons">cancel</i> </a></span>'
+  fromTd += '<br/><span id="fromRowShown'+fromRowAdded+'"><br/><input type="text" class="form-control" style="float:left;"/> '
+  fromTd +='<a class="plusButton fromLinkShown'+fromRowAdded+' " onclick="cancelFromRow('+fromRowAdded+')"> <i class="material-icons">cancel</i> </a></span>'
   $("#fromTd").append(fromTd);
  }
 function cancelFromRow(rowToHide) {
@@ -25,7 +25,7 @@ function cancelFromRow(rowToHide) {
 function addToRow() {
 	  toRowAdded++;
 	  var toTd ="";
-	  toTd += '<span id="toRowShown'+toRowAdded+'"><br/><input type="text" class="boxInput" /> '
+	  toTd += '<span id="toRowShown'+toRowAdded+'"><br/><input type="text" class="form-control" /> '
 	  toTd +='&nbsp;&nbsp;<a class="plusButton toLinkShown'+toRowAdded+' " onclick="cancelToRow('+toRowAdded+')"><i class="material-icons">cancel</i></a></span>'
 	  $("#toTd").append(toTd);
 }

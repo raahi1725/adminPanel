@@ -18,41 +18,85 @@
                 </div>
                 <div class="card-body">
                 	<form>
-                		<table>
-                			<tr>
-                				<td><label>Package Name : </label></td>
-                				<td><input type="text" class="boxInput"></td>
-                				<td><input type="number" class="boxInput" style="width:70px;">&nbsp;&nbsp;<label>Days</label></td>
-                				<td><input type="number" class="boxInput" style="width:70px;">&nbsp;&nbsp;<label>Nights</label></td>
-                			</tr>
-                			<tr>
-                				<td><label>Package Amount : </label></td>
-                				<td>
-                					<input type="text" class="boxInput" style="width:100px;">
-                          			<label>/</label>
-                          			<select class="boxInput" style="width:100px;">
+                		<div class="row">
+			                <div class="col-md-5">
+			                    <div class="form-group">
+				                    <label class="bmd-label-floating">Package Name</label>
+				                    <input name="packageName" type="text" class="form-control">
+		                   		</div>
+		                	</div>
+		                    <div class="col-md-2">
+		                    	<div class="form-group">
+			                        <label class="bmd-label-floating">Days</label>
+			                        <input name="days" type="text" class="form-control">
+		                        </div>
+		                    </div>
+		                    <div class="col-md-2">
+		                    	<div class="form-group">
+			                        <label class="bmd-label-floating">Nights</label>
+			                        <input name="nights" type="text" class="form-control">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row">
+			                <div class="col-md-3">
+			                    <div class="form-group">
+				                    <label class="bmd-label-floating">Package Amount</label>
+				                    <input name="packageAmount" type="text" class="form-control" style="float:left;">
+		                   		</div>
+		                	</div>
+		                	<div class="col-md-2">
+			                    <div class="form-group">
+                          			<select class="form-control-select" style="width:100px;">
+                          				<option>Per</option>
                           				<option>Person</option>
                           				<option>Group</option>
                           				<option>Couple</option>
                           			</select>
-                				</td>
-                				<td colspan="2"><input type="text" placeholder="Criteria" class="form-control"></td>
-                			</tr>
-                			<tr>
-                				<td><label>From Date : </label></td>
-                          		<td><input type="date" class="boxInput"></td>
-                          		<td  style="text-align: right;"><label>To  Date : </label></td>
-                          		<td><input type="date" class="boxInput"></td>
-                			</tr>
-                			<tr>
-                				<td><label>From : </label></td>
-                				<td style="white-space: nowrap;" id="fromTd"><input type="text" class="boxInput">
-                          		&nbsp;&nbsp;<a class='plusButton' onclick="addFromRow()"> <i class="material-icons">add</i> </a></td>
-                          		<td style="text-align: right;"><label>To : </label></td>
-                          		<td style="white-space: nowrap;" id="toTd"><input type="text" class="boxInput">
-                          		&nbsp;&nbsp;<a class='plusButton' onclick="addToRow()"> <i class="material-icons">add</i></a></td>
-                          	</tr>
-                		</table>
+		                   		</div>
+		                	</div>
+		                    <div class="col-md-5">
+		                    	<div class="form-group">
+			                        <label class="bmd-label-floating">Criteria</label>
+			                        <input name="criteria" type="text" class="form-control">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row">
+			                <div class="col-md-5">
+			                    <div class="form-group">
+				                    <label class="bmd-label-floating">From Date</label>
+				                    <input name="fromDate" type="date" class="form-control">
+		                   		</div>
+		                	</div>
+		                    <div class="col-md-5">
+		                    	<div class="form-group">
+			                        <label class="bmd-label-floating">To Date</label>
+			                        <input name="toDate" type="date" class="form-control">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row">
+			                <div class="col-md-4">
+			                    <div class="form-group" >
+				                    <label class="bmd-label-floating">From </label>
+				                    <input name="fromPlace" type="text" class="form-control">
+		                   		</div>
+		                	</div>
+		                	 <div class="col-md-1">
+		                	 	 <a class='plusButton' onclick="addFromRow()"> <i class="material-icons">add</i></a>
+		                	</div>
+		                	<div class="col-md-auto" id="fromTd"></div>
+		                    <div class="col-md-4">
+		                    	<div class="form-group">
+			                      <label class="bmd-label-floating">To </label>
+				                  <input name="toPlace" type="text" class="form-control">
+		                        </div>
+		                    </div>
+		                     <div class="col-md-1">
+			                    <a class='plusButton' onclick="addToRow()"> <i class="material-icons">add</i></a>
+		                	</div>
+		                </div>
                         <figure class="tabBlock">
 							<ul class="tabBlock-tabs">
 							  <li class="tabBlock-tab is-active">PickUp</li>

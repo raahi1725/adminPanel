@@ -11,20 +11,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tour_planner_branch")
-public class TourPlannerBranchModel {
-	
-	private Integer tourPlannerBranchId;
-	private TourPlannerMasterModel tourPlannerMasterId;
-	private String branchName;
-	private String city;
-	private String state;
-	private String country;
-	private Integer postalCode;
-	private Date registeredDate;
+@Table(name = "tour_planner_master")
+public class TourPlannerMasterModel {
+
+	private Integer tourPlannerMasterId;
+	private String tourPlannerName;
+	private String website;
+	private String logoImageFileName;
+	private String logoImageFilePath;
+	private Date registeredDate; 
 	private Date startDate;
 	private Date endDate;
-	private TourPlannerStaffModel primaryUserId;
 	private Date cDate;
 	private TourPlannerStaffModel createdBy;
 	private String isDel;
@@ -39,71 +36,46 @@ public class TourPlannerBranchModel {
 	private String ipAdress;
 	
 	@Id
-	@Column(name = "tourPlannerBranchId")
-	public Integer getTourPlannerBranchId() {
-		return tourPlannerBranchId;
-	}
-	public void setTourPlannerBranchId(Integer tourPlannerBranchId) {
-		this.tourPlannerBranchId = tourPlannerBranchId;
-	}
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "tourPlannerId")
-	public TourPlannerMasterModel getTourPlannerMasterId() {
+	@Column(name = "tourPlannerMasterId")
+	public Integer getTourPlannerMasterId() {
 		return tourPlannerMasterId;
 	}
-	public void setTourPlannerMasterId(TourPlannerMasterModel tourPlannerMasterId) {
+	public void setTourPlannerMasterId(Integer tourPlannerMasterId) {
 		this.tourPlannerMasterId = tourPlannerMasterId;
 	}
 	
-	@Column(name = "branchName")
-	public String getBranchName() {
-		return branchName;
+	@Column(name = "tourPlannerName")
+	public String getTourPlannerName() {
+		return tourPlannerName;
 	}
-	public void setBranchName(String branchName) {
-		this.branchName = branchName;
-	}
-	
-	@Column(name = "city")
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
+	public void setTourPlannerName(String tourPlannerName) {
+		this.tourPlannerName = tourPlannerName;
 	}
 	
-	@Column(name = "state")
-	public String getState() {
-		return state;
+	@Column(name = "website")
+	public String getWebsite() {
+		return website;
 	}
-	public void setState(String state) {
-		this.state = state;
-	}
-	
-	@Column(name = "country")
-	public String getCountry() {
-		return country;
-	}
-	public void setCountry(String country) {
-		this.country = country;
+	public void setWebsite(String website) {
+		this.website = website;
 	}
 	
-	@Column(name = "postalCode")
-	public Integer getPostalCode() {
-		return postalCode;
+	@Column(name = "logoImageFileName")
+	public String getLogoImageFileName() {
+		return logoImageFileName;
 	}
-	public void setPostalCode(Integer postalCode) {
-		this.postalCode = postalCode;
+	public void setLogoImageFileName(String logoImageFileName) {
+		this.logoImageFileName = logoImageFileName;
 	}
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "tourPlannerStaffId")
-	public TourPlannerStaffModel getPrimaryUserId() {
-		return primaryUserId;
+	@Column(name = "logoImageFilePath")
+	public String getLogoImageFilePath() {
+		return logoImageFilePath;
 	}
-	public void setPrimaryUserId(TourPlannerStaffModel primaryUserId) {
-		this.primaryUserId = primaryUserId;
+	public void setLogoImageFilePath(String logoImageFilePath) {
+		this.logoImageFilePath = logoImageFilePath;
 	}
+	
 	@Column(name = "registeredDate")
 	public Date getRegisteredDate() {
 		return registeredDate;
@@ -228,7 +200,4 @@ public class TourPlannerBranchModel {
 	public void setIpAdress(String ipAdress) {
 		this.ipAdress = ipAdress;
 	}
-
-	
-
 }

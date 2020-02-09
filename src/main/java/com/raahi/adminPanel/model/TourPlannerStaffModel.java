@@ -3,11 +3,15 @@ package com.raahi.adminPanel.model;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "tour_planner_staff")
 public class TourPlannerStaffModel {
 
 	private Integer tourPlannerStaffId;
@@ -332,6 +336,4 @@ public class TourPlannerStaffModel {
 	public void setIpAdress(String ipAdress) {
 		this.ipAdress = ipAdress;
 	}
-	
-	
 }

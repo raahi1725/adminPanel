@@ -49,7 +49,7 @@ public class PackageMasterModel {
 	}
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "packageId")
+	@JoinColumn(name = "tourPlannerBranchId")
 	public TourPlannerBranchModel getTourPlannerBranchId() {
 		return tourPlannerBranchId;
 	}
