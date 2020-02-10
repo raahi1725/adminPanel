@@ -5,12 +5,10 @@
   <script src="./resources/js/adminJs/packages.js"></script>
 </head>
 <body class="">
-  <div class="wrapper ">
-    <div class="main-panel">
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-auto">
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">Add Packages</h4>
@@ -155,7 +153,7 @@
 							  	<a class='plusButton' onclick="addPickupTables()"><i class="material-icons">add</i></a>
 							  </div>
 							  <div class="tabBlock-pane">
-							  	<table class="tabTable" id="travelBaseTable" style="width: 100%;">
+							  	<table class="tabTable" id="travelBaseTable" >
 							  		<tr>
 							  			<td>
 							  				<label class="bmd-label-floating">Mode</label>
@@ -206,7 +204,7 @@
 							  	<a class='plusButton' onclick="addTravelTables()"> <i class="material-icons">add</i></a>
 							  	</div>
 							    <div class="tabBlock-pane">
-								    <table class="tabTable"  style="width: 100%;">
+								    <table class="tabTable">
 								  		<tr>
 								  			<td>
 								  				<label class="bmd-label-floating">Name</label>
@@ -249,9 +247,8 @@
 							  		<a class='plusButton' onclick="addHotelTables()"> <i class="material-icons">add</i></a>
 							 	</div>
 							 	 <div class="tabBlock-pane">
-								    <table class="tabTable"  style="width: 100%;">
+								    <table class="tabTable" >
 								  		<tr>
-								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
 								  				<label class="bmd-label-floating">Cuisine</label>
 								  				<input type="text" class="form-control">
@@ -283,11 +280,12 @@
 		                         			</td>
 								  		</tr>
 								  	</table>
+								  	<div id="foodTable"></div>
+							  		<a class='plusButton' onclick="addFoodTables()"> <i class="material-icons">add</i></a>
 							 	</div>
 							 	<div class="tabBlock-pane">
-								    <table class="tabTable"  style="width: 100%;">
+								    <table class="tabTable">
 								  		<tr>
-								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
 								  				<label class="bmd-label-floating">Activity/Sight</label>
 								  				<input type="text" class="form-control">
@@ -323,11 +321,12 @@
 		                         			</td>
 								  		</tr>
 								  	</table>
+								  	<div id="sightTable"></div>
+							  		<a class='plusButton' onclick="addSightTables()"> <i class="material-icons">add</i></a>
 							 	</div>
 							 	<div class="tabBlock-pane">
-								  	<table class="tabTable"  style="width: 100%;">
+								  	<table class="tabTable" >
 								  		<tr>
-								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
 								  				<label class="bmd-label-floating">Mode</label>
 								  				<select class="form-control">
@@ -363,11 +362,12 @@
 								  			</td>
 								  		</tr>
 								  	</table>
+								  	<div id="dropTable"></div>
+							  		<a class='plusButton' onclick="addDropTables()"> <i class="material-icons">add</i></a>
 							  </div>
 							  <div class="tabBlock-pane">
-								  	<table class="tabTable"  style="width: 100%;">
+								  	<table class="tabTable" >
 								  		<tr>
-								  			<td><span class='plusButton'> <i class="material-icons">add</i></span></td>
 								  			<td>
 								  				<label class="bmd-label-floating">Benifit</label>
 								  				<input type="text" class="form-control">
@@ -378,6 +378,8 @@
 								  			</td>
 								  		</tr>
 								  	</table>
+								  	<div id="sightTable"></div>
+							  		<a class='plusButton' onclick="addSightTables()"> <i class="material-icons">add</i></a>
 							  </div>
 							</div>
 						</figure>
@@ -409,8 +411,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
   <script>
   </script>
 </body>

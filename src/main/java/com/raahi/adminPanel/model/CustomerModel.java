@@ -67,10 +67,10 @@ public class CustomerModel implements java.io.Serializable {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "tourPlannerBranchId")
-	public TourPlannerBranchModel setTourPlannerBranchModel() {
+	public TourPlannerBranchModel getTourPlannerBranchModel() {
 		return tourPlannerBranchModel;
 	}
-	public void setTourPlannerBranchId(TourPlannerBranchModel tourPlannerBranchModel) {
+	public void setTourPlannerBranchModel(TourPlannerBranchModel tourPlannerBranchModel) {
 		this.tourPlannerBranchModel = tourPlannerBranchModel;
 	}
 	

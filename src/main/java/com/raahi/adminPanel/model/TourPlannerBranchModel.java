@@ -228,7 +228,6 @@ public class TourPlannerBranchModel {
 	public void setIpAdress(String ipAdress) {
 		this.ipAdress = ipAdress;
 	}
-
+}
 	
 
-}

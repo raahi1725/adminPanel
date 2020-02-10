@@ -1,4 +1,4 @@
-/*package com.raahi.adminPanel.model;
+package com.raahi.adminPanel.model;
 
 import java.util.Date;
 
@@ -43,7 +43,4 @@ public class PackageStaffDetails {
 	private Date activeDate;
 	private String ipAdress;
 	
-	
-	
 }
-*/

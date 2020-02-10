@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="./resources/css//select2.min.css">
 </head>
 <body class="">
-  <div class="wrapper ">
-    <div class="main-panel">
       <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -228,11 +226,30 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="../resources/img/faces/marc.jpg" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <div class="search">
+				      <input type="text" class="searchTerm" placeholder="Customer Name, Reg No, Email ">
+				      <button type="submit" class="searchButton">
+				        <i class="fa fa-search"></i>
+				     </button>
+   				  </div>
+   				  <br/>
+                  <h4 class="card-title">Customer Details </h4>
+                  <p class="card-description"> Name : <br/> Reg No : <br/> Contact No :
+                  </p>
+                  <a href="#pablo" class="btn btn-primary btn-round">Edit</a>
+                </div>
+              </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </body>
 
 </html>
