@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Raahi Dashboard</title>
+	<title>Raahi </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -62,20 +62,18 @@
 				</div>
 			</div>
 		</nav>
-
-		<section id="home" class="video-hero" style="height: 700px; background-image: url(resources/img/login/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+		<section id="home" class="video-hero" style="height: 540px;  background-size:cover; background-image: url(resources/img/login/cover_img_1.jpg);background-position: center center;background-attachment:fixed;" data-section="home">
 		<div class="overlay"></div>
-			<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=vqqt5p0q-eU',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a> 
 			<div class="display-t text-center">
 				<div class="display-tc">
 					<div class="container">
 						<div class="col-md-12 col-md-offset-0">
-							<div class="animate-box">
+							<div class="animate-box" style="margin-top:150px;">
 								<h2>Start Your Free Trial Today</h2>
-								<input type="text" id="tourPlannerName" required="required">
-								<input type="email" id="tourPlannerEmail" required="required">
-								<input type="number" id="tourPlannerContact" required="required">
-								<input type="password" id="tourPlannerPassword" required="required">
+								<input type="text" id="tourPlannerName" required="required" placeholder="Organization Name">
+								<input type="email" id="tourPlannerEmail" required="required" placeholder="Email">
+								<input type="text" id="tourPlannerContact" required="required" placeholder="Contact No">
+								<input type="password" id="tourPlannerPassword" required="required" placeholder="Password">
 								<p><a href="#" class="btn btn-primary btn-lg btn-custom">Sign Up</a></p>
 							</div>
 						</div>
@@ -105,7 +103,7 @@
 						<div class="item">
 							<div class="col-md-8 col-md-offset-2">
 								<div class="featured-entry">
-									<img class="img-responsive" src="resources/img/login/dashboard_full_3.jpg" alt="">
+									<img class="img-responsive" src="resources/img/login/dashboard_full_1.jpg" alt="">
 								</div>
 							</div>
 						</div>
@@ -123,8 +121,8 @@
 								<i class="icon-browser"></i>
 							</span>
 							<div class="desc">
-								<h3>Create your own template</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<h3>Easy To Use</h3>
+								<p>Add, edit & view your data on simple clicks. Upload your excels and directly connect to database </p>
 							</div>
 						</div>
 					</div>
@@ -134,8 +132,8 @@
 								<i class="icon-download"></i>
 							</span>
 							<div class="desc">
-								<h3>Automatic Backup Data</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<h3>Secured</h3>
+								<p>Data is secured with proper auhthentication. </p>
 							</div>
 						</div>
 					</div>
@@ -145,8 +143,8 @@
 								<i class="icon-layers"></i>
 							</span>
 							<div class="desc">
-								<h3>Page Builder</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<h3>Customized</h3>
+								<p>User Needs are our priority</p>
 							</div>
 						</div>
 					</div>

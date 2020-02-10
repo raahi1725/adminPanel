@@ -283,16 +283,16 @@ h1, h2, h3, h4, h5, h6, figure {
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.95;
+    opacity: 0.8;
     background: #499bea;
-    background: -moz-linear-gradient(-45deg, #499bea 0%, #798eea 100%);
+    background: -moz-linear-gradient(60deg, #0ea6b9, #00acc1);;
     background: -webkit-gradient(left top, right bottom, color-stop(0%, #499bea), color-stop(100%, #798eea));
-    background: -webkit-linear-gradient(-45deg, #499bea 0%, #798eea 100%);
-    background: -o-linear-gradient(-45deg, #499bea 0%, #798eea 100%);
-    background: -ms-linear-gradient(-45deg, #499bea 0%, #798eea 100%);
-    background: -webkit-linear-gradient(315deg, #499bea 0%, #798eea 100%);
-    background: -o-linear-gradient(315deg, #499bea 0%, #798eea 100%);
-    background: linear-gradient(135deg, #499bea 0%, #798eea 100%);
+    background: -webkit-linear-gradient(60deg, #4cbad5, #1d93a2);
+    background: -o-linear-gradient(60deg, #4cbad5, #1d93a2);
+    background: -ms-linear-gradient(60deg, #4cbad5, #1d93a2);
+    background: -webkit-linear-gradient(60deg, #4cbad5, #1d93a2);
+    background: -o-linear-gradient(60deg, #4cbad5, #1d93a2);
+    background: linear-gradient(60deg, #4cbad5, #1d93a2);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#798eea', GradientType=1 );
     z-index: 1; }
   .video-hero .display-t {
@@ -307,8 +307,7 @@ h1, h2, h3, h4, h5, h6, figure {
     .video-hero .display-t.display-t2 {
       height: 500px; }
   .video-hero .display-tc {
-    display: table-cell;
-    vertical-align: middle; }
+    }
     .video-hero .display-tc .holder {
       color: #fff;
       font-family: "Poppins", Arial, sans-serif;
@@ -326,6 +325,7 @@ h1, h2, h3, h4, h5, h6, figure {
         .video-hero .display-tc h2 {
           font-size: 34px; } }
     .video-hero .display-tc p {
+      margin-top:30px;
       font-family: "Nunito", Arial, sans-serif;
       color: #fff;
       font-weight: 200;
@@ -1021,8 +1021,6 @@ article {
     box-shadow: none;
     border: 1px solid #e6e6e6; }
 
-input[type="text"] {
-  height: 50px; }
 
 .form-group {
   margin-bottom: 30px; }
@@ -1334,10 +1332,6 @@ input[type="text"] {
   margin-bottom: 4px;
   font-size: 14px;
   font-weight: 400;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  border-radius: 30px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
