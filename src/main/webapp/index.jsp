@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="./resources/css/login/owl.carousel.min.css">
 	<link rel="stylesheet" href="./resources/css/login/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./resources/css/login/style.css">
+	<link rel="stylesheet" href="./resources/css/login/model.css">
 	<script src="./resources/js/login/modernizr-2.6.2.min.js"></script>
 
 	</head>
@@ -47,18 +48,14 @@
 						<div class="col-md-10 text-right menu-1">
 							<ul>
 								<li class="active"><a href="index.html">Home</a></li>
-								<li class="has-dropdown">
-									<a href="work.html">Works</a>
-									<ul class="dropdown">
-										<li><a href="work-grid.html">Works grid with text</a></li>
-										<li><a href="work-grid-without-text.html">Works grid w/o text</a></li>
-									</ul>
-								</li>
-								<li><a href="services.html">Services</a></li>
+								<li><a href="services.html">About Us</a></li>
 								<li><a href="blog.html">Blog</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="shop.html">Shop</a></li>
+								<li><a href="about.html">Services</a></li>
+								<li><a href="shop.html">Pricing</a></li>
 								<li><a href="contact.html">Contact</a></li>
+								<li><a href="contact.html" class="btn btn-primary btn-lg btn-custom" data-toggle="modal" data-target="#modalLRForm">
+									Login/Signup</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -74,9 +71,12 @@
 					<div class="container">
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box">
-								<h2>Take on your biggest projects and goals</h2>
-								<p>with Unapp's high quality features</p>
-								<p><a href="gallery.html" class="btn btn-primary btn-lg btn-custom">Get premium</a></p>
+								<h2>Start Your Free Trial Today</h2>
+								<input type="text" id="tourPlannerName" required="required">
+								<input type="email" id="tourPlannerEmail" required="required">
+								<input type="number" id="tourPlannerContact" required="required">
+								<input type="password" id="tourPlannerPassword" required="required">
+								<p><a href="#" class="btn btn-primary btn-lg btn-custom">Sign Up</a></p>
 							</div>
 						</div>
 					</div>
@@ -473,26 +473,88 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
 	
-	<!-- jQuery -->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-c-tabs">
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 	<script src="./resources/js/login/jquery.min.js"></script>
-	<!-- jQuery Easing -->
 	<script src="./resources/js/login/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
 	<script src="./resources/js/login/bootstrap.min.js"></script>
-	<!-- Waypoints -->
 	<script src="./resources/js/login/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
 	<script src="./resources/js/login/jquery.stellar.min.js"></script>
-	<!-- YTPlayer -->
 	<script src="./resources/js/login/jquery.mb.YTPlayer.min.js"></script>
-	<!-- Owl carousel -->
 	<script src="./resources/js/login/owl.carousel.min.js"></script>
-	<!-- Magnific Popup -->
 	<script src="./resources/js/login/jquery.magnific-popup.min.js"></script>
 	<script src="./resources/js/login/magnific-popup-options.js"></script>
-	<!-- Counters -->
 	<script src="./resources/js/login/jquery.countTo.js"></script>
-	<!-- Main -->
 	<script src="./resources/js/login/main.js"></script>
 
 	</body>
