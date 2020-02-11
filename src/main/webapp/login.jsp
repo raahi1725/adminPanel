@@ -31,6 +31,7 @@
 	<link rel="stylesheet" href="./resources/css/login/style.css">
 	<link rel="stylesheet" href="./resources/css/login/model.css">
 	<script src="./resources/js/login/modernizr-2.6.2.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	</head>
 	<body>
@@ -491,14 +492,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
               <form method="POST" action="/login" class="form-signin">
 	              <div class="md-form form-sm mb-5">
 	                <i class="fas fa-envelope prefix"></i>
-	                <input name="username" type="text" id="modalLRInput10" class="form-control form-control-sm validate">
-	                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+	                <input name="username" type="text" id="modalLRInput10" class="form-control form-control-sm validate" placeholder="Mobile No">
 	              </div>
 	              <div class="md-form form-sm mb-4">
 	                <i class="fas fa-lock prefix"></i>
-	                <input name="password" type="password" id="modalLRInput11" class="form-control form-control-sm validate">
-	                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
-	              </div>
+	                <input name="password" type="password" id="modalLRInput11" class="form-control form-control-sm validate" placeholder="Password">
+ 	              </div>
 	              <div class="text-center mt-2">
 	                <button class="btn btn-info" type="submit">Log in <i class="fas fa-sign-in ml-1"></i></button>
 	              </div>
