@@ -22,6 +22,7 @@ public class TourPlannerBranchModel {
 	private String country;
 	private Integer postalCode;
 	private Date registeredDate;
+	private String headBranch;
 	private Date startDate;
 	private Date endDate;
 	private TourPlannerStaffModel primaryUserId;
@@ -37,6 +38,7 @@ public class TourPlannerBranchModel {
 	private TourPlannerStaffModel activatedBy;
 	private Date activeDate;
 	private String ipAdress;
+	
 	
 	@Id
 	@Column(name = "tourPlannerBranchId")
@@ -227,6 +229,14 @@ public class TourPlannerBranchModel {
 	}
 	public void setIpAdress(String ipAdress) {
 		this.ipAdress = ipAdress;
+	}
+	
+	@Column(name = "headBranch")
+	public String getHeadBranch() {
+		return headBranch;
+	}
+	public void setHeadBranch(String headBranch) {
+		this.headBranch = headBranch;
 	}
 }
 	

@@ -53,7 +53,7 @@
 								<li><a href="about.html">Services</a></li>
 								<li><a href="shop.html">Pricing</a></li>
 								<li><a href="contact.html">Contact</a></li>
-								<li><a href="contact.html" class="btn btn-primary btn-lg btn-custom" data-toggle="modal" data-target="#modalLRForm">
+								<li><a class="btn btn-primary btn-lg btn-custom" data-toggle="modal" data-target="#modalLRForm">
 									Login/Signup</a>
 								</li>
 							</ul>
@@ -488,20 +488,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <div class="tab-content">
           <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
             <div class="modal-body mb-1">
-              <div class="md-form form-sm mb-5">
-                <i class="fas fa-envelope prefix"></i>
-                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
-              </div>
-
-              <div class="md-form form-sm mb-4">
-                <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
-              </div>
-              <div class="text-center mt-2">
-                <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
-              </div>
+              <form method="POST" action="/login" class="form-signin">
+	              <div class="md-form form-sm mb-5">
+	                <i class="fas fa-envelope prefix"></i>
+	                <input name="username" type="text" id="modalLRInput10" class="form-control form-control-sm validate">
+	                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+	              </div>
+	              <div class="md-form form-sm mb-4">
+	                <i class="fas fa-lock prefix"></i>
+	                <input name="password" type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+	                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+	              </div>
+	              <div class="text-center mt-2">
+	                <button class="btn btn-info" type="submit">Log in <i class="fas fa-sign-in ml-1"></i></button>
+	              </div>
+	          </form>
             </div>
             <div class="modal-footer">
               <div class="options text-center text-md-right mt-1">

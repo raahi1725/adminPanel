@@ -104,15 +104,22 @@
 		    <groupId>org.apache.httpcomponents</groupId>
 		    <artifactId>httpmime</artifactId>
 		</dependency>
+		
 		<dependency>
 		    <groupId>com.google.gcm</groupId>
 		    <artifactId>gcm-server</artifactId>
 		    <version>1.0.0</version>
 		</dependency>
+		
 		<dependency>
             <groupId>org.apache.tiles</groupId>
             <artifactId>tiles-jsp</artifactId>
 			<version>3.0.5</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
     </dependencies>
