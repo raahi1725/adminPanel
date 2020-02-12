@@ -28,7 +28,7 @@
 .form-control {
     height: 40px;
     display : inline;
-    width :80%;
+    width :90%;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
@@ -51,6 +51,15 @@
     border: 1px solid #ddd;
     border-bottom-color: transparent;
 }
+
+.logo {
+  padding: 5px 0px;
+  margin: 0;
+  position: relative;
+  z-index: 4;
+  height:100px;
+}
+
 
 .icon {
   font-size: 20px;
