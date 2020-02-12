@@ -30,8 +30,13 @@
 	<link rel="stylesheet" href="./resources/css/login/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./resources/css/login/style.css">
 	<link rel="stylesheet" href="./resources/css/login/model.css">
+	<link rel="stylesheet" href="./resources/css//select2.min.css">
+	<script src="./resources/js/adminJs/customer.js"></script>
+  	<script src="./resources/js/commonJs/countrystatecity.js"></script>
+  	<script src="./resources/js/commonJs/select2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
 	<script src="./resources/js/login/modernizr-2.6.2.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 
 	</head>
 	<body>
@@ -478,12 +483,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       <div class="modal-c-tabs">
         <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
-              Login</a>
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>&nbsp;&nbsp;&nbsp;Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
-              Register</a>
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>&nbsp;&nbsp;&nbsp;Register</a>
           </li>
         </ul>
         <div class="tab-content">
@@ -491,12 +494,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <div class="modal-body mb-1">
               <form method="POST" action="/login" class="form-signin">
 	              <div class="md-form form-sm mb-5">
-	                <i class="fas fa-envelope prefix"></i>
-	                <input name="username" type="text" id="modalLRInput10" class="form-control form-control-sm validate" placeholder="Mobile No">
+	                <span class="icon"><i class="fas fa-envelope prefix"></i></span>
+	                <input name="username" type="text" class="form-control" placeholder="Mobile No">
 	              </div>
 	              <div class="md-form form-sm mb-4">
-	                <i class="fas fa-lock prefix"></i>
-	                <input name="password" type="password" id="modalLRInput11" class="form-control form-control-sm validate" placeholder="Password">
+	                <span class="icon"><i class="fas fa-lock prefix"></i></span>
+	                <input name="password" type="password" class="form-control" placeholder="Password">
  	              </div>
 	              <div class="text-center mt-2">
 	                <button class="btn btn-info" type="submit">Log in <i class="fas fa-sign-in ml-1"></i></button>
@@ -509,27 +512,113 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
               </div>
               <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
             </div>
-
           </div>
+          
           <div class="tab-pane fade" id="panel8" role="tabpanel">
             <div class="modal-body">
-              <div class="md-form form-sm mb-5">
+            	<div class="row">
+	                <div class="col-md-4">
+	               		<input name="orgName" type="text" class="form-control" placeholder="Organization Name">
+	               	</div>
+	               	<div class="col-md-4">
+	               		<input name="website" type="text" class="form-control" placeholder="Website Address">
+	               	</div>
+	               	<div class="col-md-4">
+	               		<input name="orgName" type="file" class="form-control" placeholder="Logo file">
+	               	</div>
+	            </div>
+	            <div class="row">
+	                <div class="col-md-4">
+	               		<input name="headBranchName" type="text" class="form-control" placeholder="Organization Name">
+	               	</div>
+	               	<div class="col-md-4">
+	               		<input name="contact No" type="text" class="form-control" placeholder="Code - Contact No (comma seperated for multiple)">
+	               	</div>
+	               	<div class="col-md-4">
+	               		<input name="email" type="file" class="form-control" placeholder="Emails (Seperated By Commas)">
+	               	</div>
+	            </div>
+	            <div class="row">
+	               	<div class="col-md-3">
+                        <select name="country" id="countryId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
+                        	<option value="" class="form-control-select-default">Select Country</option>
+                        </select>
+	                   </div>
+                  	<div class="col-md-3">
+                       <select name="state" id="stateId" class="form-control-select js-example-basic-multiple states">
+                       	<option value="" class="form-control-select-default">Select State</option>
+                       </select>
+                   </div>
+                   <div class="col-md-3">
+                       <select name="city" id="cityId" class="form-control-select js-example-basic-multiple cities">
+                       	<option value="" class="form-control-select-default">Select City</option>
+                       </select>
+                   </div>
+               </div>
+               <div class="row">
+               	 <div class="col-md-6">
+                      <label class="bmd-label-floating">Address</label>
+                      <textarea name="address"  class="form-control"></textarea>
+                 </div>
+                 <div class="col-md-3">
+	                   <label class="bmd-label-floating">PinCode</label>
+	                   <input name="pinCode"  type="text" class="form-control">
+                 </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                    <span class="icon"><i class="fas fa-envelope prefix"></i></span>
+              			<input name="firstName" type="text" class="form-control" placeholder="First Name">
+               	</div>
+               	<div class="col-md-4">
+	                <span class="icon"> <i class="fas fa-envelope prefix"></i></span>
+               		<input name="lastName" type="text" class="form-control" placeholder="Last Name">
+               	</div>
+               	<div class="col-md-4">
+                    <select name="gender" class="form-control-select"
+                      		 onchange="this.className=this.options[this.selectedIndex].className">
+                    		<option value="0" class="form-control-select-default">Gender</option>
+         					<option value="MALE" class="form-control-select-option">MALE</option>
+         					<option value="FEMALE" class="form-control-select-option">FEMALE</option>
+         					<option value="OTHER" class="form-control-select-option">OTHER</option>
+               		</select>
+               	</div>
+               	<div class="row">
+	                <div class="col-md-4">
+	               		<input name="email" type="text" class="form-control" placeholder="User Email">
+	               	</div>
+	               	<div class="col-md-4">
+	               		<input name="MobileNo" type="text" class="form-control" placeholder="User Contact ">
+	               	</div>
+	               	<div class="col-md-4">
+	               		<input name="password" type="password" class="form-control" placeholder="Password">
+	               	</div>
+	            </div>
+	            <div class="row">
+	                <div class="col-md-4">
+	               		<input name="email" type="text" class="form-control" placeholder="Forgot Question">
+	               	</div>
+	               	<div class="col-md-4">
+	               		<input name="MobileNo" type="text" class="form-control" placeholder="Forgot Answer ">
+	               	</div>
+	               	<div class="col-md-4">
+	               		<input name="password" type="password" class="form-control" placeholder="Password">
+	               	</div>
+	            </div>
+	          </div>
+              <!-- <div class="md-form form-sm mb-5">
                 <i class="fas fa-envelope prefix"></i>
                 <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
               </div>
-
               <div class="md-form form-sm mb-5">
                 <i class="fas fa-lock prefix"></i>
                 <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
               </div>
 
               <div class="md-form form-sm mb-4">
                 <i class="fas fa-lock prefix"></i>
                 <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
-              </div>
+              </div> -->
 
               <div class="text-center form-sm mt-2">
                 <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>

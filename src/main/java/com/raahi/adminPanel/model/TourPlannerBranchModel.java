@@ -21,6 +21,8 @@ public class TourPlannerBranchModel {
 	private String state;
 	private String country;
 	private Integer postalCode;
+	private String contactNo;
+	private String email;
 	private Date registeredDate;
 	private String headBranch;
 	private Date startDate;
@@ -96,6 +98,22 @@ public class TourPlannerBranchModel {
 	}
 	public void setPostalCode(Integer postalCode) {
 		this.postalCode = postalCode;
+	}
+	
+	@Column(name = "contactNo")
+	public String getContactNo() {
+		return contactNo;
+	}
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
+	}
+	
+	@Column(name = "email")
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	@ManyToOne(fetch = FetchType.LAZY)

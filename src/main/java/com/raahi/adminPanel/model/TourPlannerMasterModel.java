@@ -200,4 +200,5 @@ public class TourPlannerMasterModel {
 	public void setIpAdress(String ipAdress) {
 		this.ipAdress = ipAdress;
 	}
+	
 }

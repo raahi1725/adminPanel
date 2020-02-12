@@ -8,7 +8,7 @@
   
   <link href="/bootstrap.min.css" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="76x76" href="./resources/img/apple-icon.png">
- <link rel="icon" type="image/png" href="./resources/img/R.png"> 
+  <link rel="icon" type="image/png" href="./resources/img/R.png"> 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link href="./resources/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
