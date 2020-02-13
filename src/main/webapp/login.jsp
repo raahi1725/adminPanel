@@ -49,7 +49,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2">
-							<div id="colorlib-logo"><a href="index.html">Raahi</a></div>
+							<a href="#" class="simple-text logo-normal">
+         						<img src="./resources/img/logo.png" class="logo"></img>
+         					</a>
 						</div>
 						<div class="col-md-10 text-right menu-1">
 							<ul>
@@ -489,7 +491,7 @@
     <div class="modal-content">
       <div class="modal-c-tabs">
         <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>&nbsp;&nbsp;&nbsp;Login</a>
           </li>
           <li class="nav-item">
@@ -497,7 +499,7 @@
           </li>
         </ul>
         <div class="tab-content">
-          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+          <div class="tab-pane fade in  active" id="panel7" role="tabpanel">
             <div class="modal-body mb-1">
               <form method="POST" action="/login" class="form-signin">
 	              <div class="md-form form-sm mb-5">
