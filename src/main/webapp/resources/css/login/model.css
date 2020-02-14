@@ -2,9 +2,6 @@
 	margin-bottom:25px;
 }
 
-.nav-item {
-	width: 50%;
-}
 
 .nav {
 	display: block;
@@ -61,9 +58,6 @@
   float: left;
   position: relative;
   padding-right: 15px;
-}
-.modal-content {
-	width:550px;
 }
 
 .nav-tabs>li>a {
@@ -185,7 +179,6 @@ i {
 }
 .wizard-form .wizard-header {
 	text-align: center;
-	padding:  40px 0 20px;
 }
 .wizard-form .wizard-header .heading {
 	color: #333;
@@ -199,9 +192,6 @@ i {
 	font-size: 18px;
 	font-weight: 400;
 	margin:  0;
-}
-.form-register .steps {
-	margin-bottom: 33px;
 }
 .form-register .steps ul {
     display: flex;
@@ -288,7 +278,7 @@ i {
 .form-register .steps li.done a .step-icon,
 .form-register .steps li.done a:active .step-icon {
     background-image: -moz-linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
-    background-image: -webkit-linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
+    background-image:-webkit-linear-gradient( 136deg, rgb(17, 202, 216) 0%, rgb(64, 233, 231) 50%, rgb(245, 245, 245) 100%);
     background-image: -ms-linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 	-o-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -550,7 +540,6 @@ i {
 .actions ul li a {
 	color: #fff;
 	text-decoration: none;
-    padding: 13px 34px;
 }
 
 /* Responsive */
