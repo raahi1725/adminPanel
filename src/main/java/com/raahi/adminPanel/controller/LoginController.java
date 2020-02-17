@@ -1,9 +1,15 @@
 package com.raahi.adminPanel.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.raahi.adminPanel.Service.LoginService;
+import com.raahi.adminPanel.model.TourPlannerMasterModel;
 
 @Controller
 public class LoginController {
@@ -14,6 +20,9 @@ public class LoginController {
     	model.setViewName("index.jsp");
     	return model;
     }*/
+	
+	@Autowired
+	LoginService loginService;
 	
 	@GetMapping(value = "/login")
     public String login(Model model, String error, String logout) {
@@ -32,7 +41,8 @@ public class LoginController {
     }
 	
 	@PostMapping(value = "/tourPlanner")
-    public boolean addTourPlanner(@RequestBody("TourPlannerMasterModel") TourPlannerMasterModel) {
-    	return "register.jsp";
+	@ResponseBody
+    public boolean addTourPlanner(@RequestBody TourPlannerMasterModel tourPlannerMasterModel) {
+    	return loginService.addTourPlanner(tourPlannerMasterModel);
     }
 }

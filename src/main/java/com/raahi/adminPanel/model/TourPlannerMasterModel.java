@@ -1,5 +1,6 @@
 package com.raahi.adminPanel.model;
 
+import java.security.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -22,7 +23,7 @@ public class TourPlannerMasterModel {
 	private Date registeredDate; 
 	private Date startDate;
 	private Date endDate;
-	private Date cDate;
+	private Timestamp cDate;
 	private TourPlannerStaffModel createdBy;
 	private String isDel;
 	private TourPlannerStaffModel deletedBy;
@@ -100,11 +101,11 @@ public class TourPlannerMasterModel {
 		this.endDate = endDate;
 	}
 
-	@Column(name = "cDate")
-	public Date getcDate() {
+	@Column(name = "cDate",nullable = true, updatable= false,columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	public Timestamp getcDate() {
 		return cDate;
 	}
-	public void setcDate(Date cDate) {
+	public void setcDate(Timestamp cDate) {
 		this.cDate = cDate;
 	}
 	
