@@ -34,6 +34,8 @@
 	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
 	<link rel="stylesheet" type="text/css" href="css/roboto-font.css">
 	<link rel="stylesheet" type="text/css" href="./resources/css/login/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 	<script src="./resources/js/adminJs/customer.js"></script>
   	<script src="./resources/js/commonJs/countrystatecity.js"></script>
   	<script src="./resources/js/commonJs/select2.min.js"></script>
@@ -143,12 +145,12 @@
 					<div class="col-md-4 text-center animate-box">
 						<div class="services">
 							<span class="icon">
-								<i class="icon-browser"></i>
+								 <i class="material-icons">account_box</i>
 							</span>
 							<div class="desc">
-								<h3>A Faster way to add data</h3>
+								<h3>A Faster way to manage data</h3>
 								<p>Save your time and do more with your data.
-									Fill in the data through our UI or simply upload your excels and get the job done
+									Now get rid of excels and add or edit your data through one panel.
 								</p>
 							</div>
 						</div>
@@ -156,12 +158,13 @@
 					<div class="col-md-4 text-center animate-box">
 						<div class="services">
 							<span class="icon">
-								<i class="icon-download"></i>
+								<i class="material-icons">dashboard</i>
 							</span>
 							<div class="desc">
 								<h3>A easier way to access data</h3>
-								<p>Replace your excels and documents with Raahi and 
-									view all your customer staff and tours data at one place. 
+								<p>End your search here. 
+								   Anything you need to manage tour is available on Raahi. 
+								   Just hit the right search button.
 								</p>
 							</div>
 						</div>
@@ -169,7 +172,7 @@
 					<div class="col-md-4 text-center animate-box">
 						<div class="services">
 							<span class="icon">
-								<i class="icon-layers"></i>
+								<i class="material-icons">emoji_people</i>
 							</span>
 							<div class="desc">
 								<h3>A smarter way to do your marketing</h3>
@@ -181,6 +184,50 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="colorlib-pricing">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2>Pricing</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 text-center animate-box">
+						<div class="pricing">
+							<h2 class="pricing-heading">Starter</h2>
+							<div class="price"><sup class="currency">Free</sup><small>1 month trial</small></div>
+							<p>Use the panel for one month and check it for yourself. Buy when you are satisfied with the services.</p>
+							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="pricing">
+							<h2 class="pricing-heading">Basic</h2>
+							<div class="price"><sup class="currency">Rs</sup>7K<small>per year</small></div>
+							<p>Pay only for the basic services. Manage your data and get things done at such low cost</p>
+							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="pricing">
+							<h2 class="pricing-heading">Pro</h2>
+							<div class="price"><sup class="currency">Rs</sup>15K<small>per year</small></div>
+							<p>The Pro plan will take your business to another level. Get Customization done one the go. </p>
+							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
+						</div>
+					</div>
+					<!-- <div class="col-md-3 text-center animate-box">
+						<div class="pricing">
+							<h2 class="pricing-heading">Unlimited</h2>
+							<div class="price"><sup class="currency">$</sup>140<small>per month</small></div>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
 
 		<div class="colorlib-intro">
 			<div class="container">
@@ -188,13 +235,8 @@
 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
 						<h2>Do more with the customization possible on your device</h2>
 						<p>Your inputs will help us make your management easy. 
-						   Let us know what you will like to have in the software.Click to send your feedback
-						   or contact us!</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 animate-box">
-						<span class="play"><a href="https://vimeo.com/channels/staffpicks/93951774" class="pulse popup-vimeo"><i class="icon-play3"></i></a></span>
+						   Let us know what you will like to have in the software.<a> Click to send your feedback
+						   or contact us!</a></p>
 					</div>
 				</div>
 			</div>
@@ -210,19 +252,19 @@
 						<div class="desc">
 							<h2>Stay Organized instantly</h2>
 							<div class="features">
-								<span class="icon"><i class="icon-lightbulb"></i></span>
+								<span class="icon"><i class="material-icons">check</i></span>
 								<div class="f-desc">
 									<p>Papers make you disorganized and really put a bad impression on your customers</p>
 								</div>
 							</div>
 							<div class="features">
-								<span class="icon"><i class="icon-circle-compass"></i></span>
+								<span class="icon"><i class="material-icons">check</i></span>
 								<div class="f-desc">
 									<p>Carry less papers and more information</p>
 								</div>
 							</div>
 							<div class="features">
-								<span class="icon"><i class="icon-beaker"></i></span>
+								<span class="icon"><i class="material-icons">check</i></span>
 								<div class="f-desc">
 									<p> Manage everything under one app and decide what you want to show</p>
 								</div>
@@ -239,20 +281,20 @@
 						<div class="desc">
 							<h2>Never Take Risk With Your Data</h2>
 							<div class="features">
-								<span class="icon"><i class="icon-lightbulb"></i></span>
+								<span class="icon"><i class="material-icons">check</i></span>
 								<div class="f-desc">
 									<p>Avoid Last minute hustle because your customers dont want to loose
 									   their time, money and personal information</p>
 								</div>
 							</div>
 							<div class="features">
-								<span class="icon"><i class="icon-circle-compass"></i></span>
+								<span class="icon"><i class="material-icons">check</i></span>
 								<div class="f-desc">
 									<p>Avoid loss of any confidential information and assure them safe and memorable journey</p>
 								</div>
 							</div>
 							<div class="features">
-								<span class="icon"><i class="icon-beaker"></i></span>
+								<span class="icon"><i class="material-icons">check</i></span>
 								<div class="f-desc">
 									<p>Aware Customers are happy Customers</p>
 								</div>
@@ -364,51 +406,6 @@
 								</div>
 							</form>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="colorlib-pricing">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-						<h2>Pricing</h2>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 text-center animate-box">
-						<div class="pricing">
-							<h2 class="pricing-heading">Starter</h2>
-							<div class="price"><sup class="currency">$</sup>9<small>per month</small></div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
-						</div>
-					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="pricing">
-							<h2 class="pricing-heading">Basic</h2>
-							<div class="price"><sup class="currency">$</sup>27<small>per month</small></div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
-						</div>
-					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="pricing">
-							<h2 class="pricing-heading">Pro</h2>
-							<div class="price"><sup class="currency">$</sup>74<small>per month</small></div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
-						</div>
-					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="pricing">
-							<h2 class="pricing-heading">Unlimited</h2>
-							<div class="price"><sup class="currency">$</sup>140<small>per month</small></div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
 						</div>
 					</div>
 				</div>
@@ -540,6 +537,7 @@
           </div>
         </div>
       </div>
+     </div>
 </body>
 </html>
 
