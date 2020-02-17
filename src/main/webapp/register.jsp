@@ -60,7 +60,7 @@
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="orgName" name="orgName" required>
-											<span class="label">Organization Name</span>
+											<span class="label">Organization Name <span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -71,21 +71,13 @@
 					  						<span class="border"></span>
 										</label>
 									</div>
-								</div>
-								<div class="form-row">
 									<div class="form-holder form-holder-1">
 										<label class="form-row-inner">
-											<input type="file" class="form-control" id="logoImage" name="logoImage" required>
-					  						<span class="border"></span>
+										 <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('logoImage').click()">Upload Logo</button>
+										 <input type="file" class="form-control" id="logoImage" name="logoImage" required style="display:none">
+					  					 <span class="border"></span>
 										</label>
 									</div>
-									<!-- <div class="form-holder">
-										<label class="form-row-inner">
-											<input type="text" class="form-control" id="code" name="code" required>
-											<span class="label">Zip Code</span>
-					  						<span class="border"></span>
-										</label>
-									</div> -->
 								</div>
 							</div>
 			            </section>
@@ -169,7 +161,7 @@
 			            </h2>
 			            <section>
 			                <div class="inner">
-			                	<h3>More About Primary User</h3>
+			                	<h3>Owner/Admin Details</h3>
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">

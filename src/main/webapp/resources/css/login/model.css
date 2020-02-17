@@ -634,3 +634,8 @@ i {
 		margin-left: 0;
 	}
 }
+
+
+.required {
+  color: red;
+}
