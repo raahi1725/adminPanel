@@ -2,9 +2,6 @@ package com.raahi.adminPanel.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 public class PackageStaffDetails {
 	
 	private Integer tourPlannerStaffId;

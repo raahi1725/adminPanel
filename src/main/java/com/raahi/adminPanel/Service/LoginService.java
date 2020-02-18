@@ -1,9 +1,9 @@
 package com.raahi.adminPanel.Service;
 
-import com.raahi.adminPanel.model.TourPlannerMasterModel;
+import com.raahi.adminPanel.bean.RegisterRequestBean;
 
 public interface LoginService {
 
-	boolean addTourPlanner(TourPlannerMasterModel tourPlannerMasterModel);
+	boolean addTourPlanner(RegisterRequestBean registerRequestBean);
 
 }

@@ -46,7 +46,7 @@
 					<h3 class="heading">Sign Up To Raahi</h3>
 					<p>Fill all form field to go next step</p>
 				</div>
-		        <form class="form-register" action="#" method="post">
+		        <form class="form-register" action="/tourPlanner" method="POST">
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
 		        		<h2>
@@ -66,14 +66,14 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="orgWebsite" name="orgWebsite" required>
+											<input type="text" class="form-control" id="orgWebsite" name="orgWebsite">
 											<span class="label">Website</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder form-holder-1">
-										<label class="form-row-inner">
-										 <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('logoImage').click()">Upload Logo</button>
+										<label class="form-row-inner" style="display: none;">
+										 <button onclick="document.getElementById('logoImage').click()">Upload Logo</button>
 										 <input type="file" class="form-control" id="logoImage" name="logoImage" required style="display:none">
 					  					 <span class="border"></span>
 										</label>
@@ -93,21 +93,21 @@
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="branchName" name="branchName" required>
-											<span class="label">Branch Name</span>
+											<span class="label">Branch Name<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="branchEmail" name="branchEmail" required>
-											<span class="label">Email</span>
+											<span class="label">Email<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="branchContact" name="branchContact" required>
-											<span class="label">Contact No</span>
+											<span class="label">Contact No<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -132,21 +132,21 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchAddress" name="branchAddress" required>
+											<input type="text" class="form-control" id="branchAddress" name="branchAddress" >
 											<span class="label">Address</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchPinCode" name="branchPinCode" required>
+											<input type="text" class="form-control" id="branchPinCode" name="branchPinCode" >
 											<span class="label">Pin Code</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchNo" name="branchNo" required>
+											<input type="text" class="form-control" id="branchNo" name="branchNo" >
 											<span class="label">No Of Branches</span>
 					  						<span class="border"></span>
 										</label>
@@ -166,21 +166,21 @@
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="firstName" name="firstName" required>
-											<span class="label">First Name</span>
+											<span class="label">First Name<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="lastName" name="lastName" required>
-											<span class="label">Last Name</span>
+											<span class="label">Last Name<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="userContact" name="userContact" required>
-											<span class="label">Contact No</span>
+											<span class="label">Contact No<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
@@ -189,21 +189,21 @@
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="email" class="form-control" id="userEmail" name="userEmail" required>
-											<span class="label">Email</span>
+											<span class="label">Email<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="email" class="form-control" id="userPassword" name="userPassword" required>
-											<span class="label">Password</span>
+											<input type="password" class="form-control" id="userPassword" name="userPassword" required>
+											<span class="label">Password<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="userConfirmPassword" name="userConfirmPassword" required>
-											<span class="label">Confirm Password</span>
+											<input type="password" class="form-control" id="userConfirmPassword" name="userConfirmPassword" required>
+											<span class="label">Confirm Password<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>

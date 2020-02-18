@@ -17,6 +17,7 @@ public class TourPlannerBranchModel {
 	private Integer tourPlannerBranchId;
 	private TourPlannerMasterModel tourPlannerMasterId;
 	private String branchName;
+	private String address;
 	private String city;
 	private String state;
 	private String country;
@@ -27,9 +28,7 @@ public class TourPlannerBranchModel {
 	private String headBranch;
 	private Date startDate;
 	private Date endDate;
-	private TourPlannerStaffModel primaryUserId;
 	private Date cDate;
-	private TourPlannerStaffModel createdBy;
 	private String isDel;
 	private TourPlannerStaffModel deletedBy;
 	private Date delDate;
@@ -92,6 +91,14 @@ public class TourPlannerBranchModel {
 		this.country = country;
 	}
 	
+	@Column(name = "address")
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
 	@Column(name = "postalCode")
 	public Integer getPostalCode() {
 		return postalCode;
@@ -116,14 +123,6 @@ public class TourPlannerBranchModel {
 		this.email = email;
 	}
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "tourPlannerStaffId")
-	public TourPlannerStaffModel getPrimaryUserId() {
-		return primaryUserId;
-	}
-	public void setPrimaryUserId(TourPlannerStaffModel primaryUserId) {
-		this.primaryUserId = primaryUserId;
-	}
 	@Column(name = "registeredDate")
 	public Date getRegisteredDate() {
 		return registeredDate;
@@ -154,15 +153,6 @@ public class TourPlannerBranchModel {
 	}
 	public void setcDate(Date cDate) {
 		this.cDate = cDate;
-	}
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "createdBy")
-	public TourPlannerStaffModel getCreatedBy() {
-		return createdBy;
-	}
-	public void setCreatedBy(TourPlannerStaffModel createdBy) {
-		this.createdBy = createdBy;
 	}
 	
 	@Column(name = "isDel")
@@ -256,6 +246,7 @@ public class TourPlannerBranchModel {
 	public void setHeadBranch(String headBranch) {
 		this.headBranch = headBranch;
 	}
+	
 }
 	
 

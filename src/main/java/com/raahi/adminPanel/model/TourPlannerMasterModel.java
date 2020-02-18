@@ -24,16 +24,12 @@ public class TourPlannerMasterModel {
 	private Date startDate;
 	private Date endDate;
 	private Timestamp cDate;
-	private TourPlannerStaffModel createdBy;
 	private String isDel;
 	private TourPlannerStaffModel deletedBy;
 	private Date delDate;
 	private String isEdit;
 	private TourPlannerStaffModel editedBy;
 	private Date editDate;
-	private String isActive;
-	private TourPlannerStaffModel activatedBy;
-	private Date activeDate;
 	private String ipAdress;
 	
 	@Id
@@ -109,15 +105,6 @@ public class TourPlannerMasterModel {
 		this.cDate = cDate;
 	}
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "createdBy")
-	public TourPlannerStaffModel getCreatedBy() {
-		return createdBy;
-	}
-	public void setCreatedBy(TourPlannerStaffModel createdBy) {
-		this.createdBy = createdBy;
-	}
-	
 	@Column(name = "isDel")
 	public String getIsDel() {
 		return isDel;
@@ -166,32 +153,6 @@ public class TourPlannerMasterModel {
 	}
 	public void setEditDate(Date editDate) {
 		this.editDate = editDate;
-	}
-	
-	@Column(name = "isActive")
-	public String getIsActive() {
-		return isActive;
-	}
-	
-	public void setIsActive(String isActive) {
-		this.isActive = isActive;
-	}
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "activatedBy")
-	public TourPlannerStaffModel getActivatedBy() {
-		return activatedBy;
-	}
-	public void setActivatedBy(TourPlannerStaffModel activatedBy) {
-		this.activatedBy = activatedBy;
-	}
-	
-	@Column(name = "activeDate")
-	public Date getActiveDate() {
-		return activeDate;
-	}
-	public void setActiveDate(Date activeDate) {
-		this.activeDate = activeDate;
 	}
 	
 	@Column(name = "ipAdress")

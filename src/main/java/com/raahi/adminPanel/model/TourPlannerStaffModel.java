@@ -18,9 +18,11 @@ public class TourPlannerStaffModel {
 	private TourPlannerBranchModel tourPlannerBranchId;
 	private String firstName;
 	private String lastName;
+	private String role;
 	private String regNo;
 	private Date regDate;
 	private String gender;
+	private String email;
 	private String photoIdNames;
 	private String photoIdFilePath;
 	private String photoName;
@@ -35,19 +37,15 @@ public class TourPlannerStaffModel {
 	private String altCountryCode;
 	private Integer altContactNo;
 	private String password;
-	private String forgotQuestion;
-	private String forgotAnswer;
+	private String editPermission;
+	private String deletePermission;
 	private Date cDate;
-	private TourPlannerStaffModel createdBy;
 	private String isDel;
 	private TourPlannerStaffModel deletedBy;
 	private Date delDate;
 	private String isEdit;
 	private TourPlannerStaffModel editedBy;
 	private Date editDate;
-	private String isActive;
-	private TourPlannerStaffModel activatedBy;
-	private Date activeDate;
 	private String ipAdress;
 	
 	@Id
@@ -82,6 +80,14 @@ public class TourPlannerStaffModel {
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	
+	@Column(name="role")
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 	@Column(name="regNo")
@@ -220,20 +226,12 @@ public class TourPlannerStaffModel {
 		this.password = password;
 	}
 	
-	@Column(name="forgotQuestion")
-	public String getForgotQuestion() {
-		return forgotQuestion;
+	@Column(name="email")
+	public String getEmail() {
+		return email;
 	}
-	public void setForgotQuestion(String forgotQuestion) {
-		this.forgotQuestion = forgotQuestion;
-	}
-	
-	@Column(name="forgotAnswer")
-	public String getForgotAnswer() {
-		return forgotAnswer;
-	}
-	public void setForgotAnswer(String forgotAnswer) {
-		this.forgotAnswer = forgotAnswer;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	@Column(name = "cDate")
@@ -242,15 +240,6 @@ public class TourPlannerStaffModel {
 	}
 	public void setcDate(Date cDate) {
 		this.cDate = cDate;
-	}
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "createdBy")
-	public TourPlannerStaffModel getCreatedBy() {
-		return createdBy;
-	}
-	public void setCreatedBy(TourPlannerStaffModel createdBy) {
-		this.createdBy = createdBy;
 	}
 	
 	@Column(name = "isDel")
@@ -303,37 +292,27 @@ public class TourPlannerStaffModel {
 		this.editDate = editDate;
 	}
 	
-	@Column(name = "isActive")
-	public String getIsActive() {
-		return isActive;
-	}
-	
-	public void setIsActive(String isActive) {
-		this.isActive = isActive;
-	}
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "activatedBy")
-	public TourPlannerStaffModel getActivatedBy() {
-		return activatedBy;
-	}
-	public void setActivatedBy(TourPlannerStaffModel activatedBy) {
-		this.activatedBy = activatedBy;
-	}
-	
-	@Column(name = "activeDate")
-	public Date getActiveDate() {
-		return activeDate;
-	}
-	public void setActiveDate(Date activeDate) {
-		this.activeDate = activeDate;
-	}
-	
 	@Column(name = "ipAdress")
 	public String getIpAdress() {
 		return ipAdress;
 	}
 	public void setIpAdress(String ipAdress) {
 		this.ipAdress = ipAdress;
+	}
+	
+	@Column(name = "editPermission")
+	public String getEditPermission() {
+		return editPermission;
+	}
+	public void setEditPermission(String editPermission) {
+		this.editPermission = editPermission;
+	}
+	
+	@Column(name = "deletePermission")
+	public String getDeletePermission() {
+		return deletePermission;
+	}
+	public void setDeletePermission(String deletePermission) {
+		this.deletePermission = deletePermission;
 	}
 }
