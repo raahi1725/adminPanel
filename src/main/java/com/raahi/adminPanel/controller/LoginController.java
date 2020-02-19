@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.raahi.adminPanel.Service.LoginService;
 import com.raahi.adminPanel.Service.SecurityService;
@@ -23,14 +22,14 @@ public class LoginController {
 	@Autowired
 	LoginService loginService;
 	
-	 @Autowired
-	    private UserValidator userValidator;
+	@Autowired
+	private UserValidator userValidator;
 	 
-	 @Autowired
-	    private UserService userService;
+	@Autowired
+	private UserService userService;
 
-	    @Autowired
-	    private SecurityService securityService;
+	@Autowired
+	private SecurityService securityService;
 	
 	
 	@GetMapping("/login")
@@ -41,22 +40,22 @@ public class LoginController {
 	    if (logout != null)
 	        model.addAttribute("message", "You have been logged out successfully.");
 	
-	    return "login.jsp";
+	    return "login";
 	}
 	
-	@GetMapping("/registration")
+	@GetMapping("/register")
     public String registration(Model model) {
-        model.addAttribute("userForm", new User());
+        model.addAttribute("RegisterRequestBean", new RegisterRequestBean());
 
-        return "registration";
+        return "register";
     }
 
-    @PostMapping("/registration")
+    @PostMapping("/register")
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
-            return "registration";
+            return "register";
         }
 
         userService.save(userForm);
@@ -72,20 +71,21 @@ public class LoginController {
 	    return "dashboard";
 	}
 	
-	@GetMapping(value = "/register")
-	public String register() {
-		return "register.jsp";
-	}
-	
-	@GetMapping(value = "/index")
-	public String index() {
-		return "index.jsp";
-	}
-	
 	@PostMapping(value = "/tourPlanner")
 	@ResponseBody
-	public boolean addTourPlanner(@RequestBody RegisterRequestBean registerRequestBean) {
-		return loginService.addTourPlanner(registerRequestBean);
-	}
+	public String addTourPlanner(@RequestBody RegisterRequestBean registerRequestBean,
+			BindingResult bindingResult) {
+		User userForm = new User();
+		userForm.setUsername(registerRequestBean.getAdminContactNo());
+		userForm.setPassword(registerRequestBean.getAdminPassword());
+		userValidator.validate(registerRequestBean, bindingResult);
+		if (bindingResult.hasErrors()) {
+            return "register";
+        }
+	    loginService.addTourPlanner(registerRequestBean);
+	    userService.save(userForm);
+        securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
+        return "redirect:/welcome";
+}
 		
 }

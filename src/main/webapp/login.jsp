@@ -513,18 +513,22 @@
           <div class="tab-pane fade in  active" id="panel7" role="tabpanel">
             <div class="modal-body mb-1">
               <form method="POST" action="/login" class="form-signin">
-	              <div class="md-form form-sm mb-5">
-	                <span class="icon"><i class="fas fa-envelope prefix"></i></span>
-	                <input name="username" type="text" class="form-control-login" placeholder="Mobile No">
-	              </div>
-	              <div class="md-form form-sm mb-4">
-	                <span class="icon"><i class="fas fa-lock prefix"></i></span>
-	                <input name="password" type="password" class="form-control-login" placeholder="Password">
-	                  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
- 	              </div>
-	              <div class="text-center mt-2">
-	                <button class="btn btn-info" type="submit">Log in <i class="fas fa-sign-in ml-1"></i></button>
-	              </div>
+              	  <div class="form-group ${error != null ? 'has-error' : ''}">
+	              	  <span>${message}</span>
+	              	  <span>${error}</span>
+		              <div class="md-form form-sm mb-5">
+		                <span class="icon"><i class="fas fa-envelope prefix"></i></span>
+		                <input name="username" type="text" class="form-control-login" placeholder="Mobile No">
+		              </div>
+		              <div class="md-form form-sm mb-4">
+		                <span class="icon"><i class="fas fa-lock prefix"></i></span>
+		                <input name="password" type="password" class="form-control-login" placeholder="Password">
+		                  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	 	              </div>
+		              <div class="text-center mt-2">
+		                <button class="btn btn-info" type="submit">Log in <i class="fas fa-sign-in ml-1"></i></button>
+		              </div>
+		           </div>
 	          </form>
             </div>
             <div class="modal-footer">
