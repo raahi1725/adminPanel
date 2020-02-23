@@ -12,12 +12,16 @@ public class RegisterRequestBean {
 	private Integer branchPostalCode;
 	private String noOfBranches;
 	private String branchEmail;
+	private String branchCountryCode;
 	private String branchContactNo;
 	private String adminFirstName;
 	private String adminLastName;
 	private String adminEmail;
-	private String adminContactNo;
-	private String adminPassword;
+	private String countryCode;
+	private String username;
+	private String password;
+	private String passwordConfirm;
+	private String orgRegNo;
 	
 	public String getOrgName() {
 		return orgName;
@@ -61,17 +65,17 @@ public class RegisterRequestBean {
 	public void setBranchAddress(String branchAddress) {
 		this.branchAddress = branchAddress;
 	}
-	public String getNoOfBranches() {
-		return noOfBranches;
-	}
-	public void setNoOfBranches(String noOfBranches) {
-		this.noOfBranches = noOfBranches;
-	}
 	public Integer getBranchPostalCode() {
 		return branchPostalCode;
 	}
 	public void setBranchPostalCode(Integer branchPostalCode) {
 		this.branchPostalCode = branchPostalCode;
+	}
+	public String getNoOfBranches() {
+		return noOfBranches;
+	}
+	public void setNoOfBranches(String noOfBranches) {
+		this.noOfBranches = noOfBranches;
 	}
 	public String getBranchEmail() {
 		return branchEmail;
@@ -103,16 +107,42 @@ public class RegisterRequestBean {
 	public void setAdminEmail(String adminEmail) {
 		this.adminEmail = adminEmail;
 	}
-	public String getAdminContactNo() {
-		return adminContactNo;
+	public String getUsername() {
+		return username;
 	}
-	public void setAdminContactNo(String adminContactNo) {
-		this.adminContactNo = adminContactNo;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public String getAdminPassword() {
-		return adminPassword;
+	public String getPassword() {
+		return password;
 	}
-	public void setAdminPassword(String adminPassword) {
-		this.adminPassword = adminPassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
+	}
+	public String getOrgRegNo() {
+		return orgRegNo;
+	}
+	public void setOrgRegNo(String orgRegNo) {
+		this.orgRegNo = orgRegNo;
+	}
+	public String getCountryCode() {
+		return countryCode;
+	}
+	public void setCountryCode(String countryCode) {
+		this.countryCode = countryCode;
+	}
+	public String getBranchCountryCode() {
+		return branchCountryCode;
+	}
+	public void setBranchCountryCode(String branchCountryCode) {
+		this.branchCountryCode = branchCountryCode;
+	}
+	
+	
 }

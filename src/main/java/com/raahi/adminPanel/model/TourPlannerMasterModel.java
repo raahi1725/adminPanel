@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -24,15 +26,16 @@ public class TourPlannerMasterModel {
 	private Date startDate;
 	private Date endDate;
 	private Timestamp cDate;
-	private String isDel;
+	private String isDel="0";
 	private TourPlannerStaffModel deletedBy;
 	private Date delDate;
-	private String isEdit;
+	private String isEdit="0";
 	private TourPlannerStaffModel editedBy;
 	private Date editDate;
 	private String ipAdress;
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "tourPlannerMasterId")
 	public Integer getTourPlannerMasterId() {
 		return tourPlannerMasterId;

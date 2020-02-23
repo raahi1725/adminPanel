@@ -284,6 +284,64 @@ $(function(){
         autoFocus: true,
         transitionEffectSpeed: 500,
         titleTemplate : '<div class="title">#title#</div>',
+        onFinished: function (event, currentIndex) { 
+        	$("#registerForm").trigger("click");
+    	},
+    	onFinishing: function (event, currentIndex) {
+    		if(document.getElementById("adminFirstName").value==""){
+				alert("Please fill first name ");
+				document.getElementById("adminFirstName").focus;
+				return false;
+			}
+    		if(document.getElementById("adminLastName").value==""){
+				alert("Please fill last name ");
+				document.getElementById("adminLastName").focus;
+				return false;
+			}
+    		if(document.getElementById("userContact").value==""){
+				alert("Please fill contact no ");
+				document.getElementById("userContact").focus;
+				return false;
+			}
+    		if(document.getElementById("userEmail").value==""){
+				alert("Please fill email address ");
+				document.getElementById("userEmail").focus;
+				return false;
+			}
+    		if(document.getElementById("userPassword").value==""){
+				alert("Please fill email address ");
+				document.getElementById("userPassword").focus;
+				return false;
+			}
+    		if(document.getElementById("userPassword").value!=document.getElementById("userConfirmPassword").value){
+				alert("Passwords donot match ");
+				document.getElementById("userConfirmPassword").focus;
+				return false;
+			}
+    		return true; 
+    	},
+    	onStepChanging: function (event, currentIndex, newIndex) {
+    		if(currentIndex==0) {
+    			if(document.getElementById("orgName").value==""){
+    				alert("Please fill organization name ");
+    				document.getElementById("orgName").focus;
+    				return false;
+    			}
+    		}
+    		if(currentIndex==1) {
+    			if(document.getElementById("headBranchName").value==""){
+    				alert("Please fill branch name ");
+    				document.getElementById("headBranchName").focus;
+    				return false;
+    			}
+    		if(document.getElementById("branchContact").value==""){
+				alert("Please fill contact no ");
+				document.getElementById("branchContact").focus;
+				return false;
+			}
+    		}
+    		return true; 
+    	},
         labels: {
             previous : 'Back Step',
             next : 'Next Step',
@@ -297,3 +355,22 @@ $(function(){
         buttonText : '<i class="zmdi zmdi-chevron-down"></i>',
     });
 });
+
+
+function validate(evt) {
+	  var theEvent = evt || window.event;
+
+	  // Handle paste
+	  if (theEvent.type === 'paste') {
+	      key = event.clipboardData.getData('text/plain');
+	  } else {
+	  // Handle key press
+	      var key = theEvent.keyCode || theEvent.which;
+	      key = String.fromCharCode(key);
+	  }
+	  var regex = /[0-9]|\./;
+	  if( !regex.test(key) ) {
+	    theEvent.returnValue = false;
+	    if(theEvent.preventDefault) theEvent.preventDefault();
+	  }
+	}

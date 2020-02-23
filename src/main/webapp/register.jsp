@@ -4,27 +4,16 @@
 	<meta charset="utf-8">
 	<title>Register To Raahi</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
-	<link rel="stylesheet" href="./resources/css/login/animate.css">
-	<link rel="stylesheet" href="./resources/css/login/icomoon.css">
+	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 	<link rel="stylesheet" href="./resources/css/login/bootstrap.css">
-	<link rel="stylesheet" href="./resources/css/login/magnific-popup.css">
-	<link rel="stylesheet" href="./resources/css/login/owl.carousel.min.css">
-	<link rel="stylesheet" href="./resources/css/login/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./resources/css/login/style.css">
 	<link rel="stylesheet" href="./resources/css/login/model.css">
 	<link rel="stylesheet" href="./resources/css/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
-	<link rel="stylesheet" type="text/css" href="css/roboto-font.css">
-	<link rel="stylesheet" type="text/css" href="./resources/css/login/material-design-iconic-font.min.css">
-	<script src="./resources/js/adminJs/customer.js"></script>
+	<script src="./resources/js/login/all.js"></script>
   	<script src="./resources/js/commonJs/countrystatecity.js"></script>
   	<script src="./resources/js/commonJs/select2.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
 	<script src="./resources/js/login/modernizr-2.6.2.min.js"></script>
 	<script src="./resources/js/login/jquery.min.js"></script>
-	<script src="./resources/js/login/jquery.easing.1.3.js"></script>
 	<script src="./resources/js/login/bootstrap.min.js"></script>
 	<script src="./resources/js/login/jquery.waypoints.min.js"></script>
 	<script src="./resources/js/login/jquery.stellar.min.js"></script>
@@ -34,11 +23,25 @@
 	<script src="./resources/js/login/magnific-popup-options.js"></script>
 	<script src="./resources/js/login/jquery.countTo.js"></script>
 	<script src="./resources/js/login/main.js"></script>
-	<!-- <script src="./resources/js/login/jquery-3.3.1.min.js"></script> -->
 	<script src="./resources/js/login/jquery.steps.js"></script>
 	<script src="./resources/js/login/jquery-ui.min.js"></script>
+	<script>
+	function loadSelect() {
+		   $(".js-example-basic-multiple").select2();
+	}
+	</script>
+	<style>
+		.svg-inline--fa {
+		    height: 40px;
+		    margin-left: 7px;
+		}
+
+		.form-register .steps li a .title .step-icon {
+		    font-size: 32px;
+		}
+	</style>
 </head>
-<body>
+<body onload="loadSelect()">
 	<div class="page-content" style="background-image: url('images/wizard-v4.jpg')">
             <div class="modal-body page-content">
             	<div class="wizard-form">
@@ -46,11 +49,11 @@
 					<h3 class="heading">Sign Up To Raahi</h3>
 					<p>Fill all form field to go next step</p>
 				</div>
-		        <form class="form-register" action="/tourPlanner" method="POST">
+		        <form:form class="form-register" action="/register" method="POST" modelAttribute="registerRequestBean">
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
 		        		<h2>
-			            	<span class="step-icon"><i class="zmdi zmdi-account"></i></span>
+			            	<span class="step-icon"><i class="fas fa-landmark"></i></span>	
 			            	<span class="step-text">About</span>
 			            </h2>
 			            <section>
@@ -59,23 +62,23 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="orgName" name="orgName" required>
+											<form:input type="text" class="form-control" id="orgName" path="orgName" maxlength="50"/>
 											<span class="label">Organization Name <span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="orgWebsite" name="orgWebsite">
+											<form:input type="text" class="form-control" id="orgWebsite" path="website" maxlength="30"/>
 											<span class="label">Website</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
-									<div class="form-holder form-holder-1">
-										<label class="form-row-inner" style="display: none;">
-										 <button onclick="document.getElementById('logoImage').click()">Upload Logo</button>
-										 <input type="file" class="form-control" id="logoImage" name="logoImage" required style="display:none">
-					  					 <span class="border"></span>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<form:input type="text" class="form-control" id="orgRegNo" path="orgRegNo" autocomplete="off"/>
+											<span class="label">Registration Id</span>
+					  						<span class="border"></span>
 										</label>
 									</div>
 								</div>
@@ -83,7 +86,7 @@
 			            </section>
 						<!-- SECTION 2 -->
 			            <h2>
-			            	<span class="step-icon"><i class="zmdi zmdi-lock"></i></span>
+			            	<span class="step-icon"><i class="fas fa-building"></i></span>	
 			            	<span class="step-text">Head Branch</span>
 			            </h2>
 			            <section>
@@ -92,21 +95,21 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchName" name="branchName" required>
+											<form:input type="text" class="form-control" id="headBranchName" path="headBranchName" maxlength="50" />
 											<span class="label">Branch Name<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchEmail" name="branchEmail" required>
-											<span class="label">Email<span class="required">*</span></span>
+											<form:input type="email" class="form-control" id="branchEmail" path="branchEmail" maxlength="50"/>
+											<span class="label">Email<span class="required"></span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchContact" name="branchContact" required>
+											<form:input type="text" onkeypress='validate(event)' class="form-control" id="branchContact" path="branchContactNo" maxlength="12" />
 											<span class="label">Contact No<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
@@ -114,39 +117,39 @@
 								</div>
 								<div class="form-row">
 									<div class="form-holder  form-holder-2">
-										<select name="country" id="countryId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
+										<form:select path="branchCountry" name="country" id="countryId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
                        						<option value="" class="form-control-select-default">Select Country</option>
-                       					</select>		
+                       					</form:select>		
 									</div>
 									<div class="form-holder  form-holder-2">
-										<select name="state" id="stateId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
+										<form:select path="branchState" name="state" id="stateId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
                        						<option value="" class="form-control-select-default">Select State</option>
-                       					</select>		
+                       					</form:select>		
 									</div>
 									<div class="form-holder  form-holder-2">
-										<select name="city" id="cityId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
+										<select name="branchCity" id="cityId" name="city" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
                        						<option value="" class="form-control-select-default">Select City</option>
-                       					</select>		
+                       					</select>	
 									</div>
 								</div>
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchAddress" name="branchAddress" >
+											<form:input type="text" class="form-control" id="branchAddress" path="branchAddress" maxlength="100"/>
 											<span class="label">Address</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchPinCode" name="branchPinCode" >
+											<form:input type="text" class="form-control" id="branchPostalCode" path="branchPostalCode" onkeypress='validate(event)' maxlength="6"/>
 											<span class="label">Pin Code</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="branchNo" name="branchNo" >
+											<form:input type="text" class="form-control" id="noOfBranches" path="noOfBranches" maxlength="5"/>
 											<span class="label">No Of Branches</span>
 					  						<span class="border"></span>
 										</label>
@@ -156,7 +159,7 @@
 			            </section>
 			            <!-- SECTION 3 -->
 			            <h2>
-			            	<span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
+			            	<span class="step-icon"><i class="fas fa-user"></i></span>	
 			            	<span class="step-text">Admin</span>
 			            </h2>
 			            <section>
@@ -165,21 +168,21 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="firstName" name="firstName" required>
+											<form:input type="text" class="form-control" id="adminFirstName" path="adminFirstName" maxlength="20"/>
 											<span class="label">First Name<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="lastName" name="lastName" required>
+											<form:input type="text" class="form-control" id="adminLastName" path="adminLastName" maxlength="20"/>
 											<span class="label">Last Name<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="userContact" name="userContact" required>
+											<form:input type="number" class="form-control" id="userContact" onkeypress='validate(event)' path="username" maxlength="10"/>
 											<span class="label">Contact No<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
@@ -188,30 +191,31 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="email" class="form-control" id="userEmail" name="userEmail" required>
+											<form:input type="email" class="form-control" id="userEmail" path="adminEmail" maxlength="50"/>
 											<span class="label">Email<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="password" class="form-control" id="userPassword" name="userPassword" required>
+											<form:input type="password" class="form-control" id="userPassword" path="password" minlength="5" maxlength="20"/>
 											<span class="label">Password<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="password" class="form-control" id="userConfirmPassword" name="userConfirmPassword" required>
+											<form:input type="password" class="form-control" id="userConfirmPassword" path="passwordConfirm" maxlength="20"/> 
 											<span class="label">Confirm Password<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 								</div>
 							</div>
+							<input type="submit" value="Register" id="registerForm" class="hide"/>
 			            </section>
 		        	</div>
-		        </form>
+		        </form:form>
 		     </div>
 		    </div>
 		</div>

@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -33,22 +35,22 @@ public class TourPlannerStaffModel {
 	private Integer pinCode;
 	private Date birthDate;
 	private String countryCode;
-	private Integer contactNo;
+	private String contactNo;
 	private String altCountryCode;
 	private Integer altContactNo;
-	private String password;
-	private String editPermission;
-	private String deletePermission;
+	private String editPermission="0";
+	private String deletePermission="0";
 	private Date cDate;
-	private String isDel;
+	private String isDel="0";
 	private TourPlannerStaffModel deletedBy;
 	private Date delDate;
-	private String isEdit;
+	private String isEdit="0";
 	private TourPlannerStaffModel editedBy;
 	private Date editDate;
 	private String ipAdress;
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="tourPlannerStaffId")
 	public Integer getTourPlannerStaffId() {
 		return tourPlannerStaffId;
@@ -195,10 +197,10 @@ public class TourPlannerStaffModel {
 	}
 	
 	@Column(name="contactNo")
-	public Integer getContactNo() {
+	public String getContactNo() {
 		return contactNo;
 	}
-	public void setContactNo(Integer contactNo) {
+	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
 	}
 	
@@ -216,14 +218,6 @@ public class TourPlannerStaffModel {
 	}
 	public void setAltContactNo(Integer altContactNo) {
 		this.altContactNo = altContactNo;
-	}
-	
-	@Column(name="password")
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	
 	@Column(name="email")

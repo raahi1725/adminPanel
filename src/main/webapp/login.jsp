@@ -8,20 +8,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
-
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
+	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 	<link rel="stylesheet" href="./resources/css/login/animate.css">
 	<link rel="stylesheet" href="./resources/css/login/icomoon.css">
 	<link rel="stylesheet" href="./resources/css/login/bootstrap.css">
@@ -30,16 +17,8 @@
 	<link rel="stylesheet" href="./resources/css/login/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./resources/css/login/style.css">
 	<link rel="stylesheet" href="./resources/css/login/model.css">
-	<link rel="stylesheet" href="./resources/css/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
-	<link rel="stylesheet" type="text/css" href="css/roboto-font.css">
-	<link rel="stylesheet" type="text/css" href="./resources/css/login/material-design-iconic-font.min.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-	<script src="./resources/js/adminJs/customer.js"></script>
-  	<script src="./resources/js/commonJs/countrystatecity.js"></script>
-  	<script src="./resources/js/commonJs/select2.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+	<script src="./resources/js/login/all.js"></script>
 	<script src="./resources/js/login/modernizr-2.6.2.min.js"></script>
 	<script src="./resources/js/login/jquery.min.js"></script>
 	<script src="./resources/js/login/jquery.easing.1.3.js"></script>
@@ -52,26 +31,25 @@
 	<script src="./resources/js/login/magnific-popup-options.js"></script>
 	<script src="./resources/js/login/jquery.countTo.js"></script>
 	<script src="./resources/js/login/main.js"></script>
-	<!-- <script src="./resources/js/login/jquery-3.3.1.min.js"></script> -->
-	<script src="./resources/js/login/jquery.steps.js"></script>
 	<script src="./resources/js/login/jquery-ui.min.js"></script>
-
+	<script>
+	</script>
 	</head>
 	<body>
 		
 	<div class="colorlib-loader"></div>
-
 	<div id="page">
 		<nav class="colorlib-nav" role="navigation">
+			<a href="#" class="simple-text logo-normal" style="float: left;">
+        				<img src="./resources/img/WhiteLogo.png" class="logo"></img>
+   					</a>
 			<div class="top-menu">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2">
-							<a href="#" class="simple-text logo-normal">
-         						<img src="./resources/img/WhiteLogo.png" class="logo"></img>
-         					</a>
+							
 						</div>
-						<div class="col-md-10 text-right menu-1">
+						<div class="col-md-auto text-right menu-1">
 							<ul>
 								<li class="active"><a href="index.html">Home</a></li>
 								<li><a href="services.html">About Us</a></li>
@@ -97,11 +75,13 @@
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box" style="margin-top:150px;">
 								<h2>Start Your Free Trial Today</h2>
-								<input type="text" id="tourPlannerName" required="required" placeholder="Organization Name">
-								<input type="email" id="tourPlannerEmail" required="required" placeholder="Email">
-								<input type="text" id="tourPlannerContact" required="required" placeholder="Contact No">
-								<input type="password" id="tourPlannerPassword" required="required" placeholder="Password">
-								<p><a href="#" class="btn btn-primary btn-lg btn-custom">Sign Up</a></p>
+								<form:form class="form-register" action="/register" method="POST" modelAttribute="registerRequestBean">
+									<form:input type="text" placeholder="Organisation Name" id="orgName" path="orgName" maxlength="50"/>
+									<form:input type="email" id="userEmail" path="adminEmail" maxlength="50" placeholder="Email Id"/>
+									<form:input type="text" id="userContact" path="username" maxlength="10" placeholder="Mobile No" onkeypress='validate(event)'/>
+									<form:input type="password" id="userPassword" path="password" maxlength="20" minlength="5"  placeholder="Password"/>
+									<p><input type="submit" value="Sign Up" class="btn btn-primary btn-lg btn-custom"/></p>
+								</form:form>
 							</div>
 						</div>
 					</div>
@@ -138,46 +118,54 @@
 				</div>
 			</div>
 		</div>
-
+		
+		<div class="colorlib-intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h3>Its time to</h3>
+						<h2>GROW YOUR BUSINESS</h2>
+						<p>Raahi is the replacement for all the messy paper work. We aim to streamline your operations so that 
+							you can manage everything at one place without much effort. </p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="colorlib-services colorlib-bg-white">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 text-center animate-box">
+					<div class="col-md-4 animate-box">
 						<div class="services">
-							<span class="icon">
-								 <i class="material-icons">account_box</i>
-							</span>
 							<div class="desc">
-								<h3>A Faster way to manage data</h3>
-								<p>Save your time and do more with your data.
-									Now get rid of excels and add or edit your data through one panel.
+								<div class="text-center">
+									<h3><span class="fontGraphics"><i class="fa fa-rocket"></i></span>Faster</h3>
+								</div>
+								<p>Manage your itineraries, customers & Staff on the go including custom images, id verifications,
+								   payments and much more.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 text-center animate-box">
+					<div class="col-md-4  animate-box">
 						<div class="services">
-							<span class="icon">
-								<i class="material-icons">dashboard</i>
-							</span>
 							<div class="desc">
-								<h3>A easier way to access data</h3>
-								<p>End your search here. 
-								   Anything you need to manage tour is available on Raahi. 
-								   Just hit the right search button.
+								<div class="text-center">
+									<h3><span class="fontGraphics"><i class="fa fa-tools"></i></span>Easier</h3>
+								</div>
+								<p>Get what exactly suits your business perfectly tailored from us
+								   so that your business keeps running without any hustle
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 text-center animate-box">
+					<div class="col-md-4 animate-box">
 						<div class="services">
-							<span class="icon">
-								<i class="material-icons">emoji_people</i>
-							</span>
 							<div class="desc">
-								<h3>A smarter way to do your marketing</h3>
-								<p>Why spend on marketing when your own team can design and 
-								   publish fully customizable templates through Raahi</p>
+								<div class="text-center">
+									<h3><span class="fontGraphics"><i class="fas fa-bullhorn"></i></span>Smarter</h3>
+								</div>
+								<p>Raahi is one stop destination to reach all your target audience. 
+									We provide a platform to full personalize your marketing campaigns</p>
 							</div>
 						</div>
 					</div>
@@ -228,20 +216,6 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="colorlib-intro">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-						<h2>Do more with the customization possible on your device</h2>
-						<p>Your inputs will help us make your management easy. 
-						   Let us know what you will like to have in the software.<a> Click to send your feedback
-						   or contact us!</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div class="colorlib-work-featured colorlib-bg-white">
 			<div class="container">
 				<div class="row mobile-wrap">
@@ -512,7 +486,7 @@
         <div class="tab-content">
           <div class="tab-pane fade in  active" id="panel7" role="tabpanel">
             <div class="modal-body mb-1">
-              <form method="POST" action="/login" class="form-signin">
+              <form method="POST" action="/login" id="loginForm" class="form-signin" >
               	  <div class="form-group ${error != null ? 'has-error' : ''}">
 	              	  <span>${message}</span>
 	              	  <span>${error}</span>

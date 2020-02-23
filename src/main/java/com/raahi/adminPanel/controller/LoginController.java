@@ -7,8 +7,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.raahi.adminPanel.Service.LoginService;
 import com.raahi.adminPanel.Service.SecurityService;
@@ -34,6 +32,7 @@ public class LoginController {
 	
 	@GetMapping("/login")
 	public String login(Model model, String error, String logout) {
+		 model.addAttribute("registerRequestBean", new RegisterRequestBean());
 	    if (error != null)
 	        model.addAttribute("error", "Your username and password is invalid.");
 	
@@ -45,46 +44,26 @@ public class LoginController {
 	
 	@GetMapping("/register")
     public String registration(Model model) {
-        model.addAttribute("RegisterRequestBean", new RegisterRequestBean());
-
+        model.addAttribute("registerRequestBean", new RegisterRequestBean());
         return "register";
     }
 
-    @PostMapping("/register")
-    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
-        userValidator.validate(userForm, bindingResult);
-
-        if (bindingResult.hasErrors()) {
-            return "register";
-        }
-
-        userService.save(userForm);
-
-        securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
-
-        return "redirect:/welcome";
-    }
-		 
 	@GetMapping({"/", "/welcome"})
 	public String welcome(Model model) {
 		model.addAttribute("user", new User()); 
 	    return "dashboard";
 	}
 	
-	@PostMapping(value = "/tourPlanner")
-	@ResponseBody
-	public String addTourPlanner(@RequestBody RegisterRequestBean registerRequestBean,
+	@PostMapping(value = "/register")
+	public String addTourPlanner(@ModelAttribute("registerRequestBean") RegisterRequestBean registerRequestBean,
 			BindingResult bindingResult) {
 		User userForm = new User();
-		userForm.setUsername(registerRequestBean.getAdminContactNo());
-		userForm.setPassword(registerRequestBean.getAdminPassword());
-		userValidator.validate(registerRequestBean, bindingResult);
-		if (bindingResult.hasErrors()) {
-            return "register";
-        }
+		userForm.setUsername(registerRequestBean.getUsername());
+		userForm.setPassword(registerRequestBean.getPassword());
+		userValidator.validate(userForm, bindingResult);
 	    loginService.addTourPlanner(registerRequestBean);
 	    userService.save(userForm);
-        securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
+        securityService.autoLogin(userForm.getUsername(), registerRequestBean.getPassword());
         return "redirect:/welcome";
 }
 		

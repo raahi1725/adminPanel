@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,7 +17,7 @@ import javax.persistence.Table;
 public class TourPlannerBranchModel {
 	
 	private Integer tourPlannerBranchId;
-	private TourPlannerMasterModel tourPlannerMasterId;
+	private TourPlannerMasterModel tourPlannerMasterModel;
 	private String branchName;
 	private String address;
 	private String city;
@@ -29,19 +31,20 @@ public class TourPlannerBranchModel {
 	private Date startDate;
 	private Date endDate;
 	private Date cDate;
-	private String isDel;
+	private String isDel="0";
 	private TourPlannerStaffModel deletedBy;
 	private Date delDate;
-	private String isEdit;
+	private String isEdit="0";
 	private TourPlannerStaffModel editedBy;
 	private Date editDate;
-	private String isActive;
-	private TourPlannerStaffModel activatedBy;
+	private String isActive="0";
+	private String activatedBy;
 	private Date activeDate;
 	private String ipAdress;
 	
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "tourPlannerBranchId")
 	public Integer getTourPlannerBranchId() {
 		return tourPlannerBranchId;
@@ -51,12 +54,12 @@ public class TourPlannerBranchModel {
 	}
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "tourPlannerId")
-	public TourPlannerMasterModel getTourPlannerMasterId() {
-		return tourPlannerMasterId;
+	@JoinColumn(name = "tourPlannerMasterId")
+	public TourPlannerMasterModel getTourPlannerMasterModel() {
+		return tourPlannerMasterModel;
 	}
-	public void setTourPlannerMasterId(TourPlannerMasterModel tourPlannerMasterId) {
-		this.tourPlannerMasterId = tourPlannerMasterId;
+	public void setTourPlannerMasterModel(TourPlannerMasterModel tourPlannerMasterModel) {
+		this.tourPlannerMasterModel = tourPlannerMasterModel;
 	}
 	
 	@Column(name = "branchName")
@@ -214,12 +217,11 @@ public class TourPlannerBranchModel {
 		this.isActive = isActive;
 	}
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "activatedBy")
-	public TourPlannerStaffModel getActivatedBy() {
+	@Column(name = "activatedBy")
+	public String getActivatedBy() {
 		return activatedBy;
 	}
-	public void setActivatedBy(TourPlannerStaffModel activatedBy) {
+	public void setActivatedBy(String activatedBy) {
 		this.activatedBy = activatedBy;
 	}
 	

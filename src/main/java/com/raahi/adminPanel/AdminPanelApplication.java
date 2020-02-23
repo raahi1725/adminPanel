@@ -21,4 +21,5 @@ public class AdminPanelApplication {
         bean.setSuffix(".jsp");
         return bean;
     }
+    
 }
