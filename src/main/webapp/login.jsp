@@ -125,7 +125,7 @@
 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
 						<h3>Its time to</h3>
 						<h2>GROW YOUR BUSINESS</h2>
-						<p>Raahi is the replacement for all the messy paper work. We aim to streamline your operations so that 
+						<p>Raahi is the replacement for all the messy paper work. We aim to streamline your business operations so that 
 							you can manage everything at one place without much effort. </p>
 					</div>
 				</div>

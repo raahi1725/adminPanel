@@ -2,7 +2,7 @@ package com.raahi.adminPanel.Constants;
 
 public enum RoleEnum {
 
-	SUPERADMIN("Super Admin"),
+	HEADOFFICER("Head Officer"),
 	RAAHIADMIN("Raahi Admin"),
 	Staff("Staff"),
 	USer("User");

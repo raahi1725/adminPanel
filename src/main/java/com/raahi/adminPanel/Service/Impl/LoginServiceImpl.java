@@ -77,7 +77,7 @@ public class LoginServiceImpl implements LoginService {
 			tourPlannerStaffModel.setLastName(registerRequestBean.getAdminLastName());
 			tourPlannerStaffModel.setContactNo(registerRequestBean.getUsername());
 			tourPlannerStaffModel.setEmail(registerRequestBean.getAdminEmail());
-			tourPlannerStaffModel.setRole(RoleEnum.SUPERADMIN.getRoles());
+			tourPlannerStaffModel.setRole(RoleEnum.HEADOFFICER.getRoles());
 			tourPlannerStaffModel.setEditPermission("1");
 			tourPlannerStaffModel.setRegDate(new Date());
 			tourPlannerStaffModel.setDeletePermission("1");

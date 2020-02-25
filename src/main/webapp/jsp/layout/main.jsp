@@ -38,6 +38,7 @@
   <script src="./resources/js/plugins/chartist.min.js"></script>
   <script src="./resources/js/plugins/bootstrap-notify.js"></script>
   <script src="./resources/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <script src="./resources/js/commonJs/jquery.min.js"></script> 
 </head>
 <body>
 	  <div class="wrapper">
