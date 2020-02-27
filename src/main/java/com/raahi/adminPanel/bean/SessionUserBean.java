@@ -46,6 +46,10 @@ public class SessionUserBean implements Serializable {
 	
 	private String  sessionLanguage;
 
+	public SessionUserBean() {
+		super();
+	}
+
 	public SessionUserBean(Integer tourPlannerStaffId, String firstName, String lastName, String roleName, String regNo,
 			String userName, Integer tourPlannerBranchId, String branchName, String headBranch, Integer tourPlannerId,
 			String tourPlannerName) {

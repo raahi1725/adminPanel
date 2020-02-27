@@ -16,7 +16,6 @@
   <script src="/jquery-2.2.1.min.js"></script>
   <script src="/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="./resources/js/core/jquery.min.js"></script>
   <script src="./resources/js/core/popper.min.js"></script>
   <script src="./resources/js/core/bootstrap-material-design.min.js"></script>
   <script src="./resources/js/plugins/perfect-scrollbar.jquery.min.js"></script>
@@ -38,7 +37,6 @@
   <script src="./resources/js/plugins/chartist.min.js"></script>
   <script src="./resources/js/plugins/bootstrap-notify.js"></script>
   <script src="./resources/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
-  <script src="./resources/js/commonJs/jquery.min.js"></script> 
 </head>
 <body>
 	  <div class="wrapper">

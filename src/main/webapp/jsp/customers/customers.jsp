@@ -6,7 +6,7 @@
   <script src="./resources/js/adminJs/customer.js"></script>
   <script src="./resources/js/commonJs/countrystatecity.js"></script>
   <script src="./resources/js/commonJs/select2.min.js"></script>
-  <link rel="stylesheet" href="./resources/css//select2.min.css">
+  <link rel="stylesheet" href="./resources/css/select2.min.css">
 </head>
 <body class="">
       <div class="content">
@@ -51,6 +51,26 @@
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Last Name</label>
 		                          <input name="lastName" type="text" class="form-control">
+		                        </div>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Email</label>
+		                          <input name="email"  type="email" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Contact No</label>
+		                          <input name="contactNo"  type="text" class="form-control">
+		                        </div>
+	                        </div>
+	                        <div class="col-md-3">
+		                        <div class="form-group">
+		                          <label class="bmd-label-floating">Alt. Contact No</label>
+		                          <input name="altContactNo" type="text" class="form-control">
 		                        </div>
 	                        </div>
                     	</div>
@@ -115,7 +135,7 @@
                     		 <div class="col-md-6">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Address</label>
-		                          <textarea name="address"  class="form-control"></textarea>
+		                          <textarea name="address"  class="form-control" style="height:36px !important;"></textarea>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-3">
@@ -142,26 +162,6 @@
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Nationality</label>
 		                          <input name="nationality"  type="text" class="form-control">
-		                        </div>
-	                        </div>
-                    	</div>
-                    	<div class="row">
-                    		<div class="col-md-3">
-		                        <div class="form-group">
-		                          <label class="bmd-label-floating">Email</label>
-		                          <input name="email"  type="email" class="form-control">
-		                        </div>
-	                        </div>
-	                        <div class="col-md-3">
-		                        <div class="form-group">
-		                          <label class="bmd-label-floating">Contact No</label>
-		                          <input name="contactNo"  type="text" class="form-control">
-		                        </div>
-	                        </div>
-	                        <div class="col-md-3">
-		                        <div class="form-group">
-		                          <label class="bmd-label-floating">Alt. Contact No</label>
-		                          <input name="altContactNo" type="text" class="form-control">
 		                        </div>
 	                        </div>
                     	</div>
@@ -244,7 +244,7 @@
                   <h4 class="card-title">Customer Details </h4>
                   <p class="card-description"> Name : <br/> Reg No : <br/> Contact No :
                   </p>
-                  <a href="#pablo" class="btn btn-primary btn-round">Edit</a>
+                  <a href="#pablo" class="btn btn-primary btn-round" style="color:white !important">Edit</a>
                 </div>
               </div>
           </div>
