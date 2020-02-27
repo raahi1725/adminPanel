@@ -1,6 +1,8 @@
 package com.raahi.adminPanel.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,6 +14,7 @@ import com.raahi.adminPanel.Service.LoginService;
 import com.raahi.adminPanel.Service.SecurityService;
 import com.raahi.adminPanel.Service.UserService;
 import com.raahi.adminPanel.bean.RegisterRequestBean;
+import com.raahi.adminPanel.bean.SessionUserBean;
 import com.raahi.adminPanel.model.User;
 import com.raahi.adminPanel.validator.UserValidator;
 @Controller
@@ -29,6 +32,9 @@ public class LoginController {
 	@Autowired
 	private SecurityService securityService;
 	
+	@Autowired
+	private SessionUserBean sessionUserBean;
+	
 	
 	@GetMapping("/login")
 	public String login(Model model, String error, String logout) {
@@ -38,7 +44,9 @@ public class LoginController {
 	
 	    if (logout != null)
 	        model.addAttribute("message", "You have been logged out successfully.");
-	
+	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String userName = auth.getName(); 
+	    sessionUserBean.setUserName(userName);
 	    return "login";
 	}
 	
@@ -50,6 +58,7 @@ public class LoginController {
 
 	@GetMapping({"/", "/welcome"})
 	public String welcome(Model model) {
+		loginService.setSessionAttributes();
 		model.addAttribute("user", new User()); 
 	    return "dashboard";
 	}

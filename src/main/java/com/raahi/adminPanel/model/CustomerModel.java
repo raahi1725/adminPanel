@@ -46,6 +46,15 @@ public class CustomerModel implements java.io.Serializable {
 	private String photoIdFilePath;
 	private String customerPhotoName;
 	private String customerPhotoPath;
+	private Date cDate;
+	private TourPlannerStaffModel createdBy;
+	private String isDel="0";
+	private TourPlannerStaffModel deletedBy;
+	private Date delDate;
+	private String isEdit="0";
+	private TourPlannerStaffModel editedBy;
+	private Date editDate;
+	private String ipAdress;
 	
 	@Id
 	@Column(name = "customerId")
@@ -301,4 +310,80 @@ public class CustomerModel implements java.io.Serializable {
 	public void setCustomerPhotoPath(String customerPhotoPath) {
 		this.customerPhotoPath = customerPhotoPath;
 	}
+	
+	@Column(name = "cDate")
+	public Date getcDate() {
+		return cDate;
+	}
+	public void setcDate(Date cDate) {
+		this.cDate = cDate;
+	}
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "createdBy")
+	public TourPlannerStaffModel getCreatedBy() {
+		return createdBy;
+	}
+	public void setCreatedBy(TourPlannerStaffModel editedBy) {
+		this.createdBy = createdBy;
+	}
+	
+	@Column(name = "isDel")
+	public String getIsDel() {
+		return isDel;
+	}
+	public void setIsDel(String isDel) {
+		this.isDel = isDel;
+	}
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "deletedBy")
+	public TourPlannerStaffModel getDeletedBy() {
+		return deletedBy;
+	}
+	public void setDeletedBy(TourPlannerStaffModel deletedBy) {
+		this.deletedBy = deletedBy;
+	}
+	@Column(name = "isEdit")
+	public String getIsEdit() {
+		return isEdit;
+	}
+	
+	public void setIsEdit(String isEdit) {
+		this.isEdit = isEdit;
+	}
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "editedBy")
+	public TourPlannerStaffModel getEditedBy() {
+		return editedBy;
+	}
+	public void setEditedBy(TourPlannerStaffModel editedBy) {
+		this.editedBy = editedBy;
+	}
+	
+	@Column(name = "delDate")
+	public Date getDelDate() {
+		return delDate;
+	}
+	public void setDelDate(Date delDate) {
+		this.delDate = delDate;
+	}
+	
+	@Column(name = "editDate")
+	public Date getEditDate() {
+		return editDate;
+	}
+	public void setEditDate(Date editDate) {
+		this.editDate = editDate;
+	}
+	
+	@Column(name = "ipAdress")
+	public String getIpAdress() {
+		return ipAdress;
+	}
+	public void setIpAdress(String ipAdress) {
+		this.ipAdress = ipAdress;
+	}
+	
 }

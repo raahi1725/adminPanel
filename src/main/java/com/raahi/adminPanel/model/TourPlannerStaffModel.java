@@ -48,6 +48,8 @@ public class TourPlannerStaffModel {
 	private TourPlannerStaffModel editedBy;
 	private Date editDate;
 	private String ipAdress;
+	private User user;
+	
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -308,5 +310,14 @@ public class TourPlannerStaffModel {
 	}
 	public void setDeletePermission(String deletePermission) {
 		this.deletePermission = deletePermission;
+	}
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "userId")
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 }

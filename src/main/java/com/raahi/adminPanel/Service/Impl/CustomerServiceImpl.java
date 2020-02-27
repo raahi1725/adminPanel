@@ -1,24 +1,40 @@
 package com.raahi.adminPanel.Service.Impl;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.raahi.adminPanel.Repository.CustomerRepository;
 import com.raahi.adminPanel.Service.CustomerService;
+import com.raahi.adminPanel.bean.SessionUserBean;
 import com.raahi.adminPanel.model.CustomerModel;
+import com.raahi.adminPanel.model.TourPlannerBranchModel;
+import com.raahi.adminPanel.model.TourPlannerMasterModel;
+import com.raahi.adminPanel.model.TourPlannerStaffModel;
 
 @Service
 public class CustomerServiceImpl implements CustomerService{
 
 	@Autowired 
-	private CustomerRepository customerRepository;
+	private CustomerService customerService;
+	
+	@Autowired
+	private SessionUserBean sessionUserBean;
 	
 	@Override
 	public boolean addCustomers(CustomerModel customerModel) {
 		try {
-			//customerModel.setTourPlannerId(1);
-			//customerModel.setTourPlannerBranchId(1);
-			customerRepository.save(customerModel);
+			TourPlannerMasterModel tourPlannerMasterModel = new TourPlannerMasterModel();
+			tourPlannerMasterModel.setTourPlannerMasterId(sessionUserBean.getTourPlannerId());
+			customerModel.setTourPlannerMasterModel(tourPlannerMasterModel );
+			TourPlannerBranchModel tourPlannerBranchModel = new TourPlannerBranchModel();
+			tourPlannerBranchModel.setTourPlannerBranchId(sessionUserBean.getTourPlannerBranchId());
+			customerModel.setTourPlannerBranchModel(tourPlannerBranchModel);
+			customerModel.setRegDate(new Date());
+			TourPlannerStaffModel tourPlannerStaffModel = new TourPlannerStaffModel();
+			tourPlannerStaffModel.setTourPlannerStaffId(sessionUserBean.getTourPlannerStaffId());
+			customerModel.setCreatedBy(tourPlannerStaffModel);
+			customerService.addCustomers(customerModel);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();

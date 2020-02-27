@@ -15,9 +15,11 @@ import com.raahi.adminPanel.Repository.TourPlannerMasterRepository;
 import com.raahi.adminPanel.Repository.TourPlannerStaffRepository;
 import com.raahi.adminPanel.Service.LoginService;
 import com.raahi.adminPanel.bean.RegisterRequestBean;
+import com.raahi.adminPanel.bean.SessionUserBean;
 import com.raahi.adminPanel.model.TourPlannerBranchModel;
 import com.raahi.adminPanel.model.TourPlannerMasterModel;
 import com.raahi.adminPanel.model.TourPlannerStaffModel;
+import com.raahi.adminPanel.model.User;
 
 @Component
 public class LoginServiceImpl implements LoginService {
@@ -30,6 +32,9 @@ public class LoginServiceImpl implements LoginService {
 	
 	@Autowired 
 	TourPlannerBranchRepository tourPlannerBranchRepository;
+	
+	@Autowired
+	SessionUserBean sessionUserBean;
 	
 	
 	@Override
@@ -105,6 +110,15 @@ public class LoginServiceImpl implements LoginService {
 			e.printStackTrace();
 		}
 		return false;
+	}
+
+
+	@Override
+	public void setSessionAttributes() {
+		User user = new User();
+		user.setUsername(sessionUserBean.getUserName());
+		tourPlannerStaffRepository.findbyUser(user);
+		
 	}
 
 }
