@@ -38,7 +38,7 @@ public class LoginServiceImpl implements LoginService {
 	
 	
 	@Override
-	public boolean addTourPlanner(RegisterRequestBean registerRequestBean) {
+	public boolean addTourPlanner(RegisterRequestBean registerRequestBean,User user) {
 		try {
 			Calendar c= Calendar.getInstance();
 			c.add(Calendar.DATE, 30);
@@ -87,21 +87,9 @@ public class LoginServiceImpl implements LoginService {
 			tourPlannerStaffModel.setRegDate(new Date());
 			tourPlannerStaffModel.setDeletePermission("1");
 			tourPlannerStaffModel.setRegNo("1");
-			tourPlannerStaffModel.setTourPlannerBranchId(tourPlannerBranchModel);
+			tourPlannerStaffModel.setTourPlannerBranchModel(tourPlannerBranchModel);
+			tourPlannerStaffModel.setUser(user);
 			staffList.add(tourPlannerStaffModel);
-			
-			TourPlannerStaffModel raahiPlannerStaffModel = new TourPlannerStaffModel();
-			raahiPlannerStaffModel.setRegNo("2");;
-			raahiPlannerStaffModel.setFirstName("RAAHI");
-			raahiPlannerStaffModel.setLastName("ADMIN");
-			raahiPlannerStaffModel.setContactNo(registerRequestBean.getUsername());
-			raahiPlannerStaffModel.setEmail("info@myRaahi.com");
-			raahiPlannerStaffModel.setRole(RoleEnum.RAAHIADMIN.getRoles());
-			raahiPlannerStaffModel.setEditPermission("1");
-			raahiPlannerStaffModel.setDeletePermission("1");
-			raahiPlannerStaffModel.setRegDate(new Date());
-			raahiPlannerStaffModel.setTourPlannerBranchId(tourPlannerBranchModel);
-			staffList.add(raahiPlannerStaffModel);
 			
 			tourPlannerStaffRepository.saveAll(staffList);
 			
@@ -117,7 +105,7 @@ public class LoginServiceImpl implements LoginService {
 	public void setSessionAttributes() {
 		User user = new User();
 		user.setUsername(sessionUserBean.getUserName());
-		tourPlannerStaffRepository.findbyUser(user);
+		tourPlannerStaffRepository.getLoginDetails(user.getUsername());
 		
 	}
 

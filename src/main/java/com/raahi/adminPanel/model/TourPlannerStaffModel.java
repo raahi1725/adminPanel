@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public class TourPlannerStaffModel {
 
 	private Integer tourPlannerStaffId;
-	private TourPlannerBranchModel tourPlannerBranchId;
+	private TourPlannerBranchModel tourPlannerBranchModel;
 	private String firstName;
 	private String lastName;
 	private String role;
@@ -63,11 +63,11 @@ public class TourPlannerStaffModel {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "tourPlannerBranchId")
-	public TourPlannerBranchModel getTourPlannerBranchId() {
-		return tourPlannerBranchId;
+	public TourPlannerBranchModel getTourPlannerBranchModel() {
+		return tourPlannerBranchModel;
 	}
-	public void setTourPlannerBranchId(TourPlannerBranchModel tourPlannerBranchId) {
-		this.tourPlannerBranchId = tourPlannerBranchId;
+	public void setTourPlannerBranchModel(TourPlannerBranchModel tourPlannerBranchModel) {
+		this.tourPlannerBranchModel = tourPlannerBranchModel;
 	}
 	
 	@Column(name="firstName")

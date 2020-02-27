@@ -44,9 +44,7 @@ public class LoginController {
 	
 	    if (logout != null)
 	        model.addAttribute("message", "You have been logged out successfully.");
-	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	    String userName = auth.getName(); 
-	    sessionUserBean.setUserName(userName);
+	   
 	    return "login";
 	}
 	
@@ -58,6 +56,9 @@ public class LoginController {
 
 	@GetMapping({"/", "/welcome"})
 	public String welcome(Model model) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String userName = authentication.getName();
+		sessionUserBean.setUserName(userName);
 		loginService.setSessionAttributes();
 		model.addAttribute("user", new User()); 
 	    return "dashboard";
@@ -70,8 +71,9 @@ public class LoginController {
 		userForm.setUsername(registerRequestBean.getUsername());
 		userForm.setPassword(registerRequestBean.getPassword());
 		userValidator.validate(userForm, bindingResult);
-	    loginService.addTourPlanner(registerRequestBean);
-	    userService.save(userForm);
+		userService.save(userForm);
+	    loginService.addTourPlanner(registerRequestBean,userForm);
+	  
         securityService.autoLogin(userForm.getUsername(), registerRequestBean.getPassword());
         return "redirect:/welcome";
 }

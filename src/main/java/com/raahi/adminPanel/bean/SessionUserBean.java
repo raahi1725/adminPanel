@@ -16,13 +16,27 @@ public class SessionUserBean implements Serializable {
 
 	private User userBean = null;
 	
-	private Integer tourPlannerId;
+	private Integer tourPlannerStaffId;
+	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String roleName;
+	
+	private String regNo;
+	
+	private String userName;
 	
 	private Integer tourPlannerBranchId;
 	
-	private String tourPlannerName;
+	private String branchName;
 	
-	private String tourPlannerRegNo;
+	private String headBranch;
+	
+	private Integer tourPlannerId;
+	
+	private String tourPlannerName;
 	
 	private String IpAddress;
 	
@@ -31,16 +45,23 @@ public class SessionUserBean implements Serializable {
 	private String deviceType;
 	
 	private String  sessionLanguage;
-	
-	private String firstName;
-	
-	private String lastName;
-	
-	private Integer tourPlannerStaffId;
-	
-	private String roleName;
-	
-	private String userName;
+
+	public SessionUserBean(Integer tourPlannerStaffId, String firstName, String lastName, String roleName, String regNo,
+			String userName, Integer tourPlannerBranchId, String branchName, String headBranch, Integer tourPlannerId,
+			String tourPlannerName) {
+		super();
+		this.tourPlannerStaffId = tourPlannerStaffId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.roleName = roleName;
+		this.regNo = regNo;
+		this.userName = userName;
+		this.tourPlannerBranchId = tourPlannerBranchId;
+		this.branchName = branchName;
+		this.headBranch = headBranch;
+		this.tourPlannerId = tourPlannerId;
+		this.tourPlannerName = tourPlannerName;
+	}
 
 	public User getUserBean() {
 		return userBean;
@@ -50,12 +71,52 @@ public class SessionUserBean implements Serializable {
 		this.userBean = userBean;
 	}
 
-	public Integer getTourPlannerId() {
-		return tourPlannerId;
+	public Integer getTourPlannerStaffId() {
+		return tourPlannerStaffId;
 	}
 
-	public void setTourPlannerId(Integer tourPlannerId) {
-		this.tourPlannerId = tourPlannerId;
+	public void setTourPlannerStaffId(Integer tourPlannerStaffId) {
+		this.tourPlannerStaffId = tourPlannerStaffId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+
+	public String getRegNo() {
+		return regNo;
+	}
+
+	public void setRegNo(String regNo) {
+		this.regNo = regNo;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public Integer getTourPlannerBranchId() {
@@ -66,20 +127,36 @@ public class SessionUserBean implements Serializable {
 		this.tourPlannerBranchId = tourPlannerBranchId;
 	}
 
+	public String getBranchName() {
+		return branchName;
+	}
+
+	public void setBranchName(String branchName) {
+		this.branchName = branchName;
+	}
+
+	public String getHeadBranch() {
+		return headBranch;
+	}
+
+	public void setHeadBranch(String headBranch) {
+		this.headBranch = headBranch;
+	}
+
+	public Integer getTourPlannerId() {
+		return tourPlannerId;
+	}
+
+	public void setTourPlannerId(Integer tourPlannerId) {
+		this.tourPlannerId = tourPlannerId;
+	}
+
 	public String getTourPlannerName() {
 		return tourPlannerName;
 	}
 
 	public void setTourPlannerName(String tourPlannerName) {
 		this.tourPlannerName = tourPlannerName;
-	}
-
-	public String getTourPlannerRegNo() {
-		return tourPlannerRegNo;
-	}
-
-	public void setTourPlannerRegNo(String tourPlannerRegNo) {
-		this.tourPlannerRegNo = tourPlannerRegNo;
 	}
 
 	public String getIpAddress() {
@@ -114,43 +191,7 @@ public class SessionUserBean implements Serializable {
 		this.sessionLanguage = sessionLanguage;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public Integer getTourPlannerStaffId() {
-		return tourPlannerStaffId;
-	}
-
-	public void setTourPlannerStaffId(Integer tourPlannerStaffId) {
-		this.tourPlannerStaffId = tourPlannerStaffId;
-	}
-
-	public String getRoleName() {
-		return roleName;
-	}
-
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 }

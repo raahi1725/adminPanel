@@ -8,10 +8,8 @@
 	<link rel="stylesheet" href="./resources/css/login/bootstrap.css">
 	<link rel="stylesheet" href="./resources/css/login/style.css">
 	<link rel="stylesheet" href="./resources/css/login/model.css">
-	<link rel="stylesheet" href="./resources/css/select2.min.css">
 	<script src="./resources/js/login/all.js"></script>
-  	<script src="./resources/js/commonJs/countrystatecity.js"></script>
-  	<script src="./resources/js/commonJs/select2.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 	<script src="./resources/js/login/modernizr-2.6.2.min.js"></script>
 	<script src="./resources/js/login/jquery.min.js"></script>
 	<script src="./resources/js/login/bootstrap.min.js"></script>
@@ -116,26 +114,9 @@
 									</div>
 								</div>
 								<div class="form-row">
-									<div class="form-holder  form-holder-2">
-										<form:select path="branchCountry" name="country" id="countryId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
-                       						<option value="" class="form-control-select-default">Select Country</option>
-                       					</form:select>		
-									</div>
-									<div class="form-holder  form-holder-2">
-										<form:select path="branchState" name="state" id="stateId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
-                       						<option value="" class="form-control-select-default">Select State</option>
-                       					</form:select>		
-									</div>
-									<div class="form-holder  form-holder-2">
-										<select name="branchCity" id="cityId" name="city" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
-                       						<option value="" class="form-control-select-default">Select City</option>
-                       					</select>	
-									</div>
-								</div>
-								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="text" class="form-control" id="branchAddress" path="branchAddress" maxlength="100"/>
+											<form:textarea class="form-control" id="branchAddress" path="branchAddress" maxlength="100" style="height:43px;"/>
 											<span class="label">Address</span>
 					  						<span class="border"></span>
 										</label>
