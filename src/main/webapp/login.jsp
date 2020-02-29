@@ -8,7 +8,6 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
-	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 	<link rel="stylesheet" href="./resources/css/login/animate.css">
 	<link rel="stylesheet" href="./resources/css/login/icomoon.css">
 	<link rel="stylesheet" href="./resources/css/login/bootstrap.css">
@@ -17,6 +16,8 @@
 	<link rel="stylesheet" href="./resources/css/login/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./resources/css/login/style.css">
 	<link rel="stylesheet" href="./resources/css/login/model.css">
+	<link rel="stylesheet" href="./resources/css/login/main.css">
+	<link rel="stylesheet" href="./resources/css/login/util.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	<script src="./resources/js/login/all.js"></script>
 	<script src="./resources/js/login/modernizr-2.6.2.min.js"></script>
@@ -75,13 +76,13 @@
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box" style="margin-top:150px;">
 								<h2>Start Your Free Trial Today</h2>
-								<form:form class="form-register" action="/register" method="POST" modelAttribute="registerRequestBean">
-									<form:input type="text" placeholder="Organisation Name" id="orgName" path="orgName" maxlength="50"/>
-									<form:input type="email" id="userEmail" path="adminEmail" maxlength="50" placeholder="Email Id"/>
-									<form:input type="text" id="userContact" path="username" maxlength="10" placeholder="Mobile No" onkeypress='validate(event)'/>
-									<form:input type="password" id="userPassword" path="password" maxlength="20" minlength="5"  placeholder="Password"/>
+								<form class="form-register" action="/register" method="POST" modelAttribute="registerRequestBean">
+									<input type="text" placeholder="Organisation Name" id="orgName" path="orgName" maxlength="50"/>
+									<input type="email" id="userEmail" path="adminEmail" maxlength="50" placeholder="Email Id"/>
+									<input type="text" id="userContact" path="username" maxlength="10" placeholder="Mobile No" onkeypress='validate(event)'/>
+									<input type="password" id="userPassword" path="password" maxlength="20" minlength="5"  placeholder="Password"/>
 									<p><input type="submit" value="Sign Up" class="btn btn-primary btn-lg btn-custom"/></p>
-								</form:form>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -193,15 +194,15 @@
 						<div class="pricing">
 							<h2 class="pricing-heading">Basic</h2>
 							<div class="price"><sup class="currency">Rs</sup>7K<small>per year</small></div>
-							<p>Pay only for the basic services. Manage your data and get things done at such low cost</p>
+							<p>Pay only for the basic services. Manage your customers,itineraries and get things done at such low cost. </p>
 							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
 						</div>
 					</div>
 					<div class="col-md-4 text-center animate-box">
 						<div class="pricing">
 							<h2 class="pricing-heading">Pro</h2>
-							<div class="price"><sup class="currency">Rs</sup>15K<small>per year</small></div>
-							<p>The Pro plan will take your business to another level. Get Customization done one the go. </p>
+							<div class="price"><sup class="currency">Rs</sup>10K<small>per year</small></div>
+							<p>The Pro plan will take your business to another level. Get Customization done on the go. </p>
 							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
 						</div>
 					</div>
@@ -220,60 +221,143 @@
 			<div class="container">
 				<div class="row mobile-wrap">
 					<div class="col-md-5 animate-box">
-						<div class="mobile-img" style="background-image: url(resources/img/login/mobile-2.jpg);"></div>
+						<div class="wrap-contact100">
+							<div class="contact100-form-title" style="background-image: url(resources/img/login/bg-01.jpg);">
+								<span class="contact100-form-title-1">
+									Contact Us
+								</span>
+				
+								<span class="contact100-form-title-2">
+									Feel free to drop us a line below!
+								</span>
+							</div>
+
+							<form class="contact100-form validate-form">
+								<div class="wrap-input100 validate-input" data-validate="Name is required">
+									<span class="label-input100">Full Name:</span>
+									<input class="input100" type="text" name="name" placeholder="Enter full name">
+									<span class="focus-input100"></span>
+								</div>
+				
+								<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+									<span class="label-input100">Email:</span>
+									<input class="input100" type="text" name="email" placeholder="Enter email addess">
+									<span class="focus-input100"></span>
+								</div>
+				
+								<div class="wrap-input100 validate-input" data-validate="Phone is required">
+									<span class="label-input100">Phone:</span>
+									<input class="input100" type="text" name="phone" placeholder="Enter phone number">
+									<span class="focus-input100"></span>
+								</div>
+				
+								<div class="wrap-input100 validate-input" data-validate = "Message is required">
+									<span class="label-input100">Message:</span>
+									<textarea class="input100" name="message" placeholder="Your Comment..."></textarea>
+									<span class="focus-input100"></span>
+								</div>
+				
+								<div class="container-contact100-form-btn">
+									<button class="btn btn-primary btn-lg btn-custom" style="background-color: #09a8bb; border-color: #09a8bb;">
+										<span>
+											Submit
+										</span>
+									</button>
+								</div>
+							</form>
+						</div>
 					</div>
 					<div class="col-md-7 animate-box">
 						<div class="desc">
-							<h2>Stay Organized instantly</h2>
+							<h2>Your Feedback is important to us</h2>
 							<div class="features">
-								<span class="icon"><i class="material-icons">check</i></span>
+								<span class="icon"><i class="fa fa-edit"></i></span>
 								<div class="f-desc">
-									<p>Papers make you disorganized and really put a bad impression on your customers</p>
+									<p>Write Your unique requirement in the comment and get it incorporated in your product from us</p>
 								</div>
 							</div>
 							<div class="features">
-								<span class="icon"><i class="material-icons">check</i></span>
+								<span class="icon"><i class="fa fa-phone"></i></span>
 								<div class="f-desc">
-									<p>Carry less papers and more information</p>
+									<p>You can also contact us on +91-9529514481</p>
 								</div>
 							</div>
 							<div class="features">
-								<span class="icon"><i class="material-icons">check</i></span>
+								<span class="icon"><i class="fa fa-envelope"></i></span>
 								<div class="f-desc">
-									<p> Manage everything under one app and decide what you want to show</p>
+									<p>Or simply drop us an email with your idea at info@myraahi.com</p>
 								</div>
 							</div>
-							<p><a href="#" class="btn btn-primary btn-outline with-arrow">See Demo<i class="icon-arrow-right3"></i></a></p>
 						</div>
 					</div>
 				</div>
 				<div class="row mobile-wrap">
 					<div class="col-md-5 col-md-push-7 animate-box">
-						<div class="mobile-img" style="background-image: url(resources/img/login/mobile-1.jpg);"></div>
+						<div class="wrap-contact100">
+							<div class="contact100-form-title" style="background-image: url(resources/img/login/bg-01.jpg);">
+								<span class="contact100-form-title-1">
+									Request a Demo
+								</span>
+				
+								<span class="contact100-form-title-2">
+									We dont cost for seeing how the product works!
+								</span>
+							</div>
+
+							<form class="contact100-form validate-form">
+								<div class="wrap-input100 validate-input" data-validate="Name is required">
+									<span class="label-input100">Full Name:</span>
+									<input class="input100" type="text" name="name" placeholder="Enter full name">
+									<span class="focus-input100"></span>
+								</div>
+				
+								<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+									<span class="label-input100">Email:</span>
+									<input class="input100" type="text" name="email" placeholder="Enter email addess">
+									<span class="focus-input100"></span>
+								</div>
+								<div class="wrap-input100 validate-input" data-validate="Phone is required">
+									<span class="label-input100">Phone:</span>
+									<input class="input100" type="text" name="phone" placeholder="Enter phone number">
+									<span class="focus-input100"></span>
+								</div>
+								<div class="wrap-input100 validate-input" data-validate = "Address is required">
+									<span class="label-input100">Address:</span>
+									<textarea class="input100" name="message" placeholder="Your Address"></textarea>
+									<span class="focus-input100"></span>
+								</div>
+				
+								<div class="container-contact100-form-btn">
+									<button class="btn btn-primary btn-lg btn-custom" style="background-color: #09a8bb; border-color: #09a8bb;">
+										<span>
+											Request a Demo
+										</span>
+									</button>
+								</div>
+							</form>
+						</div>
 					</div>
 					<div class="col-md-7 col-md-pull-5 animate-box">
 						<div class="desc">
-							<h2>Never Take Risk With Your Data</h2>
+							<h2>Check out the unique features we offer</h2>
 							<div class="features">
-								<span class="icon"><i class="material-icons">check</i></span>
+								<span class="icon"><i class="fa fa-laptop"></i></span>
 								<div class="f-desc">
-									<p>Avoid Last minute hustle because your customers dont want to loose
-									   their time, money and personal information</p>
+									<p>We highly recommend you see the product and understand how it will change the way your business works </p>
 								</div>
 							</div>
 							<div class="features">
-								<span class="icon"><i class="material-icons">check</i></span>
+								<span class="icon"><i class="fa fa-external-link"></i></span>
 								<div class="f-desc">
-									<p>Avoid loss of any confidential information and assure them safe and memorable journey</p>
+									<p><a>Click here </a> to see the demo online</p>
 								</div>
 							</div>
 							<div class="features">
-								<span class="icon"><i class="material-icons">check</i></span>
+								<span class="icon"><i class="fa fa-comment-o"></i></span>
 								<div class="f-desc">
-									<p>Aware Customers are happy Customers</p>
+									<p>For more questions reach us at +91-9529514481 or info@myraahi.com</p>
 								</div>
 							</div>
-							<p><a href="#" class="btn btn-primary btn-outline with-arrow">See Demo <i class="icon-arrow-right3"></i></a></p>
 						</div>
 					</div>
 				</div>
@@ -290,7 +374,7 @@
 								<span class="icon"><i class="flaticon-ribbon"></i></span>
 								<div class="desc">
 									<span class="colorlib-counter js-counter" data-from="0" data-to="1500" data-speed="5000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">Of customers are satisfied with our professional support</span>
+									<span class="colorlib-counter-label">Tour planner around the world need digital solutions for their business</span>
 								</div>
 							</div>
 						</div>
@@ -299,7 +383,7 @@
 								<span class="icon"><i class="flaticon-church"></i></span>
 								<div class="desc">
 									<span class="colorlib-counter js-counter" data-from="0" data-to="500" data-speed="5000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">Amazing preset options to be mixed and combined</span>
+									<span class="colorlib-counter-label">Tours are planned per day</span>
 								</div>
 							</div>
 						</div>
@@ -307,8 +391,8 @@
 							<div class="counter-entry">
 								<span class="icon"><i class="flaticon-dove"></i></span>
 								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="1200" data-speed="5000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">Average response time on live chat support channel</span>
+									<span class="colorlib-counter js-counter" data-from="0" data-to="800" data-speed="5000" data-refresh-interval="50"></span>
+									<span class="colorlib-counter-label">Customer search for tour packages per day</span>
 								</div>
 							</div>
 						</div>
@@ -317,16 +401,16 @@
 			</div>
 		</div>
 
-		<div class="colorlib-blog">
+		 <div class="colorlib-blog">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
 						<h2>News from our Blog</h2>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						<p>We are coming with intresting blogs on travel and many other topics soon.</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 animate-box">
+					<!-- <div class="col-md-4 animate-box">
 						<article>
 							<h2>Building the Mention Sales Application on Unapp</h2>
 							<p class="admin"><span>May 12, 2018</span></p>
@@ -349,18 +433,18 @@
 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
 							<p class="author-wrap"><a href="#" class="author-img" style="background-image: url(resources/img/login/person3.jpg);"></a> <a href="#" class="author">by Dave Miller</a></p>
 						</article>
-					</div>
+					</div> -->
 				</div>
 			</div>
-		</div>
+		</div> 
 
 		<div id="colorlib-subscribe" class="colorlib-subscribe" style="background-image: url(resources/img/login/cover_img_1.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 text-center colorlib-heading animate-box">
-						<h2>Already trusted by over 10,000 users</h2>
-						<p>Subscribe to receive unapp tips from instructors right to your inbox.</p>
+						<h2>Be our first aware customers</h2>
+						<p>Subscribe to receive Raahi tips from instructors right to your inbox.</p>
 					</div>
 				</div>
 				<div class="row animate-box">
@@ -391,7 +475,8 @@
 				<div class="row row-pb-md">
 					<div class="col-md-3 colorlib-widget">
 						<h4>About Raahi</h4>
-						<p>Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+						<p>Raahi is a small company based in Pune & Jaipur which focuses mainly on reducing your hassle while traveling. 
+						   Raahi Admin Panel is one of the products of the company and we aim to provide many more solution in the near future </p>
 						<p>
 							<ul class="colorlib-social-icons">
 								<li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -417,7 +502,7 @@
 
 					<div class="col-md-3 colorlib-widget">
 						<h4>Recent Blog</h4>
-						<div class="f-blog">
+						<!-- <div class="f-blog">
 							<a href="blog.html" class="blog-img" style="background-image: url(resources/img/login/blog-1.jpg);">
 							</a>
 							<div class="desc">
@@ -440,16 +525,16 @@
 								<h2><a href="blog.html">Imahe the biggest photography studio</a></h2>
 								<p class="admin"><span>30 March 2018</span></p>
 							</div>
-						</div>
+						</div> -->
 					</div>
 
 					<div class="col-md-3 colorlib-widget">
 						<h4>Contact Info</h4>
 						<ul class="colorlib-footer-links">
-							<li>abc , <br> Pune</li>
-							<li><a href="tel://1234567920"><i class="icon-phone"></i> 8550812500</a></li>
+							<li>Katraj, <br> Pune</li>
+							<li><a href="tel://1234567920"><i class="icon-phone"></i> 9529514481</a></li>
 							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@myraahi.com</a></li>
-							<li><a href="#"><i class="icon-location4"></i> yourwebsite.com</a></li>
+							<li><a href="#"><i class="icon-location4"></i> www.myraahi.com</a></li>
 						</ul>
 					</div>
 				</div>

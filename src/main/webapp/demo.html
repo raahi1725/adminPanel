@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<html>
+
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="./resources/css/select2.min.css">
+  <meta charset="utf-8">
+  <title>International Telephone Input</title>
+   <link rel="stylesheet" href="./resources/css/select2.min.css">
   <link rel="stylesheet" href="./resources/css/intlTelInput.css">
   <link rel="stylesheet" href="./resources/css/demo.css">
   <script src="./resources/js/adminJs/customer.js"></script>
   <script src="./resources/js/commonJs/countrystatecity.js"></script>
   <script src="./resources/js/commonJs/select2.min.js"></script>
   <script src="./resources/js/telephone/intlTelInput.js"></script>
+  <script>
+  </script>
 </head>
+
 <body class="">
       <div class="content">
         <div class="container-fluid">
-         <span>${message}</span>
-          <div class="row">
+  <form>
+    <button type="submit">Submit</button>
+  </form>
+   <div class="row">
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header card-header-primary">
@@ -23,84 +29,86 @@
                   <p class="card-category">Entry for new customer</p>
                 </div>
                 <div class="card-body">
-                	 <form:form class="form-register" action="/customer" method="POST" modelAttribute="customerModel">
+                	<form>
                 		<div class="row">
-			                <div class="col-md-6">
+			                <div class="col-md-3">
 			                    <div class="form-group">
 				                    <label class="bmd-label-floating">Reg No</label>
-				                    <form:input path="regNo" type="text" class="form-control" value="1"/>
+				                    <input name="regNo" type="text" class="form-control">
 		                   		</div>
 		                	</div>
-		                    <div class="col-md-6">
+		                    <div class="col-md-3">
 		                    	<div class="form-group">
 			                        <label class="bmd-label-floating">Reg Date</label>
-			                        <form:input path="regDate" type="text" class="form-control" value="1994-01-01"/>
+			                        <input name="regDate" type="text" class="form-control">
 		                        </div>
 		                    </div>
 		                </div>
 		                <div class="row">
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">First Name</label>
-		                          <form:input path="firstName" type="text" class="form-control" value="Saloni"/>
+		                          <input name="firstName" type="text" class="form-control">
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Middle Name</label>
-		                          <form:input path="middleName" type="text" class="form-control" value="R"/>
+		                          <input name="middleName" type="text" class="form-control">
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Last Name</label>
-		                          <form:input path="lastName" type="text" class="form-control" value="Parekh"/>
+		                          <input name="lastName" type="text" class="form-control">
 		                        </div>
 	                        </div>
                     	</div>
                     	<div class="row">
-                    		<div class="col-md-4">
+                    		<div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Email</label>
-		                          <form:input path="emailId"  type="email" class="form-control" value="saloniparekh25@gmail.com"/>
+		                          <input name="email"  type="email" class="form-control">
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
-		                          <form:input path="contactNo" id="phone" name="phone" type="tel" class="form-control" placeholder="Contact No" value="9881735306"/>
+		                          <label class="bmd-label-floating">Contact No</label>
+		                           <input id="phone" name="phone" type="tel">
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
-		                          <form:input path="altContactNo" id="phone1" name="phone1" type="tel" class="form-control" placeholder="Alternate Contact" value="9881735305"/>
+		                          <label class="bmd-label-floating">Alt. Contact No</label>
+		                          <input name="altContactNo" type="text" class="form-control">
 		                        </div>
 	                        </div>
                     	</div>
                     	<div class="row">
-                    		  <div class="col-md-4">
+                    		  <div class="col-md-3">
 		                        <div class="form-group">
-		                          <select name="gender" class="form-control-select" 
+		                          <select name="gender" class="form-control-select"
 		                         		 onchange="this.className=this.options[this.selectedIndex].className">
 		                          		<option value="0" class="form-control-select-default">Gender</option>
 	                					<option value="MALE" class="form-control-select-option">MALE</option>
-	                					<option value="FEMALE" class="form-control-select-option" selected="selected">FEMALE</option>
+	                					<option value="FEMALE" class="form-control-select-option">FEMALE</option>
 	                					<option value="OTHER" class="form-control-select-option">OTHER</option>
                 				  </select>
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Birth Date</label>
-		                          <form:input path="birthDate" type="text" class="form-control" value="1994-01-01"/>
+		                          <input name="birthDate" type="date" class="form-control">
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
-		                          <select name="bloodGroup" class="form-control-select" 
+		                          <select name="bloodGroup" class="form-control-select"
 		                         		 onchange="this.className=this.options[this.selectedIndex].className">
 		                          		<option value="" class="form-control-select-default" >Blood Group</option>
 	                					<option value="A+ve" class="form-control-select-option">A+ve</option>
-	                					<option value="A-ve" class="form-control-select-option" selected="selected">A-ve</option>
+	                					<option value="A-ve" class="form-control-select-option">A-ve</option>
 	                					<option value="B+ve" class="form-control-select-option">B+ve</option>
 	                					<option value="AB+ve" class="form-control-select-option">AB+ve</option>
 	                					<option value="AB-ve" class="form-control-select-option">AB-ve</option>
@@ -111,98 +119,98 @@
 	                        </div>
                     	</div>
                     	<div class="row">
-                    		 <div class="col-md-4">
+                    		 <div class="col-md-3">
 		                        <div class="form-group">
-		                          <form:select path="country" name="country" id="countryId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
+		                          <select name="country" id="countryId" class="form-control-select js-example-basic-multiple  order-alpha presel-byip countries">
 		                          	<option value="" class="form-control-select-default">Select Country</option>
-		                          </form:select>
+		                          </select>
 		                        </div>
 	                        </div>
-                    		<div class="col-md-4">
+                    		<div class="col-md-3">
 		                        <div class="form-group">
-		                           <form:select path="state" name="state" id="stateId" class="form-control-select js-example-basic-multiple states">
+		                           <select name="state" id="stateId" class="form-control-select js-example-basic-multiple states">
 		                           	<option value="" class="form-control-select-default">Select State</option>
-		                           </form:select>
+		                           </select>
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
-		                           <form:select path="city" name="city" id="cityId" class="form-control-select js-example-basic-multiple cities">
+		                           <select name="city" id="cityId" class="form-control-select js-example-basic-multiple cities">
 		                           	<option value="" class="form-control-select-default">Select City</option>
-		                           </form:select>
+		                           </select>
 		                        </div>
 	                        </div>
                     	</div>
                     	<div class="row">
-                    		 <div class="col-md-7">
+                    		 <div class="col-md-6">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Address</label>
-		                          <form:textarea path="address" name="address"  class="form-control" style="height:36px !important;" value="pune" />
+		                          <textarea name="address"  class="form-control" style="height:36px !important;"></textarea>
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">PinCode</label>
-		                          <form:input path="pinCode"  type="text" class="form-control" value="411042"/>
+		                          <input name="pinCode"  type="text" class="form-control">
 		                        </div>
 	                        </div>
                     	</div>
                     	<div class="row">
-                    		<div class="col-md-4">
+                    		<div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Caste-Category</label>
-		                          <form:input path="casteCategory" type="text" class="form-control" value="Jain" />
+		                          <input name="casteCategory" type="text" class="form-control">
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Occupation</label>
-		                          <form:input path="occupation" type="text" class="form-control" value="Service"/>
+		                          <input name="occupation" type="text" class="form-control">
 		                        </div>
 	                        </div>
-	                        <div class="col-md-4">
+	                        <div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Nationality</label>
-		                          <form:input path="nationality"  type="text" class="form-control" value="Indian"/>
+		                          <input name="nationality"  type="text" class="form-control">
 		                        </div>
 	                        </div>
                     	</div>
                     	<div class="row">
-                    		<div class="col-md-6">
+                    		<div class="col-md-3">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Referal Code</label>
-		                          <form:input path="referalCodeId" type="text" class="form-control" value="1"/>
+		                          <input name="referalCode" type="text" class="form-control" multiple>
 		                        </div>
 	                        </div>
-	                        <div class="col-md-6" >
+	                        <div class="col-md-3" >
 		                        <div class="form-group">
-		                            <form:select path="hearedFrom" id="hearedFromSelect" 
+		                            <select name="hearedFrom" id="hearedFromSelect" 
 		                            		class="form-control-select"
 		                         		 	onchange="showHideOther(); this.className=this.options[this.selectedIndex].className">
 		                          		<option value="" class="form-control-select-default">Here Us From?</option>
 		                          		<option value="Google Search" class="form-control-select-option">Google Search</option>
 	                					<option value="Instagram" class="form-control-select-option">Instagram</option>
-	                					<option value="Facebook" class="form-control-select-option" selected="selected">Facebook</option>
+	                					<option value="Facebook" class="form-control-select-option">Facebook</option>
 	                					<option value="Advertisement" class="form-control-select-option">Advertisement</option>
 	                					<option value="Other" class="form-control-select-option">Other</option>
-                				  </form:select>
+                				  </select>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-3 hide" id="othersDiv">
 		                        <div class="form-group" >
 		                          <label class="bmd-label-floating">Other</label>
-		                          <form:input path="other" type="text" class="form-control" />
+		                          <input type="text" class="form-control">
 		                        </div>
 	                        </div>
                     	</div>
                     	<div class="row">
-                    		<div class="col-md-6">
+                    		<div class="col-md-5">
 		                        <div class="">
 		                          <label class="bmd-label-floating">Upload Id Proof</label>
-		                          <input name="idProof" type="file" class="form-control" multiple >
+		                          <input name="idProof" type="file" class="form-control" multiple>
 		                        </div>
 	                        </div>
-	                        <div class="col-md-6">
+	                        <div class="col-md-5">
 		                        <div class="">
 		                          <label class="bmd-label-floating">Upload Photo</label>
 		                          <input name="photo" type="file" class="form-control" >
@@ -218,13 +226,13 @@
 	                        </div>
                     	</div>
                     	 <div class="row">
-	                        <div class="col-md-12" style="text-align:center;">
+	                        <div class="col-md-8">
 		                        <div class="submitDiv">
-		                          <input type="submit"  class="btn btn-primary btn-round" value="Submit">
+		                          <input type="button" value="Submit">
 		                         </div>
 	                        </div>
                     	</div>
-                    </form:form>
+                     </form>
                 </div>
               </div>
             </div>
@@ -251,8 +259,36 @@
               </div>
           </div>
         </div>
-      </div>
-     </div>
+        </div>
+        </div>
+        
+ 
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // hiddenInput: "full_number",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      // placeholderNumberType: "MOBILE",
+      // preferredCountries: ['cn', 'jp'],
+      // separateDialCode: true,
+      utilsScript: "./resources/js/telephone/utils.js",
+    });
+  </script>
 </body>
 
 </html>

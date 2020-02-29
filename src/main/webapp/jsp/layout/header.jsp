@@ -11,55 +11,55 @@
         <ul id="home" class="nav">
            <li class="nav-item">
             <a class="nav-link" href="dashboard">
-              <i class="material-icons">home</i>
+              <i class="material-icons"><i class="fa fa-home"></i></i>
               <span>Home</span>
             </a>
           </li>
           <li id="packages" class="nav-item active">
             <a class="nav-link" href="packages">
-              <i class="material-icons">flight_takeoff</i>
+              <i class="material-icons"><i class="fa fa-plane"></i></i>
               <span>Packages</span>
             </a>
           </li>
           <li id="customers" class="nav-item">
             <a class="nav-link" href="customers">
-              <i class="material-icons">person_add</i>
-              <span>Customers</span>
+            	<i class="material-icons"><i class="fa fa-user"></i></i>
+            	<span>Customers</span>
             </a>
           </li>
           <li id="tourReports" class="nav-item ">
             <a class="nav-link" href="./typography.jsp">
-              <i class="material-icons">library_books</i>
+              <i class="material-icons"><i class="fa fa-line-chart"></i></i>
               <span>Tour Reports</span>
             </a>
           </li>
           <li id="iESheet" class="nav-item ">
             <a class="nav-link" href="./icons.jsp">
-              <i class="material-icons">assessment</i>
+              <i class="material-icons"><i class="fa fa-bar-chart"></i></i>
               <span>Income/Expense Sheet</span>
             </a>
           </li>
           <li id="staff" class="nav-item ">
             <a class="nav-link" href="./map.jsp">
-              <i class="material-icons">person_pin</i>
+             <i class="material-icons"><i class="fa fa-group"></i></i>
               <span>Staff</span>
             </a>
           </li>
           <li id="notifications" class="nav-item ">
             <a class="nav-link" href="./notifications.jsp">
-              <i class="material-icons">notifications</i>
+              <i class="material-icons"><i class="fa fa-bell"></i></i>
               <span>Notifications</span>
             </a>
           </li>
           <li id="language" class="nav-item ">
             <a class="nav-link" href="./rtl.jsp">
-              <i class="material-icons">language</i>
+              <i class="material-icons"><i class="fa fa-globe"></i></i>
               <span>Language</span>
             </a>
           </li>
           <li id="pro" class="nav-item active-pro ">
             <a class="nav-link" href="./upgrade.jsp">
-              <i class="material-icons">unarchive</i>
+              <i class="material-icons"><i class="fa fa-rocket"></i></i>
               <span>Upgrade to PRO</span>
             </a>
           </li>

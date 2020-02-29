@@ -251,8 +251,7 @@ select {
 
 button,
 html [type="button"],
-[type="reset"],
-[type="submit"] {
+[type="reset"] {
   font-weight:bold;
   width:120px;
   border-radius: 0;
@@ -2724,7 +2723,7 @@ fieldset:disabled a.btn {
   padding: 10px 10px 10px 10px;
   text-decoration: none;
   display: inline-block;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background-color: #3093c7;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0ea6b9), to(#00acc1));
   background-image: -webkit-linear-gradient(top, #0ea6b9, #00acc1);
@@ -8842,7 +8841,7 @@ a.text-dark:focus {
 }
 
 .btn.btn-primary {
-  color: #fff;
+  color: #fff !important;
   background-color: #9c27b0;
   border-color: #9c27b0;
   box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
@@ -14711,7 +14710,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .sidebar .nav i {
-  font-size: 24px;
+  font-size: 22px;
   float: left;
   margin-right: 15px;
   line-height: 30px;

@@ -13,29 +13,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link href="./resources/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   
-  <script src="/jquery-2.2.1.min.js"></script>
-  <script src="/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="./resources/js/core/popper.min.js"></script>
   <script src="./resources/js/core/bootstrap-material-design.min.js"></script>
   <script src="./resources/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <script src="./resources/js/plugins/moment.min.js"></script>
-  <script src="./resources/js/plugins/sweetalert2.js"></script>
-  <script src="./resources/js/plugins/jquery.validate.min.js"></script>
-  <script src="./resources/js/plugins/jquery.bootstrap-wizard.js"></script>
-  <script src="./resources/js/plugins/bootstrap-selectpicker.js"></script>
-  <script src="./resources/js/plugins/bootstrap-datetimepicker.min.js"></script>
-  <script src="./resources/js/plugins/jquery.dataTables.min.js"></script>
-  <script src="./resources/js/plugins/bootstrap-tagsinput.js"></script>
-  <script src="./resources/js/plugins/jasny-bootstrap.min.js"></script>
-  <script src="./resources/js/plugins/fullcalendar.min.js"></script>
-  <script src="./resources/js/plugins/jquery-jvectormap.js"></script>
-  <script src="./resources/js/plugins/nouislider.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
-  <script src="./resources/js/plugins/arrive.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <script src="./resources/js/plugins/chartist.min.js"></script>
-  <script src="./resources/js/plugins/bootstrap-notify.js"></script>
   <script src="./resources/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
 </head>
 <body>

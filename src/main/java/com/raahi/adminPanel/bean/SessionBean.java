@@ -1,21 +1,10 @@
 package com.raahi.adminPanel.bean;
 
-import java.io.Serializable;
-
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
-import com.raahi.adminPanel.model.User;
-
 @Component
-@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class SessionUserBean implements Serializable {
+public class SessionBean {
 
-	private static final long serialVersionUID = 7069850922488754287L;
-
-	private User userBean = null;
-	
 	private Integer tourPlannerStaffId;
 	
 	private String firstName;
@@ -46,12 +35,25 @@ public class SessionUserBean implements Serializable {
 	
 	private String  sessionLanguage;
 
-	public User getUserBean() {
-		return userBean;
+	public SessionBean() {
+		super();
 	}
 
-	public void setUserBean(User userBean) {
-		this.userBean = userBean;
+	public SessionBean(Integer tourPlannerStaffId, String firstName, String lastName, String roleName, String regNo,
+			String userName, Integer tourPlannerBranchId, String branchName, String headBranch, Integer tourPlannerId,
+			String tourPlannerName) {
+		super();
+		this.tourPlannerStaffId = tourPlannerStaffId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.roleName = roleName;
+		this.regNo = regNo;
+		this.userName = userName;
+		this.tourPlannerBranchId = tourPlannerBranchId;
+		this.branchName = branchName;
+		this.headBranch = headBranch;
+		this.tourPlannerId = tourPlannerId;
+		this.tourPlannerName = tourPlannerName;
 	}
 
 	public Integer getTourPlannerStaffId() {
@@ -174,7 +176,4 @@ public class SessionUserBean implements Serializable {
 		this.sessionLanguage = sessionLanguage;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 }

@@ -1,10 +1,9 @@
 package com.raahi.adminPanel.Service.Impl;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.raahi.adminPanel.Repository.CustomerRepository;
 import com.raahi.adminPanel.Service.CustomerService;
 import com.raahi.adminPanel.bean.SessionUserBean;
 import com.raahi.adminPanel.model.CustomerModel;
@@ -16,7 +15,7 @@ import com.raahi.adminPanel.model.TourPlannerStaffModel;
 public class CustomerServiceImpl implements CustomerService{
 
 	@Autowired 
-	private CustomerService customerService;
+	private CustomerRepository customerRepository;
 	
 	@Autowired
 	private SessionUserBean sessionUserBean;
@@ -30,11 +29,10 @@ public class CustomerServiceImpl implements CustomerService{
 			TourPlannerBranchModel tourPlannerBranchModel = new TourPlannerBranchModel();
 			tourPlannerBranchModel.setTourPlannerBranchId(sessionUserBean.getTourPlannerBranchId());
 			customerModel.setTourPlannerBranchModel(tourPlannerBranchModel);
-			customerModel.setRegDate(new Date());
 			TourPlannerStaffModel tourPlannerStaffModel = new TourPlannerStaffModel();
 			tourPlannerStaffModel.setTourPlannerStaffId(sessionUserBean.getTourPlannerStaffId());
 			customerModel.setCreatedBy(tourPlannerStaffModel);
-			customerService.addCustomers(customerModel);
+			customerRepository.save(customerModel);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();

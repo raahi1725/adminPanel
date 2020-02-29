@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -22,9 +24,9 @@ public class CustomerModel implements java.io.Serializable {
 	private String middleName;
 	private String lastName;
 	private String regNo;
-	private Date regDate;
+	private String regDate;
 	private String gender;
-	private Date birthDate;
+	private String birthDate;
 	private String bloodGroup;
 	private String address;
 	private String state;
@@ -35,10 +37,8 @@ public class CustomerModel implements java.io.Serializable {
 	private String Occupation;
 	private String nationality;
 	private String emailId;
-	private String countryCode;
-	private Integer contactNo;
-	private String altCountryCode;
-	private Integer altContactNo;
+	private String contactNo;
+	private String altContactNo;
 	private Integer referalCodeId;
 	private String hearedFrom;
 	private String other;
@@ -57,6 +57,7 @@ public class CustomerModel implements java.io.Serializable {
 	private String ipAdress;
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "customerId")
 	public Integer getCustomerId() {
 		return customerId;
@@ -116,10 +117,10 @@ public class CustomerModel implements java.io.Serializable {
 	}
 	
 	@Column(name = "regDate")
-	public Date getRegDate() {
+	public String getRegDate() {
 		return regDate;
 	}
-	public void setRegDate(Date regDate) {
+	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
 	
@@ -132,10 +133,10 @@ public class CustomerModel implements java.io.Serializable {
 	}
 	
 	@Column(name = "birthDate")
-	public Date getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 	
@@ -223,35 +224,19 @@ public class CustomerModel implements java.io.Serializable {
 		this.emailId = emailId;
 	}
 	
-	@Column(name = "countryCode")
-	public String getCountryCode() {
-		return countryCode;
-	}
-	public void setCountryCode(String countryCode) {
-		this.countryCode = countryCode;
-	}
-	
 	@Column(name = "contactNo")
-	public Integer getContactNo() {
+	public String getContactNo() {
 		return contactNo;
 	}
-	public void setContactNo(Integer contactNo) {
+	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
 	}
 	
-	@Column(name = "altCountryCode")
-	public String getAltCountryCode() {
-		return altCountryCode;
-	}
-	public void setAltCountryCode(String altCountryCode) {
-		this.altCountryCode = altCountryCode;
-	}
-	
 	@Column(name = "altContactNo")
-	public Integer getAltContactNo() {
+	public String getAltContactNo() {
 		return altContactNo;
 	}
-	public void setAltContactNo(Integer altContactNo) {
+	public void setAltContactNo(String altContactNo) {
 		this.altContactNo = altContactNo;
 	}
 	

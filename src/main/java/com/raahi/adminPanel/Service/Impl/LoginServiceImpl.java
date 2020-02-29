@@ -4,6 +4,7 @@ package com.raahi.adminPanel.Service.Impl;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,7 @@ import com.raahi.adminPanel.Repository.TourPlannerMasterRepository;
 import com.raahi.adminPanel.Repository.TourPlannerStaffRepository;
 import com.raahi.adminPanel.Service.LoginService;
 import com.raahi.adminPanel.bean.RegisterRequestBean;
+import com.raahi.adminPanel.bean.SessionBean;
 import com.raahi.adminPanel.bean.SessionUserBean;
 import com.raahi.adminPanel.model.TourPlannerBranchModel;
 import com.raahi.adminPanel.model.TourPlannerMasterModel;
@@ -35,7 +37,6 @@ public class LoginServiceImpl implements LoginService {
 	
 	@Autowired
 	SessionUserBean sessionUserBean;
-	
 	
 	@Override
 	public boolean addTourPlanner(RegisterRequestBean registerRequestBean,User user) {
@@ -105,8 +106,10 @@ public class LoginServiceImpl implements LoginService {
 	public void setSessionAttributes() {
 		User user = new User();
 		user.setUsername(sessionUserBean.getUserName());
-		tourPlannerStaffRepository.getLoginDetails(user.getUsername());
-		
+		List<SessionBean> list = tourPlannerStaffRepository.getLoginDetails(user.getUsername());
+		sessionUserBean.setTourPlannerId(list.get(0).getTourPlannerId());
+		sessionUserBean.setTourPlannerBranchId(list.get(0).getTourPlannerBranchId());
+		sessionUserBean.setTourPlannerStaffId(list.get(0).getTourPlannerStaffId());
 	}
 
 }
