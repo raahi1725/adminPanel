@@ -327,21 +327,26 @@ $(function(){
     				document.getElementById("orgName").focus;
     				return false;
     			}
-    			$("#about").removeClass('step-icon')
-    			$("#about").addClass('step-icon-green')
-    			$("#about").css("background-color","#49c32a");
+    			$("#aboutDiv").addClass('step-icon-green')
+    			$("#aboutDiv").css("background-color","#2ca572");
     		}
-    		if(currentIndex==1) {
+    		if(currentIndex==0 && newIndex==2) {
+    			alert("Please fill head branch details first")
+    			return false;
+    		}
+    		if(currentIndex==1 && newIndex!=0) {
     			if(document.getElementById("headBranchName").value==""){
     				alert("Please fill branch name ");
     				document.getElementById("headBranchName").focus;
     				return false;
     			}
-    		if(document.getElementById("branchContactShow").value==""){
-				alert("Please fill contact no ");
-				document.getElementById("branchContactShow").focus;
-				return false;
-			}
+	    		if(document.getElementById("branchContactShow").value==""){
+					alert("Please fill contact no ");
+					document.getElementById("branchContactShow").focus;
+					return false;
+				}
+    			$("#headBranchDiv").addClass('step-icon-green')
+    			$("#headBranchDiv").css("background-color","#2ca572");
     		}
     		return true; 
     	},
@@ -359,6 +364,57 @@ $(function(){
     });
 });
 
+$(document).ready(function() {
+    var input = document.querySelector("#branchContactShow");
+    window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+       autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //      callback(countryCode);
+      //    });
+      // },
+       hiddenInput: "branchContactNo",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+       onlyCountries: ['in'],
+      // placeholderNumberType: "MOBILE",
+      // preferredCountries: ['in', 'jp'],
+      // separateDialCode: true,
+      utilsScript: "./resources/js/telephone/utils.js",
+    });
+    
+    var input1 = document.querySelector("#userContactShow");
+    window.intlTelInput(input1, {
+        // allowDropdown: false,
+        // autoHideDialCode: false,
+         autoPlaceholder: "off",
+        // dropdownContainer: document.body,
+        // excludeCountries: ["us"],
+        // formatOnDisplay: false,
+        // geoIpLookup: function(callback) {
+        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //     var countryCode = (resp && resp.country) ? resp.country : "";
+        //     callback(countryCode);
+        //   });
+        // },
+         hiddenInput: "adminContact",
+        // initialCountry: "auto",
+        // localizedCountries: { 'in': 'India' },
+        // nationalMode: false,
+         onlyCountries: ['in'],
+        // placeholderNumberType: "MOBILE",
+        // preferredCountries: ['cn', 'jp'],
+        // separateDialCode: true,
+        utilsScript: "./resources/js/telephone/utils.js",
+      });
+});
 
 function validate(evt) {
 	  var theEvent = evt || window.event;

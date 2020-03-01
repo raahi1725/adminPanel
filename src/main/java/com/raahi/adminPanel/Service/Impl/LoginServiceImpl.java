@@ -49,6 +49,7 @@ public class LoginServiceImpl implements LoginService {
 			tourPlannerMasterModel.setStartDate(new Date());
 			tourPlannerMasterModel.setTourPlannerName(registerRequestBean.getOrgName());
 			tourPlannerMasterModel.setWebsite(registerRequestBean.getWebsite());
+			tourPlannerMasterModel.setRegistrationId(registerRequestBean.getOrgRegNo());
 			tourPlannerMasterModel.setEndDate(endDate);
 			tourPlannerMasterRepository.save(tourPlannerMasterModel);
 			

@@ -30,58 +30,6 @@
 	function loadSelect() {
 		   $(".js-example-basic-multiple").select2();
 	}
-	$(document).ready(function() {
-	    var input = document.querySelector("#branchContactShow");
-	    window.intlTelInput(input, {
-	      // allowDropdown: false,
-	      // autoHideDialCode: false,
-	       autoPlaceholder: "off",
-	      // dropdownContainer: document.body,
-	      // excludeCountries: ["us"],
-	      // formatOnDisplay: false,
-	      // geoIpLookup: function(callback) {
-	      //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-	      //     var countryCode = (resp && resp.country) ? resp.country : "";
-	      //      callback(countryCode);
-	      //    });
-	      // },
-	       hiddenInput: "branchContactNo",
-	      // initialCountry: "auto",
-	      // localizedCountries: { 'de': 'Deutschland' },
-	      // nationalMode: false,
-	      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-	      // placeholderNumberType: "MOBILE",
-	      // preferredCountries: ['in', 'jp'],
-	      // separateDialCode: true,
-	      utilsScript: "./resources/js/telephone/utils.js",
-	    });
-	    
-	    var input1 = document.querySelector("#userContactShow");
-	    window.intlTelInput(input1, {
-	        // allowDropdown: false,
-	        // autoHideDialCode: false,
-	         autoPlaceholder: "off",
-	        // dropdownContainer: document.body,
-	        // excludeCountries: ["us"],
-	        // formatOnDisplay: false,
-	        // geoIpLookup: function(callback) {
-	        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-	        //     var countryCode = (resp && resp.country) ? resp.country : "";
-	        //     callback(countryCode);
-	        //   });
-	        // },
-	         hiddenInput: "adminContact",
-	        // initialCountry: "auto",
-	        // localizedCountries: { 'de': 'Deutschland' },
-	        // nationalMode: false,
-	        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-	        // placeholderNumberType: "MOBILE",
-	        // preferredCountries: ['cn', 'jp'],
-	        // separateDialCode: true,
-	        utilsScript: "./resources/js/telephone/utils.js",
-	      });
-	});
-
 	</script>
 	<style>
 	.iti {
@@ -110,7 +58,7 @@
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
 		        		<h2>
-			            	<span class="step-icon" id="about"><i class="fas fa-landmark"></i></span>	
+			            	<span class="step-icon" id="aboutDiv"><i class="fas fa-landmark"></i></span>	
 			            	<span class="step-text">About</span>
 			            </h2>
 			            <section>
@@ -133,7 +81,7 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="text" class="form-control" id="orgRegNo" path="orgRegNo" autocomplete="off"/>
+											<form:input type="text" class="form-control" id="orgRegNo" path="orgRegNo" maxlength="30"/>
 											<span class="label">Registration Id</span>
 					  						<span class="border"></span>
 										</label>
@@ -143,7 +91,7 @@
 			            </section>
 						<!-- SECTION 2 -->
 			            <h2>
-			            	<span class="step-icon"><i class="fas fa-building"></i></span>	
+			            	<span class="step-icon" id="headBranchDiv"><i class="fas fa-building"></i></span>	
 			            	<span class="step-text">Head Branch</span>
 			            </h2>
 			            <section>
@@ -166,7 +114,7 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="tel" class="form-control" id="branchContactShow" onkeypress='validate(event)' maxlength="50" style="width:200px;padding:0px 40px;"/>
+											<input type="tel" class="form-control" id="branchContactShow" onkeypress='validate(event)' maxlength="10" style="width:200px;padding:0px 40px;"/>
 											<span class="label" style="position:initial;">Contact No<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
@@ -222,7 +170,7 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input id="userContactShow" name="phone" onkeypress='validate(event)' type="tel" class="form-control" style="width:200px;padding:0px 40px;"/>
+											<input id="userContactShow" name="phone" onkeypress='validate(event)' maxlength="10" type="tel" class="form-control" style="width:200px;padding:0px 40px;"/>
 											<span class="label" style="position:initial;">Contact No<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>

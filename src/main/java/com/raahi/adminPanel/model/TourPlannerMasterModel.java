@@ -20,6 +20,7 @@ public class TourPlannerMasterModel {
 	private Integer tourPlannerMasterId;
 	private String tourPlannerName;
 	private String website;
+	private String registrationId;
 	private String logoImageFileName;
 	private String logoImageFilePath;
 	private Date registeredDate; 
@@ -164,6 +165,14 @@ public class TourPlannerMasterModel {
 	}
 	public void setIpAdress(String ipAdress) {
 		this.ipAdress = ipAdress;
+	}
+	
+	@Column(name = "registrationId")
+	public String getRegistrationId() {
+		return registrationId;
+	}
+	public void setRegistrationId(String registrationId) {
+		this.registrationId = registrationId;
 	}
 	
 }
