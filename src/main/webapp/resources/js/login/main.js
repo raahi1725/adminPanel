@@ -298,9 +298,9 @@ $(function(){
 				document.getElementById("adminLastName").focus;
 				return false;
 			}
-    		if(document.getElementById("userContact").value==""){
+    		if(document.getElementById("userContactShow").value==""){
 				alert("Please fill contact no ");
-				document.getElementById("userContact").focus;
+				document.getElementById("userContactShow").focus;
 				return false;
 			}
     		if(document.getElementById("userEmail").value==""){
@@ -327,6 +327,9 @@ $(function(){
     				document.getElementById("orgName").focus;
     				return false;
     			}
+    			$("#about").removeClass('step-icon')
+    			$("#about").addClass('step-icon-green')
+    			$("#about").css("background-color","#49c32a");
     		}
     		if(currentIndex==1) {
     			if(document.getElementById("headBranchName").value==""){
@@ -334,9 +337,9 @@ $(function(){
     				document.getElementById("headBranchName").focus;
     				return false;
     			}
-    		if(document.getElementById("branchContact").value==""){
+    		if(document.getElementById("branchContactShow").value==""){
 				alert("Please fill contact no ");
-				document.getElementById("branchContact").focus;
+				document.getElementById("branchContactShow").focus;
 				return false;
 			}
     		}

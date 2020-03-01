@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="./resources/css/login/bootstrap.css">
 	<link rel="stylesheet" href="./resources/css/login/style.css">
 	<link rel="stylesheet" href="./resources/css/login/model.css">
+	<link rel="stylesheet" href="./resources/css/select2.min.css">
+ 	<link rel="stylesheet" href="./resources/css/intlTelInput.css">
 	<script src="./resources/js/login/all.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 	<script src="./resources/js/login/modernizr-2.6.2.min.js"></script>
@@ -23,20 +25,77 @@
 	<script src="./resources/js/login/main.js"></script>
 	<script src="./resources/js/login/jquery.steps.js"></script>
 	<script src="./resources/js/login/jquery-ui.min.js"></script>
+	<script src="./resources/js/telephone/intlTelInput.js"></script>
 	<script>
 	function loadSelect() {
 		   $(".js-example-basic-multiple").select2();
 	}
+	$(document).ready(function() {
+	    var input = document.querySelector("#branchContactShow");
+	    window.intlTelInput(input, {
+	      // allowDropdown: false,
+	      // autoHideDialCode: false,
+	       autoPlaceholder: "off",
+	      // dropdownContainer: document.body,
+	      // excludeCountries: ["us"],
+	      // formatOnDisplay: false,
+	      // geoIpLookup: function(callback) {
+	      //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+	      //     var countryCode = (resp && resp.country) ? resp.country : "";
+	      //      callback(countryCode);
+	      //    });
+	      // },
+	       hiddenInput: "branchContactNo",
+	      // initialCountry: "auto",
+	      // localizedCountries: { 'de': 'Deutschland' },
+	      // nationalMode: false,
+	      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+	      // placeholderNumberType: "MOBILE",
+	      // preferredCountries: ['in', 'jp'],
+	      // separateDialCode: true,
+	      utilsScript: "./resources/js/telephone/utils.js",
+	    });
+	    
+	    var input1 = document.querySelector("#userContactShow");
+	    window.intlTelInput(input1, {
+	        // allowDropdown: false,
+	        // autoHideDialCode: false,
+	         autoPlaceholder: "off",
+	        // dropdownContainer: document.body,
+	        // excludeCountries: ["us"],
+	        // formatOnDisplay: false,
+	        // geoIpLookup: function(callback) {
+	        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+	        //     var countryCode = (resp && resp.country) ? resp.country : "";
+	        //     callback(countryCode);
+	        //   });
+	        // },
+	         hiddenInput: "adminContact",
+	        // initialCountry: "auto",
+	        // localizedCountries: { 'de': 'Deutschland' },
+	        // nationalMode: false,
+	        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+	        // placeholderNumberType: "MOBILE",
+	        // preferredCountries: ['cn', 'jp'],
+	        // separateDialCode: true,
+	        utilsScript: "./resources/js/telephone/utils.js",
+	      });
+	});
+
 	</script>
 	<style>
-		.svg-inline--fa {
-		    height: 40px;
-		    margin-left: 7px;
-		}
+	.iti {
+    	position: relative;
+    	display: inline;
+	}
+	.svg-inline--fa {
+	    height: 40px;
+	    margin-left: 7px;
+	}
 
-		.form-register .steps li a .title .step-icon {
-		    font-size: 32px;
-		}
+	.form-register .steps li a .title .step-icon {
+	    font-size: 32px;
+	}
 	</style>
 </head>
 <body onload="loadSelect()">
@@ -51,7 +110,7 @@
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
 		        		<h2>
-			            	<span class="step-icon"><i class="fas fa-landmark"></i></span>	
+			            	<span class="step-icon" id="about"><i class="fas fa-landmark"></i></span>	
 			            	<span class="step-text">About</span>
 			            </h2>
 			            <section>
@@ -107,8 +166,8 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="text" onkeypress='validate(event)' class="form-control" id="branchContact" path="branchContactNo" maxlength="12" />
-											<span class="label">Contact No<span class="required">*</span></span>
+											<input type="tel" class="form-control" id="branchContactShow" onkeypress='validate(event)' maxlength="50" style="width:200px;padding:0px 40px;"/>
+											<span class="label" style="position:initial;">Contact No<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -163,8 +222,8 @@
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="number" class="form-control" id="userContact" onkeypress='validate(event)' path="username" maxlength="10"/>
-											<span class="label">Contact No<span class="required">*</span></span>
+											<input id="userContactShow" name="phone" onkeypress='validate(event)' type="tel" class="form-control" style="width:200px;padding:0px 40px;"/>
+											<span class="label" style="position:initial;">Contact No<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
@@ -172,7 +231,7 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="email" class="form-control" id="userEmail" path="adminEmail" maxlength="50"/>
+											<form:input type="email" class="form-control" id="userEmail" path="username" maxlength="50"/>
 											<span class="label">Email<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>

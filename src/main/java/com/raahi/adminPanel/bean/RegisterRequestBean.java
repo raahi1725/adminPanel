@@ -12,12 +12,11 @@ public class RegisterRequestBean {
 	private Integer branchPostalCode;
 	private String noOfBranches;
 	private String branchEmail;
-	private String branchCountryCode;
 	private String branchContactNo;
 	private String adminFirstName;
 	private String adminLastName;
 	private String adminEmail;
-	private String countryCode;
+	private String adminContact;
 	private String username;
 	private String password;
 	private String passwordConfirm;
@@ -131,18 +130,10 @@ public class RegisterRequestBean {
 	public void setOrgRegNo(String orgRegNo) {
 		this.orgRegNo = orgRegNo;
 	}
-	public String getCountryCode() {
-		return countryCode;
+	public String getAdminContact() {
+		return adminContact;
 	}
-	public void setCountryCode(String countryCode) {
-		this.countryCode = countryCode;
+	public void setAdminContact(String adminContact) {
+		this.adminContact = adminContact;
 	}
-	public String getBranchCountryCode() {
-		return branchCountryCode;
-	}
-	public void setBranchCountryCode(String branchCountryCode) {
-		this.branchCountryCode = branchCountryCode;
-	}
-	
-	
 }

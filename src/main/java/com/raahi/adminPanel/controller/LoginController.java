@@ -45,8 +45,11 @@ public class LoginController {
 	@GetMapping("/login")
 	public String login(Model model, String error, String logout) {
 		 model.addAttribute("registerRequestBean", new RegisterRequestBean());
-	    if (error != null)
+		 model.addAttribute("errorCode","");
+	    if (error != null) {
 	        model.addAttribute("error", "Your username and password is invalid.");
+	    	model.addAttribute("errorCode", "101");
+	    }
 	
 	    if (logout != null)
 	        model.addAttribute("message", "You have been logged out successfully.");

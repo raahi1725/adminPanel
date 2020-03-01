@@ -58,7 +58,7 @@
 								<li><a href="about.html">Services</a></li>
 								<li><a href="shop.html">Pricing</a></li>
 								<li><a href="contact.html">Contact</a></li>
-								<li><a class="btn btn-primary btn-lg btn-custom" data-toggle="modal" data-target="#modalLRForm">Login</a>
+								<li><a class="btn btn-primary btn-lg btn-custom" data-toggle="modal" id="loginButton" data-target="#modalLRForm">Login</a>
 								</li>
 								<li><a href="/register" class="btn btn-primary btn-lg btn-custom" target="_blank" >Signup</a>
 								</li>
@@ -573,15 +573,21 @@
             <div class="modal-body mb-1">
               <form method="POST" action="/login" id="loginForm" class="form-signin" >
               	  <div class="form-group ${error != null ? 'has-error' : ''}">
-	              	  <span>${message}</span>
-	              	  <span>${error}</span>
+              	  <script>
+              	  	var errorCode = '${errorCode}';
+              	  	if(errorCode=='101'){
+              	  		$("#loginButton").click();
+              	  	}
+              	  </script>
+	              	  <span >${message}</span>
+	              	  <span style="color:red">${error}</span>
 		              <div class="md-form form-sm mb-5">
 		                <span class="icon"><i class="fas fa-envelope prefix"></i></span>
-		                <input name="username" type="text" class="form-control-login" placeholder="Mobile No">
+		                <input name="username" type="email" class="form-control-login" placeholder="Email" required="required">
 		              </div>
 		              <div class="md-form form-sm mb-4">
 		                <span class="icon"><i class="fas fa-lock prefix"></i></span>
-		                <input name="password" type="password" class="form-control-login" placeholder="Password">
+		                <input name="password" type="password" class="form-control-login" placeholder="Password" required="required">
 		                  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 	 	              </div>
 		              <div class="text-center mt-2">

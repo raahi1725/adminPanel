@@ -244,6 +244,31 @@ i {
     margin-right: 108px;
     padding:3px 8px;
 }
+
+.form-register .steps li a .title .step-icon-green { 
+	background-color : #53b53a;
+	font-size:32px !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: #ccc;
+    margin: 0 auto;
+    position: relative;
+    outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    color: #fff;
+    font-size: 25.6px;
+    margin-right: 108px;
+    padding:3px 8px;
+}
+
 .form-register .steps li a .step-icon i {
 	position: absolute;
 	top: 50%;
@@ -466,7 +491,7 @@ i {
 .inner .form-row .form-holder .form-control:focus,
 .inner .form-row .form-holder .form-control:valid {
 	border-bottom: 2px solid #afc5d0;
-	margin-top: 21px;
+	margin-top: 21px !important;
 }
 .inner .form-row .form-holder .form-control:focus + .label, 
 .inner .form-row .form-holder .form-control:valid + .label {
