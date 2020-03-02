@@ -11,7 +11,7 @@
   <script src="./resources/js/commonJs/select2.min.js"></script>
   <script src="./resources/js/telephone/intlTelInput.js"></script>
 </head>
-<body class="">
+<body onload="onLoadData();">
       <div class="content">
         <div class="container-fluid">
          <span>${message}</span>
@@ -24,17 +24,18 @@
                 </div>
                 <div class="card-body">
                 	 <form:form class="form-register" action="/customer" method="POST" modelAttribute="customerModel">
+                		 <form:input path="customerId" id="customerId" />
                 		<div class="row">
 			                <div class="col-md-6">
 			                    <div class="form-group">
 				                    <label class="bmd-label-floating">Reg No</label>
-				                    <form:input path="regNo" type="text" class="form-control" value="1"/>
+				                    <form:input path="regNo" id="regNo" type="text" class="form-control" value="1"/>
 		                   		</div>
 		                	</div>
 		                    <div class="col-md-6">
 		                    	<div class="form-group">
 			                        <label class="bmd-label-floating">Reg Date</label>
-			                        <form:input path="regDate" type="text" class="form-control" value="1994-01-01"/>
+			                        <form:input path="regDate" id="regDate" type="text" class="form-control" value="1994-01-01"/>
 		                        </div>
 		                    </div>
 		                </div>
@@ -42,19 +43,19 @@
 	                        <div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">First Name</label>
-		                          <form:input path="firstName" type="text" class="form-control" value="Saloni"/>
+		                          <form:input path="firstName" id="firstName" type="text" class="form-control" value="Saloni"/>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Middle Name</label>
-		                          <form:input path="middleName" type="text" class="form-control" value="R"/>
+		                          <form:input path="middleName" id="middleName" type="text" class="form-control" value="R"/>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Last Name</label>
-		                          <form:input path="lastName" type="text" class="form-control" value="Parekh"/>
+		                          <form:input path="lastName" id="lastName" type="text" class="form-control" value="Parekh"/>
 		                        </div>
 	                        </div>
                     	</div>
@@ -62,24 +63,24 @@
                     		<div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Email</label>
-		                          <form:input path="emailId"  type="email" class="form-control" value="saloniparekh25@gmail.com"/>
+		                          <form:input path="emailId" id="emailId" type="email" class="form-control" value="saloniparekh25@gmail.com"/>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
-		                          <form:input path="contactNo" id="phone" name="phone" type="tel" class="form-control" placeholder="Contact No" value="9881735306"/>
+		                          <form:input path="contactNo" id="contactNo" id="phone" name="phone" type="tel" class="form-control" placeholder="Contact No" value="9881735306"/>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
-		                          <form:input path="altContactNo" id="phone1" name="phone1" type="tel" class="form-control" placeholder="Alternate Contact" value="9881735305"/>
+		                          <form:input path="altContactNo" id="altContactNo" id="phone1" name="phone1" type="tel" class="form-control" placeholder="Alternate Contact" value="9881735305"/>
 		                        </div>
 	                        </div>
                     	</div>
                     	<div class="row">
                     		  <div class="col-md-4">
 		                        <div class="form-group">
-		                          <select name="gender" class="form-control-select" 
+		                          <select name="gender" class="form-control-select" id="gender"
 		                         		 onchange="this.className=this.options[this.selectedIndex].className">
 		                          		<option value="0" class="form-control-select-default">Gender</option>
 	                					<option value="MALE" class="form-control-select-option">MALE</option>
@@ -91,12 +92,12 @@
 	                        <div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Birth Date</label>
-		                          <form:input path="birthDate" type="text" class="form-control" value="1994-01-01"/>
+		                          <form:input path="birthDate" id="birthDate" type="text" class="form-control" value="1994-01-01"/>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
-		                          <select name="bloodGroup" class="form-control-select" 
+		                          <select name="bloodGroup" class="form-control-select" id="bloodGroup"
 		                         		 onchange="this.className=this.options[this.selectedIndex].className">
 		                          		<option value="" class="form-control-select-default" >Blood Group</option>
 	                					<option value="A+ve" class="form-control-select-option">A+ve</option>
@@ -137,13 +138,13 @@
                     		 <div class="col-md-7">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Address</label>
-		                          <form:textarea path="address" name="address"  class="form-control" style="height:36px !important;" value="pune" />
+		                          <form:textarea path="address" id="address" name="address"  class="form-control" style="height:36px !important;" value="pune" />
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">PinCode</label>
-		                          <form:input path="pinCode"  type="text" class="form-control" value="411042"/>
+		                          <form:input path="pinCode" id="pinCode" type="text" class="form-control" value="411042"/>
 		                        </div>
 	                        </div>
                     	</div>
@@ -151,19 +152,19 @@
                     		<div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Caste-Category</label>
-		                          <form:input path="casteCategory" type="text" class="form-control" value="Jain" />
+		                          <form:input path="casteCategory" id="casteCategory" type="text" class="form-control" value="Jain" />
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Occupation</label>
-		                          <form:input path="occupation" type="text" class="form-control" value="Service"/>
+		                          <form:input path="occupation" id="occupation" type="text" class="form-control" value="Service"/>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Nationality</label>
-		                          <form:input path="nationality"  type="text" class="form-control" value="Indian"/>
+		                          <form:input path="nationality" id="nationality" type="text" class="form-control" value="Indian"/>
 		                        </div>
 	                        </div>
                     	</div>
@@ -171,7 +172,7 @@
                     		<div class="col-md-6">
 		                        <div class="form-group">
 		                          <label class="bmd-label-floating">Referal Code</label>
-		                          <form:input path="referalCodeId" type="text" class="form-control" value="1"/>
+		                          <form:input path="referalCodeId" id="referalCodeId" type="text" class="form-control" value="1"/>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-6" >
@@ -191,7 +192,7 @@
 	                        <div class="col-md-3 hide" id="othersDiv">
 		                        <div class="form-group" >
 		                          <label class="bmd-label-floating">Other</label>
-		                          <form:input path="other" type="text" class="form-control" />
+		                          <form:input path="other" id="other" type="text" class="form-control" />
 		                        </div>
 	                        </div>
                     	</div>
@@ -237,16 +238,18 @@
                 </div>
                 <div class="card-body">
                   <div class="search">
-				      <input type="text" class="searchTerm" placeholder="Customer Name, Reg No, Email ">
+				      <input type="text" class="searchTerm" id="searchParam" placeholder="Customer Name,Reg No,Contact No ">
 				      <button type="submit" class="searchButton">
 				        <i class="fa fa-search"></i>
 				     </button>
    				  </div>
    				  <br/>
                   <h4 class="card-title">Customer Details </h4>
-                  <p class="card-description"> Name : <br/> Reg No : <br/> Contact No :
+                  <input type="hidden" id="customerSearchId">
+                  <p class="card-description"> Name : <span id="customerSearchName"></span> <br/> Reg No :<span id="customerSearchRegNo"></span> 
+                  	<br/> Contact No :<span id="customerSearchContact"></span>
                   </p>
-                  <a href="#pablo" class="btn btn-primary btn-round" style="color:white !important">Edit</a>
+                  <a href="#pablo" class="btn btn-primary btn-round" style="color:white !important" onclick="getSearchDetails()">Edit</a>
                 </div>
               </div>
           </div>
