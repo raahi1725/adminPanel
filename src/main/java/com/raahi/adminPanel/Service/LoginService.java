@@ -9,4 +9,8 @@ public interface LoginService {
 
 	void setSessionAttributes();
 
+	boolean verifyAdminMobileNumber(String mobileNumber);
+
+	boolean verifyRegisteredEmailId(String emailId);
+
 }

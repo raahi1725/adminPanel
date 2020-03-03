@@ -6,4 +6,8 @@ import com.raahi.adminPanel.model.TourPlannerBranchModel;
 
 public interface TourPlannerBranchRepository extends JpaRepository<TourPlannerBranchModel, Integer> {
 
+	TourPlannerBranchModel findByContactNo(String mobileNumber);
+
+	TourPlannerBranchModel findByEmail(String emailId);
+
 }

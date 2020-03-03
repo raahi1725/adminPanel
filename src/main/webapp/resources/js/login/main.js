@@ -275,6 +275,7 @@
 
 }());
 
+var isMobileOrEmailExists=false;
 $(function(){
     $("#form-total").steps({
         headerTag: "h2",
@@ -318,6 +319,46 @@ $(function(){
 				document.getElementById("userConfirmPassword").focus;
 				return false;
 			}
+    		$.ajax({
+    			dataType : "json",
+    			async:false,
+    			url : 'verifyRegisteredMobileNumber.do?customerId='+customerId,
+    			headers : {
+    				'Accept' : 'application/json',
+    				'Content-Type' : 'application/json'
+    			},
+    			type : 'GET',
+    			success : function(data) {
+    				if(data) {
+    					alert("Branch or user mobile no exists");
+    					isMobileOrEmailExists=true;
+    					return false;
+    				}
+    				
+    			},
+    			error : function(data) {
+    			}
+    		});
+    		$.ajax({
+    			dataType : "json",
+    			async:false,
+    			url : 'verifyRegisteredEmailId.do?customerId='+customerId,
+    			headers : {
+    				'Accept' : 'application/json',
+    				'Content-Type' : 'application/json'
+    			},
+    			type : 'GET',
+    			success : function(data) {
+    				if(data) {
+    					alert("Branch or user email exists");
+    					isMobileOrEmailExists=true;
+    					return false;
+    				}
+    				
+    			},
+    			error : function(data) {
+    			}
+    		});
     		return true; 
     	},
     	onStepChanging: function (event, currentIndex, newIndex) {
@@ -418,7 +459,7 @@ $(document).ready(function() {
 
 function validate(evt) {
 	  var theEvent = evt || window.event;
-
+	
 	  // Handle paste
 	  if (theEvent.type === 'paste') {
 	      key = event.clipboardData.getData('text/plain');
@@ -432,4 +473,7 @@ function validate(evt) {
 	    theEvent.returnValue = false;
 	    if(theEvent.preventDefault) theEvent.preventDefault();
 	  }
-	}
+}
+
+
+

@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.raahi.adminPanel.Service.LoginService;
 import com.raahi.adminPanel.Service.SecurityService;
@@ -95,5 +99,19 @@ public class LoginController {
         }  
          return "redirect:/";  
      }  
-		
+	
+	@GetMapping(value = "/verifyRegisteredMobileNumber")
+	@ResponseBody
+    public ResponseEntity<?> verifyRegisteredMobileNumber(@RequestParam("mobileNumber") String mobileNumber) {
+		boolean isMobilePresent =  loginService.verifyAdminMobileNumber(mobileNumber);
+		return ResponseEntity.status(HttpStatus.OK).body(isMobilePresent);
+    }
+	
+	@GetMapping(value = "/verifyRegisteredEmailId")
+	@ResponseBody
+    public ResponseEntity<?> verifyRegisteredEmailId(@RequestParam("emailId") String emailId) {
+		boolean isMobilePresent =  loginService.verifyRegisteredEmailId(emailId);
+		return ResponseEntity.status(HttpStatus.OK).body(isMobilePresent);
+    }
+	
 }

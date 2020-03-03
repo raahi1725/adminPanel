@@ -19,6 +19,8 @@ public interface TourPlannerStaffRepository extends JpaRepository<TourPlannerSta
 			+ "where b.username=:username ")
 	List<SessionBean> getLoginDetails(String username);
 
-	//void findbyUser(User user);
+	TourPlannerStaffModel findByContactNo(String mobileNumber);
+
+	TourPlannerStaffModel findByEmail(String emailId);
 
 }

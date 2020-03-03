@@ -15,6 +15,7 @@ import com.raahi.adminPanel.Repository.TourPlannerBranchRepository;
 import com.raahi.adminPanel.Repository.TourPlannerMasterRepository;
 import com.raahi.adminPanel.Repository.TourPlannerStaffRepository;
 import com.raahi.adminPanel.Service.LoginService;
+import com.raahi.adminPanel.bean.CustomerBean;
 import com.raahi.adminPanel.bean.RegisterRequestBean;
 import com.raahi.adminPanel.bean.SessionBean;
 import com.raahi.adminPanel.bean.SessionUserBean;
@@ -111,6 +112,34 @@ public class LoginServiceImpl implements LoginService {
 		sessionUserBean.setTourPlannerId(list.get(0).getTourPlannerId());
 		sessionUserBean.setTourPlannerBranchId(list.get(0).getTourPlannerBranchId());
 		sessionUserBean.setTourPlannerStaffId(list.get(0).getTourPlannerStaffId());
+	}
+
+
+	@Override
+	public boolean verifyAdminMobileNumber(String mobileNumber) {
+		TourPlannerStaffModel tourPlannerStaffModel = tourPlannerStaffRepository.findByContactNo(mobileNumber);
+		if(tourPlannerStaffModel!=null) {
+			return true;
+		}
+		TourPlannerBranchModel tourPlannerBranchModel = tourPlannerBranchRepository.findByContactNo(mobileNumber);
+		if(tourPlannerBranchModel!=null) {
+			return true;
+		}
+		return false;
+	}
+
+
+	@Override
+	public boolean verifyRegisteredEmailId(String emailId) {
+		TourPlannerStaffModel tourPlannerStaffModel = tourPlannerStaffRepository.findByEmail(emailId);
+		if(tourPlannerStaffModel!=null) {
+			return true;
+		}
+		TourPlannerBranchModel tourPlannerBranchModel = tourPlannerBranchRepository.findByEmail(emailId);
+		if(tourPlannerBranchModel!=null) {
+			return true;
+		}
+		return false;
 	}
 
 }
