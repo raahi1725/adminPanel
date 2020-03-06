@@ -14,14 +14,14 @@ import com.raahi.adminPanel.model.CustomerModel;
 public interface CustomerRepository extends JpaRepository<CustomerModel, Integer>{
 
 	@Query("select new com.raahi.adminPanel.bean.CustomerBean(a.customerId,CONCAT(COALESCE(a.regNo,''),'-',COALESCE(a.firstName,''),' ',"
-			+ "COALESCE(a.lastName,''),' ',COALESCE(a.contactNo,'') as serachedField )"
+			+ "COALESCE(a.lastName,''),' ',COALESCE(a.contactNo,'')) )"
 		 + "from CustomerModel a where a.regNo like CONCAT('%', :searchParameter ,'%') or a.firstName like CONCAT('%', :searchParameter ,'%')"
 		 + "or a.lastName like CONCAT('%', :searchParameter ,'%') or a.contactNo like CONCAT('%', :searchParameter ,'%') ")
 	List<CustomerBean> searchCustomer(@Param("searchParameter") String searchParameter);
 	
 	@Query("select new com.raahi.adminPanel.bean.CustomerBean(a.customerId,a.tourPlannerMasterModel.tourPlannerMasterId,"
 			 + "a.tourPlannerBranchModel.tourPlannerBranchId,a.firstName,a.lastName,a.middleName,a.regNo,a.regDate,a.gender,a.birthDate,a.bloodGroup,a.address,"
-			 + "a.state,a.city,a.country,a.pinCode,a.casteCategory,a.Occupation,a.nationality,a.emailId,a.contactNo,a.altContactNo,a.referalCodeId,a.hearedFrom,"
+			 + "a.state,a.city,a.country,a.pinCode,a.casteCategory,a.occupation,a.nationality,a.emailId,a.contactNo,a.altContactNo,a.referalCodeId,a.hearedFrom,"
 			 + "a.other,a.photoIdNames,a.photoIdFilePath,a.customerPhotoName,a.customerPhotoPath,a.cDate) "
 			 + "from CustomerModel a where a.customerId=:customerId ")
 	CustomerBean getCustomerDetails(@Param("customerId") String customerId);

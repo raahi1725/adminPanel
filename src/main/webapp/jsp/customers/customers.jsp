@@ -14,7 +14,7 @@
 <body onload="onLoadData();">
       <div class="content">
         <div class="container-fluid">
-         <span>${message}</span>
+         <span style="color: green;font-size: 20px;">${message}</span>
           <div class="row">
             <div class="col-md-8">
               <div class="card">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="card-body">
                 	 <form:form class="form-register" action="/customer" method="POST" modelAttribute="customerModel">
-                		 <form:input path="customerId" id="customerId" />
+                		 <form:hidden path="customerId" id="customerId" />
                 		<div class="row">
 			                <div class="col-md-6">
 			                    <div class="form-group">
@@ -68,12 +68,12 @@
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
-		                          <form:input path="contactNo" id="contactNo" id="phone" name="phone" type="tel" class="form-control" placeholder="Contact No" value="9881735306"/>
+		                          <form:input path="contactNo" id="phone" name="phone" type="tel" class="form-control" placeholder="Contact No" value="9881735306"/>
 		                        </div>
 	                        </div>
 	                        <div class="col-md-4">
 		                        <div class="form-group">
-		                          <form:input path="altContactNo" id="altContactNo" id="phone1" name="phone1" type="tel" class="form-control" placeholder="Alternate Contact" value="9881735305"/>
+		                          <form:input path="altContactNo" id="phone1" name="phone1" type="tel" class="form-control" placeholder="Alternate Contact" value="9881735305"/>
 		                        </div>
 	                        </div>
                     	</div>
@@ -238,7 +238,7 @@
                 </div>
                 <div class="card-body">
                   <div class="search">
-				      <input type="text" class="searchTerm" id="searchParam" placeholder="Customer Name,Reg No,Contact No ">
+				      <input type="text" class="searchTerm" id="searchParam" placeholder="Customer Name,Reg No,Contact No " >
 				      <button type="submit" class="searchButton">
 				        <i class="fa fa-search"></i>
 				     </button>
@@ -246,6 +246,7 @@
    				  <br/>
                   <h4 class="card-title">Customer Details </h4>
                   <input type="hidden" id="customerSearchId">
+                  <input type="hidden" name="nameIdHidden">
                   <p class="card-description"> Name : <span id="customerSearchName"></span> <br/> Reg No :<span id="customerSearchRegNo"></span> 
                   	<br/> Contact No :<span id="customerSearchContact"></span>
                   </p>

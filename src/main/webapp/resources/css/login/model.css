@@ -2,7 +2,13 @@
 	margin-bottom:25px;
 }
 
-
+.loginLink {
+	color:#1f7ab7;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: underline;
+}
 .nav {
 	display: block;
     width: 100%;

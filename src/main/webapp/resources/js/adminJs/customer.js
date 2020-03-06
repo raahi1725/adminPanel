@@ -92,13 +92,13 @@ $(document).ready(function() {
 });
 
 function onLoadData() {
-	
+	alert(9)
 	$('#searchParam').autocomplete({
 		source : function(request, response) {
 			$('input:text[name=nameIdHidden]').val("");
+			alert(1)
 			jQuery
 			.ajax({
-		
 				url : 'searchCustomer.do',
 				dataType : 'json',
 				type : 'GET',

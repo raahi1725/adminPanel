@@ -4,13 +4,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -78,16 +77,34 @@ public class LoginController {
 	}
 	
 	@PostMapping(value = "/register")
-	public String addTourPlanner(@ModelAttribute("registerRequestBean") RegisterRequestBean registerRequestBean,
+	public String addTourPlanner(Model model,@ModelAttribute("registerRequestBean") RegisterRequestBean registerRequestBean,
 			BindingResult bindingResult) {
-		User userForm = new User();
-		userForm.setUsername(registerRequestBean.getUsername());
-		userForm.setPassword(registerRequestBean.getPassword());
-		userValidator.validate(userForm, bindingResult);
-		userService.save(userForm);
-	    loginService.addTourPlanner(registerRequestBean,userForm);
-	  
-        securityService.autoLogin(userForm.getUsername(), registerRequestBean.getPassword());
+		if(verifyRegisteredMobileNumber(registerRequestBean.getAdminContact())) {
+			 model.addAttribute("error", "Admin Contact is already present");
+			 return "register";
+		}
+		else if(verifyRegisteredMobileNumber(registerRequestBean.getBranchContactNo())) {
+			 model.addAttribute("error", "Branch Contact is already present");
+			 return "register";
+		}
+		else if(verifyRegisteredEmailId(registerRequestBean.getAdminEmail())) {
+			 model.addAttribute("error", "Admin Email is already present");
+			 return "register";
+		}
+		else if(!StringUtils.isEmpty(registerRequestBean.getBranchEmail()) &&  verifyRegisteredEmailId(registerRequestBean.getBranchEmail())) {
+			 model.addAttribute("error", "Branch Email is already present");
+			 return "register";
+		}
+		else {
+			User userForm = new User();
+			userForm.setUsername(registerRequestBean.getUsername());
+			userForm.setPassword(registerRequestBean.getPassword());
+			userValidator.validate(userForm, bindingResult);
+			userService.save(userForm);
+		    loginService.addTourPlanner(registerRequestBean,userForm);
+		  
+	        securityService.autoLogin(userForm.getUsername(), registerRequestBean.getPassword());
+		}
         return "redirect:/welcome";
 	}
 	
@@ -102,16 +119,14 @@ public class LoginController {
 	
 	@GetMapping(value = "/verifyRegisteredMobileNumber")
 	@ResponseBody
-    public ResponseEntity<?> verifyRegisteredMobileNumber(@RequestParam("mobileNumber") String mobileNumber) {
-		boolean isMobilePresent =  loginService.verifyAdminMobileNumber(mobileNumber);
-		return ResponseEntity.status(HttpStatus.OK).body(isMobilePresent);
+    public boolean verifyRegisteredMobileNumber(@RequestParam("mobileNumber") String mobileNumber) {
+		return  loginService.verifyAdminMobileNumber(mobileNumber);
     }
 	
 	@GetMapping(value = "/verifyRegisteredEmailId")
 	@ResponseBody
-    public ResponseEntity<?> verifyRegisteredEmailId(@RequestParam("emailId") String emailId) {
-		boolean isMobilePresent =  loginService.verifyRegisteredEmailId(emailId);
-		return ResponseEntity.status(HttpStatus.OK).body(isMobilePresent);
+    public boolean verifyRegisteredEmailId(@RequestParam("emailId") String emailId) {
+		return  loginService.verifyRegisteredEmailId(emailId);
     }
 	
 }

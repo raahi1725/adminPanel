@@ -8,8 +8,8 @@
          </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul id="home" class="nav">
-           <li class="nav-item">
+        <ul  class="nav">
+           <li id="home" class="nav-item">
             <a class="nav-link" href="dashboard">
               <i class="material-icons"><i class="fa fa-home"></i></i>
               <span>Home</span>

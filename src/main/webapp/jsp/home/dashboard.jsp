@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link href="./resources/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <link href="./resources/demo/demo.css" rel="stylesheet" />
+  <script>
+  $(function() {
+		$(".nav-item").removeClass("active");
+		$("#home").addClass("active");
+});
+  </script>
 </head>
 <body class="">
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">

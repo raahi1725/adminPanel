@@ -8,8 +8,8 @@ import com.raahi.adminPanel.model.TourPlannerMasterModel;
 public class CustomerBean {
 	
 	private Integer customerId;
-	private TourPlannerMasterModel tourPlannerMasterModel;
-	private TourPlannerBranchModel tourPlannerBranchModel;
+	private Integer tourPlannerMasterModel;
+	private Integer tourPlannerBranchModel;
 	private String firstName;
 	private String middleName;
 	private String lastName;
@@ -46,11 +46,11 @@ public class CustomerBean {
 	public CustomerBean(Integer customerId, String searchedField) {
 		super();
 		this.customerId = customerId;
-		this.searchedField = searchedField;
+		this.setSearchedField(searchedField);
 	}
 
-	public CustomerBean(Integer customerId, TourPlannerMasterModel tourPlannerMasterModel,
-			TourPlannerBranchModel tourPlannerBranchModel, String firstName, String middleName, String lastName,
+	public CustomerBean(Integer customerId, Integer tourPlannerMasterModel,
+			Integer tourPlannerBranchModel, String firstName, String middleName, String lastName,
 			String regNo, String regDate, String gender, String birthDate, String bloodGroup, String address,
 			String state, String city, String country, Integer pinCode, String casteCategory, String occupation,
 			String nationality, String emailId, String contactNo, String altContactNo, Integer referalCodeId,
@@ -97,16 +97,16 @@ public class CustomerBean {
 	public void setCustomerId(Integer customerId) {
 		this.customerId = customerId;
 	}
-	public TourPlannerMasterModel getTourPlannerMasterModel() {
+	public Integer getTourPlannerMasterModel() {
 		return tourPlannerMasterModel;
 	}
-	public void setTourPlannerMasterModel(TourPlannerMasterModel tourPlannerMasterModel) {
+	public void setTourPlannerMasterModel(Integer tourPlannerMasterModel) {
 		this.tourPlannerMasterModel = tourPlannerMasterModel;
 	}
-	public TourPlannerBranchModel getTourPlannerBranchModel() {
+	public Integer getTourPlannerBranchModel() {
 		return tourPlannerBranchModel;
 	}
-	public void setTourPlannerBranchModel(TourPlannerBranchModel tourPlannerBranchModel) {
+	public void setTourPlannerBranchModel(Integer tourPlannerBranchModel) {
 		this.tourPlannerBranchModel = tourPlannerBranchModel;
 	}
 	public String getFirstName() {
@@ -270,6 +270,14 @@ public class CustomerBean {
 	}
 	public void setcDate(Date cDate) {
 		this.cDate = cDate;
+	}
+
+	public String getSearchedField() {
+		return searchedField;
+	}
+
+	public void setSearchedField(String searchedField) {
+		this.searchedField = searchedField;
 	}
 	
 }

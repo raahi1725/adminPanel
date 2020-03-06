@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.raahi.adminPanel.Service.CustomerService;
 import com.raahi.adminPanel.bean.CustomerBean;
@@ -34,16 +33,16 @@ public class CustomerController {
 	
 	@PostMapping(value = "/customer")
     public ModelAndView addCustomers(@ModelAttribute CustomerModel customerModel,
-    		RedirectAttributes redirectAttributes) {
-    	ModelAndView model = new ModelAndView();
+    		Model model) {
+    	ModelAndView modelAndView = new ModelAndView();
     	boolean isSaveSuccessful = customerService.addCustomers(customerModel);
     	if(isSaveSuccessful) {
-    		redirectAttributes.addFlashAttribute("message", "Records added successfully.");
+    		model.addAttribute("message", "Records added successfully.");
     	}else {
-    		redirectAttributes.addFlashAttribute("message", "Error while adding record.");
+    		model.addAttribute("message", "Error while adding record.");
     	}
-    	model.setViewName("customers");
-    	return model;
+    	modelAndView.setViewName("customers");
+    	return modelAndView;
     }
 	
 	@GetMapping(value = "/searchCustomer")

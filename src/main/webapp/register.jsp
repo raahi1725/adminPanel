@@ -53,6 +53,7 @@
 				<div class="wizard-header">
 					<h3 class="heading">Sign Up To Raahi</h3>
 					<p>Fill all form field to go next step</p>
+					 <span style="color:red">${error}</span>&nbsp;&nbsp; <a href="/login" class='loginLink'>Login here</a>
 				</div>
 		        <form:form class="form-register" action="/register" method="POST" modelAttribute="registerRequestBean">
 		        	<div id="form-total">
@@ -67,8 +68,8 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="text" class="form-control" id="orgName" path="orgName" maxlength="50"/>
-											<span class="label">Organization Name <span class="required">*</span></span>
+											<form:input type="text" class="form-control" id="orgName" path="orgName" maxlength="50" value="Kp Dreams"/>
+											<span class="label">Organization Name <span class="required" >*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -100,21 +101,21 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="text" class="form-control" id="headBranchName" path="headBranchName" maxlength="50" />
+											<form:input type="text" class="form-control" id="headBranchName" path="headBranchName" maxlength="50" value="Pune" />
 											<span class="label">Branch Name<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="email" class="form-control" id="branchEmail" path="branchEmail" maxlength="50"/>
+											<form:input type="email" class="form-control" id="branchEmail" path="branchEmail" maxlength="50" value=""/>
 											<span class="label">Email<span class="required"></span></span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="tel" class="form-control" id="branchContactShow" onkeypress='validate(event)' maxlength="10" style="width:200px;padding:0px 40px;"/>
+											<input type="tel" class="form-control" id="branchContactShow" value="9881735306" onkeypress='validate(event)' maxlength="10" style="width:200px;padding:0px 40px;"/>
 											<span class="label" style="position:initial;">Contact No<span class="required">*</span></span>
 					  						<span class="border"></span>
 										</label>
@@ -156,21 +157,21 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="text" class="form-control" id="adminFirstName" path="adminFirstName" maxlength="20"/>
+											<form:input type="text" class="form-control" id="adminFirstName" path="adminFirstName" maxlength="20" value="Saloni"/>
 											<span class="label">First Name<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="text" class="form-control" id="adminLastName" path="adminLastName" maxlength="20"/>
+											<form:input type="text" class="form-control" id="adminLastName" path="adminLastName" maxlength="20" value="Parekh"/>
 											<span class="label">Last Name<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input id="userContactShow" name="phone" onkeypress='validate(event)' maxlength="10" type="tel" class="form-control" style="width:200px;padding:0px 40px;"/>
+											<input id="userContactShow" name="phone" onkeypress='validate(event)' value="8550812500" maxlength="10" type="tel" class="form-control" style="width:200px;padding:0px 40px;"/>
 											<span class="label" style="position:initial;">Contact No<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
@@ -179,28 +180,28 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="email" class="form-control" id="userEmail" path="username" maxlength="50"/>
+											<form:input type="email" class="form-control" id="userEmail" path="username" maxlength="50" value="saloniparekh25@gmail.com"/>
 											<span class="label">Email<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="password" class="form-control" id="userPassword" path="password" minlength="5" maxlength="20"/>
+											<form:input type="password" class="form-control" id="userPassword" path="password" minlength="5" maxlength="20" value="12345678"/>
 											<span class="label">Password<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<form:input type="password" class="form-control" id="userConfirmPassword" path="passwordConfirm" maxlength="20"/> 
+											<form:input type="password" class="form-control" id="userConfirmPassword" path="passwordConfirm" maxlength="20" value="12345678"/> 
 											<span class="label">Confirm Password<span class="required">*</span></span>
 											<span class="border"></span>
 										</label>
 									</div>
 								</div>
 							</div>
-							<input type="submit" value="Register" id="registerForm" class="hide"/>
+							<input type="submit" value="Register" id="registerForm" class="hide" />
 			            </section>
 		        	</div>
 		        </form:form>

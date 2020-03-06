@@ -34,7 +34,7 @@ public class CustomerModel implements java.io.Serializable {
 	private String country;
 	private Integer pinCode;
 	private String casteCategory;
-	private String Occupation;
+	private String occupation;
 	private String nationality;
 	private String emailId;
 	private String contactNo;
@@ -201,11 +201,11 @@ public class CustomerModel implements java.io.Serializable {
 	
 	@Column(name = "occupation")
 	public String getOccupation() {
-		return Occupation;
+		return occupation;
 	}
 	
 	public void setOccupation(String occupation) {
-		Occupation = occupation;
+		this.occupation = occupation;
 	}
 	
 	@Column(name = "nationality")
