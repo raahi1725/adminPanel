@@ -12,12 +12,15 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link href="./resources/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="./resources/js/core/popper.min.js"></script>
   <script src="./resources/js/core/bootstrap-material-design.min.js"></script>
   <script src="./resources/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <script src="./resources/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  
 </head>
 <body>
 	  <div class="wrapper">

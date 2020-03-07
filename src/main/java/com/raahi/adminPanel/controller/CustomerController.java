@@ -39,7 +39,7 @@ public class CustomerController {
     	if(isSaveSuccessful) {
     		model.addAttribute("message", "Records added successfully.");
     	}else {
-    		model.addAttribute("message", "Error while adding record.");
+    		model.addAttribute("error", "Error while adding record.");
     	}
     	modelAndView.setViewName("customers");
     	return modelAndView;
@@ -47,14 +47,14 @@ public class CustomerController {
 	
 	@GetMapping(value = "/searchCustomer")
 	@ResponseBody
-    public List<CustomerBean> searchCustomer(@RequestParam("searchParameter") String searchParameter) {
-		return customerService.searchCustomer(searchParameter);
-    //	return ResponseEntity.status(HttpStatus.OK).body(customerBean);
+    public ResponseEntity<?>  searchCustomer(@RequestParam("searchParameter") String searchParameter) {
+		List<CustomerBean> customerList = customerService.searchCustomer(searchParameter);
+    	return ResponseEntity.status(HttpStatus.OK).body(customerList);
     }
 	
 	@GetMapping(value = "/customerDetails")
 	@ResponseBody
-    public ResponseEntity<?> getCustomerDetails(@RequestParam("customerId") String customerId) {
+    public ResponseEntity<?> getCustomerDetails(@RequestParam("customerId") Integer customerId) {
 		CustomerBean customerBean = customerService.getCustomerDetails(customerId);
     	return ResponseEntity.status(HttpStatus.OK).body(customerBean);
     }

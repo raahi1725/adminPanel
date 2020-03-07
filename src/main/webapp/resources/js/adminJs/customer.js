@@ -13,7 +13,7 @@ function showHideOther() {
 }
 
 $(document).ready(function() {
-	$(function() {
+	/*$(function() {
 		$("#regDate").datepicker({
 			changeMonth : true,
 			changeYear : true,
@@ -22,18 +22,18 @@ $(document).ready(function() {
 			dateFormat : "dd-mm-yy"
 
 		});
-	});
-	
+	}); */
 	$.ajax({
 		dataType : "json",
-		url : 'maxRegNo.do',
+		url : 'maxRegNo',
 		headers : {
 			'Accept' : 'application/json',
 			'Content-Type' : 'application/json'
 		},
 		type : 'GET',
 		success : function(data) {
-			document.getElementById("customerSearchRegNo").value = data;
+			alert(data)
+			document.getElementById("regNo").value = data;
 		},
 		error : function(data) {
 		}
@@ -92,31 +92,24 @@ $(document).ready(function() {
 });
 
 function onLoadData() {
-	alert(9)
 	$('#searchParam').autocomplete({
 		source : function(request, response) {
 			$('input:text[name=nameIdHidden]').val("");
-			alert(1)
-			jQuery
-			.ajax({
-				url : 'searchCustomer.do',
+			jQuery.ajax({
+				url : 'searchCustomer',
 				dataType : 'json',
 				type : 'GET',
 				data : {
-
 					searchParameter : request.term
 				},
-
-				success : function(
-						data) {
-					response(jQuery
-							.map(data,function(item) {
-										return {
-											label : item.serachedField,
-											value : item.serachedField,
-											id : item.customerId
-										};
-									}));
+				success : function(data) {
+						response(jQuery.map(data,function(item) {
+						return {
+							label : item.searchedField,
+							value : item.searchedField,
+							id : item.customerId
+						};
+					}));
 				},
 				error : function(data) {
 				}
@@ -135,17 +128,17 @@ function onLoadData() {
 	select : function(event, ui) {
 		document.getElementById("customerSearchId").value=ui.item.id;
 		var arr = [];
-		arr =	serachedField.split('-');
-		document.getElementById("customerSearchRegNo").value = arr[0];
-		document.getElementById("customerSearchName").value = arr[1];
-		document.getElementById("customerSearchContact").value = arr[2];
+		arr =	ui.item.value.split('-');
+		document.getElementById("customerSearchRegNo").innerHTML = arr[0];
+		document.getElementById("customerSearchName").innerHTML = arr[1];
+		document.getElementById("customerSearchContact").innerHTML = arr[2];
 	},
 	open : function() {
-		$(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+		//$(this).removeClass("ui-corner-all").addClass("ui-corner-top");
 
 	},
 	close : function() {
-		$(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+		//$(this).removeClass("ui-corner-top").addClass("ui-corner-all");
 	}
 	});
 }
@@ -154,7 +147,7 @@ function getSearchDetails() {
 	var customerId = document.getElementById("customerSearchId").value;
 	$.ajax({
 		dataType : "json",
-		url : 'customerDetails.do?customerId='+customerId,
+		url : 'customerDetails?customerId='+customerId,
 		headers : {
 			'Accept' : 'application/json',
 			'Content-Type' : 'application/json'
@@ -168,8 +161,8 @@ function getSearchDetails() {
 			document.getElementById("middleName").value=data.middleName;
 			document.getElementById("lastName").value=data.lastName;
 			document.getElementById("emailId").value=data.emailId;
-			document.getElementById("contactNo").value=data.contactNo;
-			document.getElementById("altContactNo").value=data.altContactNo;
+			document.getElementById("phone").value=data.contactNo;
+			document.getElementById("phone1").value=data.altContactNo;
 			document.getElementById("gender").value=data.gender;
 			document.getElementById("birthDate").value=data.birthDate;
 			document.getElementById("bloodGroup").value=data.bloodGroup;
@@ -182,11 +175,8 @@ function getSearchDetails() {
 			document.getElementById("occupation").value=data.occupation;
 			document.getElementById("nationality").value=data.nationality;
 			document.getElementById("referalCodeId").value=data.referalCodeId;
-			document.getElementById("hearedFromSelect").value=data.hearedFromSelect;
+			document.getElementById("hearedFromSelect").value=data.hearedFrom;
 			document.getElementById("other").value=data.other;
-			
-			
-			
 		},
 		error : function(data) {
 		}

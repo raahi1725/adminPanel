@@ -57,7 +57,7 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public CustomerBean getCustomerDetails(String customerId) {
+	public CustomerBean getCustomerDetails(Integer customerId) {
 		CustomerBean bean = new CustomerBean();
 		try {
 			bean = customerRepository.getCustomerDetails(customerId);

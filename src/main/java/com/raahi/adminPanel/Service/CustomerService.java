@@ -11,7 +11,7 @@ public interface CustomerService {
 
 	List<CustomerBean> searchCustomer(String searchParameter);
 
-	CustomerBean getCustomerDetails(String customerId);
+	CustomerBean getCustomerDetails(Integer customerId);
 
 	Long getMaxRegNo();
 
