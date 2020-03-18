@@ -520,6 +520,7 @@
 	              <div class="md-form form-sm mb-4">
 	                <span class="icon"><i class="fas fa-lock prefix"></i></span>
 	                <input name="password" type="password" class="form-control-login" placeholder="Password">
+	                  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
  	              </div>
 	              <div class="text-center mt-2">
 	                <button class="btn btn-info" type="submit">Log in <i class="fas fa-sign-in ml-1"></i></button>
